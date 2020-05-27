@@ -1,0 +1,489 @@
+#!sh
+
+# Scratchpad for shell commands issued to the Makerbot to attempt to acheive programmatic control of heater controller's temperature setpoint.
+
+
+tail --retry --follow=name /var/log/messages
+
+watch -n 1 'tail -n 20 /var/log/messages'
+
+
+cat /tmp/messsages
+cat /tmp/messsages.0
+
+#set the clock based on a public ntp server:
+ntpd -d -n -q -g -p pool.ntp.org
+
+tail -n 20 -f /var/home/logs/printer/toolhead_0_temp.log
+tail -n 20 -f /var/home/logs/printer/machine_586.log
+tail -n 20 -f /var/home/logs/kaiten/event.log
+tail -n 20 -f /var/home/logs/kaiten/kaiten.log
+tail -n 20 -f /var/home/logs/kaiten/netstats.log
+tail -n 20 -f /home/logs/printer/print_telemetry.log.1
+
+
+dbus-send          \
+  --dest=org.freedesktop.DBus \
+  --type=method_call          \
+  --print-reply               \
+  /org/freedesktop/DBus       \
+  org.freedesktop.DBus.Introspectable.Introspect
+  
+  
+tail -n 1 /home/logs/printer/print_telemetry.log.1 | sed "s/,/\t/g"
+
+
+watch -n 1 "tail -n 1 /home/logs/printer/print_telemetry.log.1 | sed 's/,/\n/g'"
+watch -n 1 "tail -n 1 /home/logs/printer/print_telemetry.log.1 | sed 's/,/\t/g'"
+
+tail -n 1 /home/logs/printer/print_telemetry.log.1 | sed 's/,/\t/g'
+
+#to monitor the extruder temperature and setpoint during a print:
+tail -n 1 -f /home/logs/printer/print_telemetry.log.1 | sed 's/,/\t/g'
+
+tail -n 30 -f /home/logs/kaiten/kaiten.log
+
+cd /usr/lib/python3.4; python /usr/scripts/repl.py
+
+
+#here is the output that results from issuing "help" to the repl.py script:
+    #>> >help
+    #>> abort
+    #>> acceleration_buffer_empty
+    #>> acknowledged
+    #>> add_local_auth
+    #>> add_makerbot_account
+    #>> any_heater_above_temp
+    #>> assisted_level
+    #>> authenticate
+    #>> authorize
+    #>> begin_hes_log
+    #>> birdwing_list
+    #>> bot_maintained
+    #>> bronx_upload
+    #>> brooklyn_upload
+    #>> calibrate_z_offset
+    #>> cancel
+    #>> capture_image
+    #>> change_hes_sample_rate
+    #>> change_machine_name
+    #>> change_tool
+    #>> clear_all_buffers
+    #>> clear_all_z_pause
+    #>> clear_authorized
+    #>> clear_position_reference
+    #>> clear_queue
+    #>> clear_ssh_id
+    #>> clear_z_pause_mm
+    #>> close_and_cleanup
+    #>> close_machine_driver
+    #>> close_queue
+    #>> cloud_slice_print
+    #>> configure_hes
+    #>> connect_tool
+    #>> connman_get_services
+    #>> cool
+    #>> copy_ssh_id
+    #>> create_machine
+    #>> create_parser_interface
+    #>> deauthorize
+    #>> debug
+    #>> destroy_machine
+    #>> destroy_parser_interface
+    #>> desync_account
+    #>> disable_check_build_plate
+    #>> disable_leds
+    #>> disable_spi
+    #>> disable_z_pause
+    #>> download_and_install_firmware
+    #>> drm_print
+    #>> dump_machine_config
+    #>> enable_check_build_plate
+    #>> enable_leds
+    #>> enable_spi
+    #>> enable_toolhead_idle
+    #>> enable_z_pause
+    #>> end_camera_stream
+    #>> end_hes_log
+    #>> endstop_triggered
+    #>> execute_queue
+    #>> expire_thingiverse_credentials
+    #>> external_print
+    #>> fast_abort
+    #>> fcgi_reauthorize
+    #>> find_knob_z
+    #>> firmware_cleanup
+    #>> first_contact
+    #>> get_authorized
+    #>> get_available_z_offset_adjustment
+    #>> get_axes_position
+    #>> get_cached_tool_usage_stats
+    #>> get_cloud_services_info
+    #>> get_config
+    #>> get_current_command_index
+    #>> get_extended_toolhead_self_check_results
+    #>> get_extrusion_distance_percent
+    #>> get_filament_presence
+    #>> get_heater_progress_percent
+    #>> get_hes_log
+    #>> get_init
+    #>> get_machine_config
+    #>> get_move_buffer_position
+    #>> get_persistent_statistics
+    #>> get_power_value
+    #>> get_print_history
+    #>> get_queue_status
+    #>> get_raw_hes_value
+    #>> get_sound_state
+    #>> get_static_ipv4
+    #>> get_statistics
+    #>> get_sync_state
+    #>> get_system_information
+    #>> get_temperature
+    #>> get_temperature_settings
+    #>> get_tool_id
+    #>> get_tool_uid
+    #>> get_tool_usage_stats
+    #>> get_toolhead_firmware_version
+    #>> get_toolhead_self_check_results
+    #>> get_unique_identifiers
+    #>> get_z_adjusted_offset
+    #>> handshake
+    #>> has_valid_position_reference
+    #>> has_z_calibration_routine
+    #>> heat
+    #>> hes_log_loaded
+    #>> home
+    #>> home_axis
+    #>> immediate_toolhead_error
+    #>> initialize_from_settings
+    #>> is_endstop_triggered
+    #>> is_initialized
+    #>> is_tool_connected
+    #>> iterate
+    #>> kill_power
+    #>> led_sleep
+    #>> led_wake
+    #>> library_print
+    #>> load_filament
+    #>> load_filament_jam_settings
+    #>> load_print_meta_settings
+    #>> load_print_tool
+    #>> load_temperature_settings
+    #>> log_tool_eeprom
+    #>> machine_action_command
+    #>> machine_query_command
+    #>> machine_query_process
+    #>> manual_level
+    #>> motor_abort
+    #>> motor_enable
+    #>> move
+    #>> move_axis
+    #>> move_buffer_empty
+    #>> network_state
+    #>> open_queue
+    #>> park
+    #>> perform_toolhead_self_check
+    #>> ping
+    #>> power_monitor_close
+    #>> power_monitor_init
+    #>> preheat
+    #>> print
+    #>> print_again
+    #>> process_method
+    #>> program_tool
+    #>> program_toolhead
+    #>> program_yonkers
+    #>> pru_is_paused
+    #>> put_init
+    #>> put_raw
+    #>> put_term
+    #>> query_power_info
+    #>> quick_pause
+    #>> reauthorize
+    #>> reboot
+    #>> record_serial_dict
+    #>> register_client_name
+    #>> register_fcgi
+    #>> register_lcd
+    #>> request_camera_frame
+    #>> request_camera_stream
+    #>> reset_extrusion_distance
+    #>> reset_heater_watchdog
+    #>> reset_lcd
+    #>> reset_staging_urls
+    #>> reset_to_factory
+    #>> reset_tool_usage
+    #>> reset_z_pause_index
+    #>> restart_ui
+    #>> resume_boot
+    #>> run_diagnostics
+    #>> sample_power
+    #>> scan_toolheads
+    #>> set_analytics_enabled
+    #>> set_auto_unload
+    #>> set_chamber_blink
+    #>> set_chamber_color
+    #>> set_config
+    #>> set_extruder_delay
+    #>> set_fan_duty
+    #>> set_heater_duty
+    #>> set_interface_address
+    #>> set_keys
+    #>> set_knob_blink
+    #>> set_knob_color
+    #>> set_led_blink
+    #>> set_led_brightness
+    #>> set_moose_chamber_brightness
+    #>> set_move_buffer_position
+    #>> set_namuga_resolution
+    #>> set_position
+    #>> set_position_reference
+    #>> set_print_context
+    #>> set_reflector_enabled
+    #>> set_staging_urls
+    #>> set_static_ipv4
+    #>> set_temperature_target
+    #>> set_thingiverse_credentials
+    #>> set_toolhead_error_visibility
+    #>> set_toolhead_idle_update_period
+    #>> set_z_adjusted_offset
+    #>> set_z_pause_mm
+    #>> setup_printer
+    #>> shutdown
+    #>> sync_account_to_bot
+    #>> sync_state_confirmed
+    #>> toggle_acceleration
+    #>> toggle_acceleration_lookahead
+    #>> toggle_expend_buffer
+    #>> toggle_extrusion_percent_update
+    #>> toggle_fan
+    #>> toggle_filament_jam
+    #>> toggle_lcd
+    #>> toggle_sound
+    #>> toggle_toolhead_power
+    #>> toggle_toolhead_syncing
+    #>> toolhead_acknowledged_hes
+    #>> toolhead_blocking
+    #>> toolhead_ok
+    #>> transfer_progress
+    #>> unload_filament
+    #>> unwrap_returns
+    #>> update_available_firmware
+    #>> update_mac_address
+    #>> update_tool_refurb_count
+    #>> update_tool_usage_stats
+    #>> wait_for_heaters_at_least_target
+    #>> wait_for_heaters_at_target
+    #>> wifi_connect
+    #>> wifi_disable
+    #>> wifi_disconnect
+    #>> wifi_enable
+    #>> wifi_forget
+    #>> wifi_fre_authorize
+    #>> wifi_reset
+    #>> wifi_scan
+    #>> wifi_setup
+    #>> wifi_signal_strength
+    #>> yonkers_upload
+    #>> zip_logs
+
+set_temperature_target(0,205)
+    
+open_queue(0)
+machine_action_command("set_temperature_target", {"index":0, "temperature":211})
+close_queue()
+execute_queue()
+
+machine_query_process
+
+process_method("set_temperature_target", {"index":0, "temperature":211})
+process_method("_do_unsuspend")
+machine_query_command("set_temperature_target", {"index":0, "temperature":211})
+
+get_temperature()
+get_temperature_settings()
+
+set_temperature_target(0,205)
+
+
+process_method("resume")
+process_method("suspend")
+
+
+,{
+"command" : {"function":"set_toolhead_temperature","metadata":{},"parameters":{"index":0,"temperature":225, "timeout":60000},"tags":[]}
+}
+
+dir(
+    self._machine_manager._libparser.CreateJTParser(
+        self._machine_manager.create_pymachine().create_parser_interface(),       
+        ctypes.c_char_p(bytes("/var/home/usb_storage/print.jsontoolpath", "UTF-8")),
+        ctypes.c_size_t(4),
+        ctypes.c_int(-1)
+    )
+)
+
+import ctypes
+
+
+
+
+neils_jt_parser = self._machine_manager._libparser.CreateJTParser(
+        self._machine_manager._pymach.create_parser_interface(),       
+        ctypes.c_char_p(bytes("/var/home/usb_storage/print.jsontoolpath", "UTF-8")),
+        ctypes.c_size_t(4),
+        ctypes.c_int(-1)
+    )
+
+self._machine_manager._libparser.ParseNext(neils_jt_parser)
+
+dir(self._machine_manager._pymach._libmachine)
+dir(self._machine_manager._pymach._libmachine)
+self._machine_manager._pymach._machine_driver
+
+neils_parser_interface = self._machine_manager._pymach.create_parser_interface()
+
+debug
+import ctypes
+self._machine_manager._pymach._libmachine.SetTemperatureTarget(
+    ctypes.c_uint8(0),
+    ctypes.c_int16(217),
+    self._machine_manager._pymach._machine_driver
+)
+
+
+self._machine_manager._pymach._libmachine.SetTemperatureTarget(
+    ctypes.c_uint8(0),
+    ctypes.c_int16(0),
+    self._machine_manager._pymach._machine_driver
+)
+
+
+[result for result in self._machine_manager._pymach._loop(self._machine_manager._pymach._libmachine.SetTemperatureTarget, ctypes.c_uint8(0),  ctypes.c_int16(50),self._machine_manager._pymach._machine_driver, timeout=10)]
+
+
+import sys; sys.path.append("/usr/scripts"); import repl; client = repl.Client(); 
+client._methods._methods['get_temperature'].__code__
+client._methods.get_temperature.__code__
+[x for x in client._handle_cmd("get_temperature(0)", client._repl._handle_response)]
+[x for x in client._handle_cmd("help", client._repl._handle_response)]
+
+def myResponseHandler(response=None, exc=None):
+    global _response
+    global _exc
+    _response = response
+    _exc = exc
+    print("response: "); print(response);
+    print("exc: "); print(exc);
+
+next(client._handle_cmd("help", client._repl._handle_response))
+next(client._handle_cmd("get_temperature(0)", client._repl._handle_response))
+next(client._handle_cmd("get_temperature(0)", myResponseHandler))
+
+i=client._handle_cmd("get_temperature(0)", myResponseHandler)
+try:
+    next(i)
+except:
+    print('oops')
+
+
+client._methods.get_temperature(0)
+
+client._request()
+
+client._connected
+
+method = client._methods._get_method('get_temperature')
+client._jsonrpc.request
+
+client._callback = myResponseHandler
+client._methods.get_temperature(0)
+
+
+get_temperature(0)
+get_temperature_settings()
+
+debug("import ctypes; [result for result in self._machine_manager._pymach._loop(self._machine_manager._pymach._libmachine.SetTemperatureTarget, ctypes.c_uint8(0),  ctypes.c_int16(50),self._machine_manager._pymach._machine_driver, timeout=10)]")
+
+[self._machine_manager._pymach.get_temperature(0),self._machine_manager._pymach.get_temperature_settings()[0]]
+
+[result for result in self._machine_manager._pymach._loop(self._machine_manager._pymach._libmachine.SetTemperatureTarget, ctypes.c_uint8(0),  ctypes.c_int16(217),self._machine_manager._pymach._machine_driver, timeout=10)]
+
+[result for result in self._machine_manager._pymach._loop(self._machine_manager._pymach._libmachine.SetTemperatureTarget, ctypes.c_uint8(0),  ctypes.c_int16(218),self._machine_manager._pymach._machine_driver, timeout=10)]
+
+[x for x in self._machine_manager._pymach.set_temperature_target(0,216)]  +  [x for x in self._machine_manager._pymach.heat()]
+[x for x in self._machine_manager._pymach.set_temperature_target(0,211)]  +    [x for x in self._machine_manager._pymach.heat()] + [x for x in self._machine_manager._pymach.wait_for_heaters_at_target(timeout_minutes=1, check=[True])]
+
+
+[x for x in self._machine_manager._pymach.set_temperature_target(0,211) + self._machine_manager._pymach.load_temperature_settings([212])] 
+list(self._machine_manager._pymach.load_temperature_settings([212])) + list(self._machine_manager._pymach.set_temperature_target(0,211)) + list(self._machine_manager._pymach.heat())
+list(self._machine_manager._pymach.cool())
+get_current_command_index
+
+[self._machine_manager._pymach.get_current_command_index(),self._machine_manager._pymach.get_temperature(0),self._machine_manager._pymach.get_temperature_settings()[0]]
+
+map(list, [])
+
+list(zip(
+    self._machine_manager._pymach.load_temperature_settings([212]), 
+    self._machine_manager._pymach.set_temperature_target(0,211),
+    self._machine_manager._pymach.heat()
+))
+
+
+set command="python /usr/scripts/repl.py"
+start "" kitty -kload "U:\2020-05-02_makerbot_uart_connection\makerbot_ssh.ktx" -cmd %command% -title %command%
+
+set command="echo debug | python /usr/scripts/repl.py"
+start "" kitty -kload "U:\2020-05-02_makerbot_uart_connection\makerbot_ssh.ktx" -cmd %command% -title %command%
+
+
+====================== Note to makerbot: ==========================
+Dear Makerbot, 
+
+I would like to add a command to a jsontoolpath file so as to cause my 
+Makerbot, while executing the toolpath, when it encounters my command, 
+to set the extruder heater controller's temperature setpoint to an 
+arbitrary (but reasonable) value encoded in the command. The 
+set_toolhead_temperature command, which miracle_grue inserts into its 
+jsontoolpath output, would seem, naively, to be exactly what I am after. 
+However, I have observed that my Makerbot seems to ignore 
+set_toolhead_temperature commands in the jsontoolpath. Based on my 
+observations, it seems that the only piece of information in the 
+.makerbot file that has any effect on the extruder heater temperature 
+setpoint is the extruder_temperature property of the object encoded by 
+the meta.json file; the value of this property specifies a setpoint that 
+remains in effect throughout the duration of the toolpath.
+
+Does there exist a command (or sequence of commands) that could be 
+inserted into the print.jsontoolpath file that would acheive my goal? 
+
+Thank you. 
+
+P.S. Here are the specifics of my Makerbot: 
+    model: Makerbot Replicator 5th Gen 
+    serial number: XXX 
+    mac address: XXX 
+    firmware version: 2.6.1.724 
+    Smart Extruder serial number: XXX 
+    toolhead firmware version: 1.7.724 
+
+Sincerely, 
+=========================================================================
+
+
+
+
+with the following in meta.json:
+    "extruder_temperature": 219,    "extruder_temperatures": [221],
+the setpoint ends up being 219
+
+When we have only "extruder_temperatures": [221] " (i.e. we delete the extruder_temperature property)
+the setpoint ends up being zero.
+
+When we have only "extruder_temperature": 219, (i.e. we delete the extruder_temperatures property)
+the setpoint ends up being 219
+
+When we have neither of those two properties in the meta.json file,
+the setpoint ends up being 

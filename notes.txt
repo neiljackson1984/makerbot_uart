@@ -1,0 +1,73 @@
+#!sh
+
+# Scratchpad for shell commands used to install my public key on the Makerbot to enable ssh connections:
+
+#to stop the sshd service:
+/etc/init.d/S50sshd stop
+
+/usr/sbin/sshd -d 
+
+chmod 600 /var/ssh/authorized_keys
+echo -e "\n" >> /var/ssh/authorized_keys
+
+# my usual 4096-bit key was too long for busybox.
+# I generated a 2048-bit key instead, and that seemed to work.
+ssh-keygen -P "" -t rsa -b 2048 -f c.openssh-private-key
+
+echo "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC6NPRnOmez+h5mVZBnlW0sl2qubPVyVgV6bb1tGbYylUBYTpaJBx0cHm3Xzo8RF88kVt1YC/DkYrHatrtaruHPlrcRLkMQlHYDM00YrLUB6HUftNN76uuWDitprvInWiQxTn09n2jjdHqcecnsoZeA4lW+Pw0vA38IwWAtNaQ2uTsK+tgxTWqpvQlx8dCtt7HHPKbfvXkzUUczWrOWEdywQdXrxZIV2X8hdGx6fTHAmGwp5A02q9cHZE7dJRxYnuk7wveL112yIqDr6yUOUqNNgRxgKeVEj1+b7Bb127bFjJcHlSNqfHQ+5Cg9lWh5RaUC/OqKAQXLqj9pGQpxb6wD" > /var/ssh/authorized_keys
+
+
+Pinouts of the headers of interest on the Makerbot "Gowanus" motherboard:
+This is a Makerbot Replicator 5th Gen
+
+J5 is a male 6-pin 0.1-inch-pitch single-row non-keyed unshrouded header on the Makerbot's "Gowanus" motherboard.
+The text "USB2TTL" is silkscreened on the circuit board next to J5.
+It seems that the signals on the pins of J5 are 3.3-volt UART signals.  The pinout matches
+that of the widely available 6-pin "USB to TTL" usb-to-UART adapters.  These adapters typically consist 
+of an FTDI or Prolific PL2303 IC, with a female mini USB connector on one side, and a 6-pin female 0.1-inch-pitch single-row
+header socket on the other end.  J5 seems to be intended to plug into such a "USB to TTL" adapter to connect a PC to the 
+motherboard for debugging (hence, I presume, the "USB2TTL" designation).  Conveniently, the Makerbot's Linux shell is directly 
+accessible on this UART interface. (UART parameters: 115200,8N1).
+The pinout of J5 is as follows:
+J5 Pin 1: GROUND (not connected to the metal case, but rather ground for the logic signals)
+J5 Pin 2: unknown1 (with the motherboard powered and operating normally, with nothing connected to J5, I measured a voltage of 0.00 volts between pin 2 and ground.  With the motherboard completely disconnected from the system and unpowered, I measured a resistance of about 15k between pin 2 and ground).  
+J5 Pin 3: unknown2 (Pin 3 seems to be completely isolated from everything else on the motherboard, as far as I can tell.)
+J5 Pin 4: UART data into makerbot (3.3 volt logic level)
+J5 Pin 4: UART data out of makerbot (3.3 volt logic level)
+J5 Pin 6: unknown3 (with the motherboard powered and operating normally, with nothing connected to J5, I measured a voltage of 0.00 volts between pin 6 and ground.  With the motherboard completely disconnected from the system and unpowered, I measured a resistance of about 15k between pin 6 and ground).   
+
+For reference, the pinout of a typical 6-pin "USB to TTL" adapter is as follows:
+Pin 1: GROUND
+Pin 2: CTS 
+Pin 3: Vcc (typically, this is 5-volt power that flows from the PC's USB port, into the USB to TTL adapter, and then onward into the device that the USB to TTL adapter is connected to.) 
+Pin 4: Tx (i.e. UART data out of the USB to TTL adapter)
+Pin 5: Rx (i.e. UART data into the USB to TTL adapter)
+Pin 6: DTR 
+
+Of J5's six pins, the only pins needed for the UART connection are pins 1, 4, and 5.  
+The Makerbot motherboard, having its own power supply, has no need to draw power from the USB to TTL adapter, and therefore J5's pin 3 is completely isolated - a dummy pin whose sole purpose is to serve as a placeholder so that the pinout of J5 will match the pinout of the widely available "USB to TTL" adapters.
+Pins 2 and 3 might, conceivably, be used for hardware handshaking, but, as it happens, in the default configuration, the Makerbot's UART connection does not use hardware handshaking.
+
+
+J9 is a male 16-pin 0.1-inch-pitch dual-row non-keyed unshrouded header on the Makerbot's "Gowanus" motherboard..
+Most of the pins on J9 are connected to the power supply rails.  Here is a pinout consistent with my observations:
+J9 Pin 1: GROUND (everything labeled "GROUND" here and in the pinout of J5, above, is tied together on the motherboard)
+J9 Pin 2: GROUND   
+J9 Pin 3: + 12-volt power   
+J9 Pin 4: + 12-volt power     
+J9 Pin 5: GROUND   
+J9 Pin 6: GROUND   
+J9 Pin 7: + 3.3-volt power     
+J9 Pin 8: + 5-volt power     
+J9 Pin 9: GROUND   
+J9 Pin 10: GROUND   
+J9 Pin 11:  unknown4 (I measured a voltage of 6.1 millivolts relative to GROUND when the motherboard was powered during normal operation )
+J9 Pin 12:  unknown5 (I measured a voltage of 6.1 millivolts relative to GROUND when the motherboard was powered during normal operation )
+J9 Pin 13:  unknown6 (I measured a voltage of 3.315 millivolts relative to GROUND when the motherboard was powered during normal opperation )
+J9 Pin 14:  unknown7 (I measured a voltage of 3.318 millivolts relative to GROUND when the motherboard was powered during normal opperation )
+J9 Pin 15:  unknown8 (I measured a voltage of 3.318 millivolts relative to GROUND when the motherboard was powered during normal opperation )
+J9 Pin 16:  unknown9 (I measured a voltage of -0.1 millivolts relative to GROUND when the motherboard was powered during normal opperation )
+
+I extracted +3.3-volt power from J9 pin 7 in order to power an RS232 driver module, so that I could equip the Makerbot with a hard-wired RS232 UART port
+in the form of a female DE9 connector mounted to the back plate of the Makerbot's case, next to the USB and Ethernet ports.  That provides a convenient way to
+connect the makerbot to my PC's RS232 port without having to deconstruct the case to get at it.
