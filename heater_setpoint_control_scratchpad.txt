@@ -506,3 +506,7 @@ divider=$( yes = | head -80 | tr -d "\n"); watch -n 1 "tail /tmp/neil_log_1; ech
 tail -f /tmp/neil_log_1;
 
 (while [ ! -f ${logFile} ] ; do echo "log file does not (yet) exist.  waiting..."; sleep 1; done;)
+
+cat /home/usb_storage/temperature_monitor.sh | sh
+sh /home/usb_storage/temperature_monitor.sh
+sh /home/usb_storage/temperature_monitor.sh

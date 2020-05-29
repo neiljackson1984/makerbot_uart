@@ -11,7 +11,7 @@ SHELL=sh
 .PHONY: default
 default: $(sources)
 	@echo "====== BUILDING $@ from $< ======= "
-	@ls -al $<
+	# @ls -al $<
 	pscp "$(call getFullyQualifiedWindowsStylePath,$<)" "${makerbotUsername}@${makerbotHost}:${destinationDirectoryOnTheMakerbot}$(notdir $<)"
 	# # ssh ${makerbotUsername}@${makerbotHost} "chmod ugo+x ${destinationDirectoryOnTheMakerbot}$(notdir $<)"
 	# kitty -ssh ${makerbotUsername}@${makerbotHost} -cmd "chmod ugo+x ${destinationDirectoryOnTheMakerbot}$(notdir $<); exit"
