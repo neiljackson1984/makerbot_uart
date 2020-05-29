@@ -488,131 +488,7 @@ the setpoint ends up being 219
 When we have neither of those two properties in the meta.json file,
 the setpoint ends up being 
 
-cd /tmp
-mkdir --parents temp
-cd temp
-mkfifo in out
-nohup python /usr/scripts/repl.py <in >out &
-echo debug >in
-cat out
-
-python /usr/scripts/repl.py &
-
-(echo -e "debug\n" && cat) | python /usr/scripts/repl.py
-
-watch echo -e "[self._machine_manager._pymach.get_current_command_index(),self._machine_manager._pymach.get_temperature(0),self._machine_manager._pymach.get_temperature_settings()[0]]" > out
-
-
-watch -n 1 "(echo -e \"blarg\\n\" && cat) > out"
-
-exec 9<> out
-watch -n 1 "echo -e \"blarg\\n\" > out"
-
-watch -n 1 "echo foo > out"
-
-watch -n 1 "date"
-
-# In one shell, run the following:
-
-watch -n 3 "echo -e \"[\\\"$(date)\\\",  self._machine_manager._pymach.get_current_command_index(),self._machine_manager._pymach.get_temperature(0),self._machine_manager._pymach.get_temperature_settings()[0]]\" > out"
-
-watch -n 1 "echo -e \"[\\\"\$(date)\\\",  self._machine_manager._pymach.get_current_command_index(),self._machine_manager._pymach.get_temperature(0),self._machine_manager._pymach.get_temperature_settings()[0]]\" > out"
-#it is necessary to escape the dollar sign above, so that the dollar-sign expression is evaluated not by this shell (before executing the watch command) but rather byt the sub shell that the watch command creates.
-
-(echo -e "debug\n" && cat /tmp/temp/out) | python /usr/scripts/repl.py
-
-# in another shell, run the following
-exec 9<> out; (echo -e "debug\n" && cat /tmp/temp/out) | python /usr/scripts/repl.py
-#exec 9<> out; keeps the handle to out open, preventing the repl from seeing an EOF. (I am not sure why this works exactly)
-
-#putting it all into one line, we have:
-mkdir --parents /tmp/temp ; rm /tmp/temp/out; mkfifo /tmp/temp/out ; watch -n 2 "echo -e \"[\\\"\$(date)\\\",  self._machine_manager._pymach.get_current_command_index(),self._machine_manager._pymach.get_temperature(0),self._machine_manager._pymach.get_temperature_settings()[0]]\" > /tmp/temp/out" & ; exec 9<> /tmp/temp/out ; (echo -e "debug\n" && cat /tmp/temp/out) | python /usr/scripts/repl.py
-
-#putting it all into one block, we have
-mkdir --parents /tmp/temp
-rm /tmp/temp/out
-mkfifo /tmp/temp/out
-watch -n 2 "echo -e \"[\\\"\$(date)\\\",  self._machine_manager._pymach.get_current_command_index(),self._machine_manager._pymach.get_temperature(0),self._machine_manager._pymach.get_temperature_settings()[0]]\" > /tmp/temp/out" > /dev/null &
-exec 9<> /tmp/temp/out
-(echo -e "debug\n" && cat /tmp/temp/out) | python /usr/scripts/repl.py
-
-
-#putting it all into one line, we have
-mkdir --parents /tmp/temp; rm /tmp/temp/out; mkfifo /tmp/temp/out; (watch -n 2 "echo -e \"[\\\"\$(date)\\\",  self._machine_manager._pymach.get_current_command_index(),self._machine_manager._pymach.get_temperature(0),self._machine_manager._pymach.get_temperature_settings()[0]]\" > /tmp/temp/out" > /dev/null &); exec 9<> /tmp/temp/out; (echo -e "debug\n" && cat /tmp/temp/out) | python /usr/scripts/repl.py; rm /tmp/temp/out
-
-#the final removal of /tmp/temp/out may be unnecessary, but I don't want to leave this pipe, which is intended to be temporary, existing after I am done.
-
-
-rm /tmp/neiltemp1; mkfifo /tmp/neiltemp1; (watch -n 2 "echo -e \"[\\\"\$(date)\\\",  self._machine_manager._pymach.get_current_command_index(),self._machine_manager._pymach.get_temperature(0),self._machine_manager._pymach.get_temperature_settings()[0]]\" > /tmp/neiltemp1" > /dev/null &); exec 9<> /tmp/neiltemp1; (echo -e "debug\n" && cat /tmp/neiltemp1) | python /usr/scripts/repl.py; rm /tmp/neiltemp1
-
-#TODO - automatically kill the backgrounded "watch" process when the whole thing finishes.  Possibly by wrapping everything in parentheses
-
-(rm /tmp/neiltemp1; mkfifo /tmp/neiltemp1; (watch -n 2 "echo -e \"[\\\"\$(date)\\\",  self._machine_manager._pymach.get_current_command_index(),self._machine_manager._pymach.get_temperature(0),self._machine_manager._pymach.get_temperature_settings()[0]]\" > /tmp/neiltemp1" > /dev/null &); exec 9<> /tmp/neiltemp1; (echo -e "debug\n" && cat /tmp/neiltemp1) | python /usr/scripts/repl.py; rm /tmp/neiltemp1)
- # (nope, the outer parenthesese don't quite have the desired effect.)
-
 # "
-
-#here is a daemon-like shell script that polls the kaiten repl interface every few seconds, and also timestamps and dumps to a log file each of the lines outputted by the kaiten repl.
-(
-# echo $$
-pipeIntoRepl="/tmp/neiltemp1";
-pipeOutOfRepl="/tmp/neiltemp2";
-logFile="/tmp/neil_log_1";
-timestampFormat="%F_%T";
-
-#clean up procedure:
-# trap "echo ; echo cleaning up...; echo \"logging the fact that we are ceasing logging ...\"; echo \"ceasing logging at \$(date +${timestampFormat})\" >> ${pipeOutOfRepl}; echo \"waiting 1 second to allow the logging apparatus to log the cessation of logging before we kill the logging apparatus ...\"; sleep 1; echo killing processes \$(jobs -p) ...; kill \$(jobs -p); echo deleting pipes ${pipeIntoRepl}  ${pipeOutOfRepl} ...; rm ${pipeIntoRepl}  ${pipeOutOfRepl} 1> /dev/null 2>&1;  echo \"invoking \\\"jobs\\\" one last time...\";  jobs 1> /dev/null 2>&1; " SIGINT;
-# trap "echo ; echo cleaning up...; echo \"making sure the output pipe is open so that our logging of the cessation of logging will wait until the loggin apparatus will receive the message before proceeding to kill the logging apparatus. ...\"; exec 9<> ${pipeOutOfRepl}; echo \"logging the fact that we are ceasing logging ...\"; echo \"ceasing logging at \$(date +${timestampFormat})\" > ${pipeOutOfRepl}; echo killing processes \$(jobs -p) ...; kill \$(jobs -p); echo deleting pipes ${pipeIntoRepl}  ${pipeOutOfRepl} ...; rm ${pipeIntoRepl}  ${pipeOutOfRepl} 1> /dev/null 2>&1;  echo \"invoking \\\"jobs\\\" one last time...\";  jobs 1> /dev/null 2>&1; " SIGINT;
-# trap "echo ; echo cleaning up...; echo \"logging the fact that we are ceasing logging ...\"; echo \"ceasing logging at \$(date +${timestampFormat})\" > ${pipeOutOfRepl}; echo killing processes \$(jobs -p) ...; kill \$(jobs -p); echo deleting pipes ${pipeIntoRepl}  ${pipeOutOfRepl} ...; rm ${pipeIntoRepl}  ${pipeOutOfRepl} 1> /dev/null 2>&1;  echo \"invoking \\\"jobs\\\" one last time...\";  jobs 1> /dev/null 2>&1; " SIGINT;
-#getting the listening loop (below) to stay active long enough to log the cessation of logging is a bit tricky.  I have resorted to a rather crude method of just waiting a second after logging the cessation of logging before doing the killing (it ought to be possible for the echo that sends the cessation log message to block until the 
-#listening loop has ingested the data, but I can't quite seem to make this happen - hence the wait-one-second kludge.
-trap "echo ; echo cleaning up...; echo \"logging the fact that we are ceasing logging ...\"; echo \"ceasing logging at \$(date +${timestampFormat})\" >> ${pipeOutOfRepl}; echo \"waiting 1 second to allow the logging apparatus to log the cessation of logging before we kill the logging apparatus ...\"; sleep 1; echo killing processes \$(jobs -p) ...; kill \$(jobs -p); echo deleting pipes ${pipeIntoRepl}  ${pipeOutOfRepl} ...; rm ${pipeIntoRepl}  ${pipeOutOfRepl} 1> /dev/null 2>&1;  echo \"invoking \\\"jobs\\\" one last time...\";  jobs 1> /dev/null 2>&1" SIGINT;
-
-rm ${pipeIntoRepl}  ${pipeOutOfRepl} 1> /dev/null 2>&1; 
-mkfifo ${pipeIntoRepl} ${pipeOutOfRepl}; 
-exec 8<> ${pipeIntoRepl}; 
-exec 9<> ${pipeOutOfRepl};
-
-#start listening for log entries, and write them to the log file with a timestamp as they come in:
-# (exec 9<> ${pipeOutOfRepl}; while read p; do echo "$(date  +${timestampFormat}) $p" >> ${logFile}; done <${pipeOutOfRepl} ;) &:;
-(sleep 5; while read p; do echo "$(date  +${timestampFormat}) $p" >> ${logFile}; done <${pipeOutOfRepl} ;) &:;
-
-# the exec 9<> ${pipeOutOfRepl};, above, is necessary to keep the while loop cranking away even if everyone else has closed the output pipe.
-
-echo "commencing logging at $(date +${timestampFormat})" > ${pipeOutOfRepl};
-
-python /usr/scripts/repl.py >>${pipeOutOfRepl} <${pipeIntoRepl} & :;
-
-
-echo debug > ${pipeIntoRepl};
-watch -n 2 "echo -e \"[self._machine_manager._pymach.get_current_command_index(),self._machine_manager._pymach.get_temperature(0),self._machine_manager._pymach.get_temperature_settings()[0]]\" > ${pipeIntoRepl}" > /dev/null & :; 
-
-#at this point, all of our asynchronous tasks are cranking away and we can sit back and relax
-
-echo waiting for ${logFile} to exist...;
-#wait for the log file to exist, so as  not to cause the tail command, below, to throw an error when it tries to read a non-existent file.
-while [ ! -f ${logFile} ]; do echo "log file does not yet exist.  waiting..."; sleep 1; done;
-
-
-#when running this whole script as a one-liner, the following command is useful because it causes us to previewthe log entries in real time.
-tail -f ${logFile} ;
-
-#this is a bit of a bogus command just to prevent this shell from ever exiting (unless of course we manually kill it, which is the intended way to stop this shell).
-# we need this because all of our business logic is running asynchronous subshells.
-#if we did not do something explicit here to wait, we would fall out the bottom of the subshell and the 
-# cleanup up command that we registered with trap, above, would fire, stopping the logging process.
-#wait for 
-wait $(jobs -p)
-)
-
-# exec 8<> ${pipeIntoRepl}; 
-# exec 9<> ${pipeOutOfRepl}; 
-# (echo -e "debug\n" && cat ${pipeIntoRepl}) | python /usr/scripts/repl.py > ${pipeOutOfRepl} <${pipeIntoRepl} & :; 
- 
-# rm ${pipeIntoRepl};
-# rm ${pipeOutOfRepl};
-# kill %1 %2;
-
 
 #keep an eye on processes spawned by the shell in which we are running our repl-manipulation commands.
 processIdOfMonitoringShell=11130
@@ -623,6 +499,7 @@ watch "ps -l | grep -E -e \"(re()pl)|(mach()ine)\""
 
 
 # the state-of-the-art one-line version
+
 
 divider=$( yes = | head -80 | tr -d "\n"); watch -n 1 "tail /tmp/neil_log_1; echo -e \"${divider}\n\"; ls -al /tmp/neil_log_1; ls -al /tmp/neiltemp1; ls -al /tmp/neiltemp2; echo -e \"${divider}\n\"; ps -l | grep -E -e \"(re()pl)|(mach()ine)|(no()hup)\"; ";
 
