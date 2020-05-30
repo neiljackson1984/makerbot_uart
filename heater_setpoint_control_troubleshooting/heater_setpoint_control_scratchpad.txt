@@ -14,6 +14,9 @@ cat /tmp/messsages.0
 #set the clock based on a public ntp server:
 ntpd -d -n -q -g -p pool.ntp.org
 
+#set the clock based on a public ntp server:
+ntpd -d -n -g -p pool.ntp.org
+
 tail -n 20 -f /var/home/logs/printer/toolhead_0_temp.log
 tail -n 20 -f /var/home/logs/printer/machine_586.log
 tail -n 20 -f /var/home/logs/kaiten/event.log
@@ -498,10 +501,10 @@ watch "ps -l | grep -E -e \"(repl)|(machine)\" | sed \\\$d | sed \\\$d | sed \\\
 watch "ps -l | grep -E -e \"(re()pl)|(mach()ine)\""
 
 
-# the state-of-the-art one-line version
 
 
 divider=$( yes = | head -80 | tr -d "\n"); watch -n 1 "tail /tmp/neil_log_1; echo -e \"${divider}\n\"; ls -al /tmp/neil_log_1; ls -al /tmp/neiltemp1; ls -al /tmp/neiltemp2; echo -e \"${divider}\n\"; ps -l | grep -E -e \"(re()pl)|(mach()ine)|(no()hup)\"; ";
+
 
 tail -f /tmp/neil_log_1;
 
