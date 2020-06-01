@@ -1,0 +1,1823 @@
+0007c8a4 T Abort
+0007cad8 T AccelerationBufferEmpty
+0007ca24 T AnyHeaterAboveTemp
+0007ce2c T BeginHesLog
+0007c410 T ChangeHesSampleRate
+0007c4dc T ChangeTool
+0007c368 T ClearAllBuffers
+0007cfe8 T ClearAllZPause
+0007d1d8 T ClearPositionReference
+0007cffc T ClearZPauseMm
+0007c85c T CloseAndCleanup
+0007c43c T ConfigureHes
+0007d060 T ConnectTool
+0007cb1c T Cool
+00071984 T CreateBirdwingMachine
+0007d298 T CreateParserInterface
+0007d278 T DestroyMachine
+0007d254 T DestroyParserInterface
+0007c848 T DisableSpi
+0007cfac T DisableZPause
+0007c834 T EnableSpi
+0007cbc0 T EnableToolheadIdle
+0007cfc0 T EnableZPause
+0007ce0c T EndHesLog
+0007cedc T EndstopTriggered
+0007c890 T FastAbort
+0007c37c T FindKnobZ
+0007c690 T GetAxesPosition
+0007d120 T GetCachedToolUsageStats
+0007c328 T GetCurrentCommandIndex
+0007ccdc T GetExtendedToolheadSelfCheckResults
+0007c4bc T GetExtrusionDistancePercent
+0007c608 T GetFilamentPresence
+0007c468 T GetHeaterProgressPercent
+0007cde0 T GetHesLog
+0007c6e8 T GetMoveBufferPosition
+0007c3a0 T GetPowerValue
+0007cd90 T GetRawHesValue
+0007c2e0 T GetSyncState
+0007c7fc T GetTemperature
+0007c77c T GetTemperatureSettings
+0007d170 T GetToolId
+0007d194 T GetToolUid
+0007d144 T GetToolUsageStats
+0007c5a8 T GetToolheadFirmwareVersion
+0007cd08 T GetToolheadSelfCheckResults
+0007d230 T HasValidPositionReference
+0007c67c T Heat
+0007cdbc T HesLogLoaded
+0007cf00 T HomeAxis
+0007d1ec T ImmediateToolheadError
+0007c520 T InitializeFromSettings
+0007c8b8 T IsInitialized
+0007d03c T IsToolConnected
+0007d258 T Iterate
+0007cca8 T LedSleep
+0007cc94 T LedWake
+0007c5e4 T LoadFilamentJamSettings
+0007c540 T LoadPrintMetaSettings
+0007c7c4 T LoadTemperatureSettings
+0007cab8 T LogToolEeprom
+0007c870 T MotorAbort
+0007cf44 T MotorEnable
+0007ce7c T Move
+0007cd54 T MoveAxis
+0007caf8 T MoveBufferEmpty
+0007cd34 T PerformToolheadSelfCheck
+0007c668 T PowerMonitorClose
+0007c654 T PowerMonitorInit
+0007c584 T ProgramToolhead
+0007c560 T ProgramYonkers
+0007c348 T PruIsPaused
+0007c640 T QueryPowerInfo
+0007cc74 T QuickPause
+0007c488 T ResetExtrusionDistance
+0007c62c T ResetHeaterWatchdog
+0007d0b8 T ResetToolUsage
+0007cfd4 T ResetZPauseIndex
+0007c3e4 T SamplePower
+0007d084 T ScanToolheads
+0007c8fc T SetChamberBlink
+0007c93c T SetChamberColor
+0007cbf4 T SetExtruderDelay
+0007cb54 T SetFanDuty
+0007cb30 T SetHeaterDuty
+0007c9b4 T SetInterfaceAddress
+0007c91c T SetKnobBlink
+0007c978 T SetKnobColor
+0007c9d4 T SetLedBlink
+0007ca00 T SetLedBrightness
+0007ccbc T SetMooseChamberBrightness
+0007c740 T SetMoveBufferPosition
+0007c8d8 T SetPosition
+0007d1b8 T SetPositionReference
+0007c2bc T SetPrintContext
+0007cb9c T SetTemperatureTarget
+0007cf88 T SetToolheadIdleUpdatePeriod
+0007d01c T SetZPauseMm
+0007c820 T Shutdown
+0007c304 T SyncStateConfirmed
+0007cc54 T ToggleAcceleration
+0007cc34 T ToggleAccelerationLookahead
+0007cc14 T ToggleExpendBuffer
+0007c49c T ToggleExtrusionPercentUpdate
+0007cb78 T ToggleFan
+0007cf68 T ToggleFilamentJam
+0007c4fc T ToggleToolheadPower
+0007cbd4 T ToggleToolheadSyncing
+0007ce58 T ToolheadAcknowledgedHes
+0007d0fc T ToolheadBlocking
+0007d20c T ToolheadOk
+0007d0d8 T UpdateToolRefurbCount
+0007d098 T UpdateToolUsageStats
+0007ca48 T WaitForHeatersAtLeastTarget
+0007ca80 T WaitForHeatersAtTarget
+0008c97c T getBaseAddr(int)
+00086d30 T secondsToTicks(float)
+00059170 T BuildToolheadFromKey(std::string, unsigned char, machine::MachineResponseStatus*)
+0004f08c T sqrt(q14 const&)
+00046600 T crc16(unsigned char*, unsigned short)
+000b3f48 V guard variable for boost::log::v2_mt_posix::aux::lazy_singleton<boost::log::v2_mt_posix::sources::aux::logger_singleton<log_obj>, boost::shared_ptr<boost::log::v2_mt_posix::sources::aux::logger_holder<boost::log::v2_mt_posix::sources::severity_channel_logger<boost::log::v2_mt_posix::trivial::severity_level, std::string> > > >::get_instance()::instance
+000b4e84 V guard variable for boost::log::v2_mt_posix::aux::lazy_singleton<boost::log::v2_mt_posix::sources::aux::logger_singleton<telem_obj>, boost::shared_ptr<boost::log::v2_mt_posix::sources::aux::logger_holder<boost::log::v2_mt_posix::sources::severity_channel_logger<boost::log::v2_mt_posix::trivial::severity_level, std::string> > > >::get_instance()::instance
+000b4e60 V guard variable for boost::array<std::pair<boost::log::v2_mt_posix::type_info_wrapper, void*>, 2u> const& boost::log::v2_mt_posix::aux::type_sequence_dispatcher<boost::mpl::vector2<std::string, std::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t> > > >::get_dispatching_map<boost::log::v2_mt_posix::binder1st<boost::log::v2_mt_posix::output_fun, boost::log::v2_mt_posix::basic_formatting_ostream<char, std::char_traits<char>, std::allocator<char> >&> >()::instance
+0008d550 T libstepper::QuickPause(bool)
+0008c7a8 T libstepper::TimedPause(machine::AxisName, unsigned int, bool)
+00086f14 T libstepper::CacheBuffer()
+0008e1a8 T libstepper::GetPosition(machine::AxisName)
+000820a0 T libstepper::SetPosition(machine::AxisName, unsigned int)
+00086e68 T libstepper::BufferIsFull()
+0008d284 T libstepper::SetSyncDelay(unsigned char)
+0008113c T libstepper::UpdatePruLog()
+0008d5a4 T libstepper::ToggleSyncing(bool)
+0008e938 T libstepper::GetStatusFlags(machine::AxisName)
+00086bfc T libstepper::DebugReadL3Byte(int)
+00086c20 T libstepper::DebugReadPruByte(int)
+00086f0c T libstepper::LoadCachedBuffer()
+00086f1c T libstepper::AxisConfiguration::AxisConfiguration()
+00086f1c T libstepper::AxisConfiguration::AxisConfiguration()
+0008dd54 T libstepper::CheckAxesComplete()
+000876d0 T libstepper::GetAvailableSpace(machine::AxisName, int*)
+0008d804 T libstepper::WaitForCompletion(std::set<machine::AxisName, std::less<machine::AxisName>, std::allocator<machine::AxisName> > const&, float)
+00086c8c T libstepper::MicrosecondsPerTick()
+00086d60 T libstepper::BufferIsTrapezoidFull(bool)
+00086c44 T libstepper::GetCurrentCommandIndex()
+0008c724 T libstepper::On(std::set<machine::AxisName, std::less<machine::AxisName>, std::allocator<machine::AxisName> > const&)
+0008120c T libstepper::Off(std::set<machine::AxisName, std::less<machine::AxisName>, std::allocator<machine::AxisName> > const&)
+00081298 T libstepper::Init()
+00081f4c T libstepper::Move(machine::AxisName, int, int, unsigned int, bool, bool, bool, int, int, unsigned int)
+000819f4 T libstepper::Abort(bool)
+0008d52c T libstepper::Resume()
+000b3ef8 D libstepper::lockFd
+0008c640 T libstepper::SetVref(machine::AxisName, bool)
+00086860 T libstepper::libLock()
+00081c84 T libstepper::Shutdown()
+000878f4 T libstepper::IsRunning()
+00086f30 T libstepper::libUnlock()
+000771cc T json_config::safe_get(Json::Value const&, std::string const&, Json::Value const*&)
+00077354 T json_config::safe_get(Json::Value const&, std::string const&, bool&)
+00077888 T json_config::safe_get(Json::Value const&, std::string const&, float&)
+000776cc T json_config::safe_get(Json::Value const&, std::string const&, int&)
+00077510 T json_config::safe_get(Json::Value const&, std::string const&, unsigned int&)
+00054a30 T InterfaceLED::Initialize()
+00053cf8 T InterfaceLED::SetChannel(unsigned char, unsigned char, unsigned char, InterfaceLED::Channel)
+00053c48 T InterfaceLED::SetKnobBlink(float)
+000542e4 T InterfaceLED::SetKnobColor(float, float, float, float)
+00053ca0 T InterfaceLED::SetChamberBlink(float)
+00053f70 T InterfaceLED::SetChamberColor(float, float, float, float)
+000536e0 T InterfaceLED::SetMooseChamberBrightness(float)
+00054778 T InterfaceLED::Wake()
+00054658 T InterfaceLED::Sleep()
+00053900 T InterfaceLED::SetBlink(float, InterfaceLED::Channel)
+00054e98 T PowerMonitor::SamplePower(machine::PowerMonitorRail, machine::PowerMonitorValue, unsigned short)
+00047024 T PowerMonitor::GetPowerValue(machine::PowerMonitorRail, machine::PowerMonitorValue, unsigned short*, float*, float*)
+00055344 T PowerMonitor::QueryPowerInfo()
+00047c58 T PowerMonitor::CheckValidEnums(machine::PowerMonitorRail, machine::PowerMonitorValue)
+00054d04 T PowerMonitor::SwitchPowerChip(machine::PowerMonitorRail)
+000534b8 T PowerMonitor::SetCalibrationValue(unsigned short)
+000535cc T PowerMonitor::SetConfigurationRegister()
+0005543c T PowerMonitor::Init()
+0005211c T PowerMonitor::Close()
+00053368 T PowerMonitor::GetValue(machine::PowerMonitorValue, short&)
+00047088 T PowerMonitor::PowerMonitor(std::unique_ptr<I2C, std::default_delete<I2C> >)
+00047088 T PowerMonitor::PowerMonitor(std::unique_ptr<I2C, std::default_delete<I2C> >)
+0003b0d0 T acceleration::FanCommand::ProcessCommand()
+0003b0a4 T acceleration::FanDutyCommand::ProcessCommand()
+00038c30 T acceleration::TemperatureCommand::ProcessCommand()
+00080990 T acceleration::Block::initialize(std::vector<float, std::allocator<float> >, std::vector<float, std::allocator<float> >, std::vector<float, std::allocator<float> >, float, float, bool, int)
+0009062c T acceleration::Block::Block(unsigned int)
+0009062c T acceleration::Block::Block(unsigned int)
+0008ae64 T acceleration::RawMove::RawMove(std::vector<float, std::allocator<float> > const&, float, float, int, bool)
+000905a4 T acceleration::RawMove::RawMove(unsigned int)
+0008ae64 T acceleration::RawMove::RawMove(std::vector<float, std::allocator<float> > const&, float, float, int, bool)
+000905a4 T acceleration::RawMove::RawMove(unsigned int)
+00045914 T HeaterManager::ClearHeaters()
+00045d44 T HeaterManager::UpdateStatus()
+00045f70 T HeaterManager::ResetWatchdog()
+00045dbc T HeaterManager::HeatersAtTarget(unsigned char, bool)
+00045c40 T HeaterManager::GetProgressPercent(short*)
+00047168 T HeaterManager::LoadWatchdogSettings(unsigned char, unsigned char, unsigned char, unsigned char, unsigned char, unsigned char, unsigned char, unsigned short, unsigned short)
+00047470 T HeaterManager::SetTemperatureTarget(unsigned char, short)
+00045684 T HeaterManager::GetTemperatureLogLine(unsigned char)
+00045bdc T HeaterManager::LoadTemperatureSettings(short const*)
+000478d4 T HeaterManager::Cool()
+00047928 T HeaterManager::Heat()
+00045c2c T HeaterManager::GetError()
+00045c24 T HeaterManager::SetError(machine::Error)
+00045a54 T HeaterManager::AddHeater(std::shared_ptr<Heater>)
+0004739c T HeaterManager::HeaterManager()
+0004739c T HeaterManager::HeaterManager()
+0008eddc T UnitConverter::Initialize(unsigned int, std::vector<float, std::allocator<float> > const&, std::vector<double, std::allocator<double> > const&, std::vector<unsigned char, std::allocator<unsigned char> > const&)
+00070be8 T UnitConverter::UnitConverter()
+00070be8 T UnitConverter::UnitConverter()
+00038b4c T NullTransceiver::ChangeTool(std::shared_ptr<ExtruderInterface>)
+00038b50 T NullTransceiver::SetPosition(machine::AxisName, int)
+0003a414 T NullTransceiver::MoveTrapezoid(std::array<std::vector<AbstractTransceiver::ConvertedMove, std::allocator<AbstractTransceiver::ConvertedMove> >, 3u> const&)
+00038b44 T NullTransceiver::SetFilamentFan(unsigned char, bool)
+00038b3c T NullTransceiver::SetFilamentFanDuty(unsigned char, float)
+0003a5a4 T NullTransceiver::Move(std::vector<AbstractTransceiver::ConvertedMove, std::allocator<AbstractTransceiver::ConvertedMove> > const&)
+0004edec T ToolheadManager::DisableSPI()
+00050664 T ToolheadManager::Initialize()
+0004a030 T ToolheadManager::ClearBuffer()
+0005bdc8 T ToolheadManager::GetResponse(unsigned char)
+00049f1c T ToolheadManager::SetFilepath(char const*)
+0005e7d4 T ToolheadManager::GetAPIVersion()
+0005e78c T ToolheadManager::RequestStatus()
+0004cf4c T ToolheadManager::ResetWatchdog()
+0005d0f0 T ToolheadManager::DumpToolEEPROM(unsigned char)
+00049dec T ToolheadManager::GetNextCommand()
+0004a17c T ToolheadManager::LogPacketError(std::string)
+00049dcc T ToolheadManager::Pack32BitTo8Bit(unsigned int, unsigned char*)
+00049f14 T ToolheadManager::SetStatusStruct(machine::ToolheadStatus*)
+00049dac T ToolheadManager::CheckLongestMove(unsigned char const*)
+00056b04 T ToolheadManager::MarkDisconnected()
+00049b3c T ToolheadManager::ResetLongestMove()
+0004a5cc T ToolheadManager::ResetPacketStats()
+0004a7a8 T ToolheadManager::SetBlockWatchdog(toolhead::Commands)
+0005c3c4 T ToolheadManager::GetStatusResponse(toolhead::Commands)
+0005e7b0 T ToolheadManager::GetFirmwareVersion()
+00049ec4 T ToolheadManager::SaveCurrentCommand()
+0005eae8 T ToolheadManager::ClearToolheadBuffer()
+0004a0b4 T ToolheadManager::SetStatusUpdateTime(float)
+00049d88 T ToolheadManager::Unpack32BitFrom8Bit(unsigned char const*)
+0004cf74 T ToolheadManager::LoadWatchdogSettings(unsigned char, unsigned char, unsigned char, unsigned char, unsigned char, unsigned char, unsigned short, unsigned short)
+0004b944 T ToolheadManager::PrepareCommandPacket(unsigned char, unsigned char const*, unsigned char, bool)
+0004ceec T ToolheadManager::SetTemperatureTarget(short)
+0005aa4c T ToolheadManager::InitializeCommandBuffer()
+0004a11c T ToolheadManager::HESConfigureAcknowledged()
+0004d16c T ToolheadManager::Send(unsigned char const*, int)
+0004cdec T ToolheadManager::Abort()
+0005e698 T ToolheadManager::Pause()
+0005e5a4 T ToolheadManager::Resume()
+00057844 T ToolheadManager::Disable()
+00056b50 T ToolheadManager::Iterate()
+0004cfe0 T ToolheadManager::Receive(unsigned short)
+00056af0 T ToolheadManager::Power12V(bool)
+0004ecf4 T ToolheadManager::EnableSPI()
+000578a0 T ToolheadManager::PowerData(bool)
+0005e7f8 T ToolheadManager::SelfCheck()
+0004fd38 T ToolheadManager::ToolheadManager(unsigned char)
+0004fd38 T ToolheadManager::ToolheadManager(unsigned char)
+0006e4f8 T AccelerationMath::GetStartSpeed(float, float, float)
+0006e090 T AccelerationMath::GetAxisFeedrates(std::vector<float, std::allocator<float> > const&, float, std::vector<float, std::allocator<float> > const&, float)
+0006e6b0 T AccelerationMath::GetAccelerationTime(float, float, float)
+0006defc T AccelerationMath::EnforceExtruderSpeed(std::vector<float, std::allocator<float> > const&)
+0006e704 T AccelerationMath::GetAccelerationDistance(float, float, float)
+0006e5fc T AccelerationMath::GetIntersectionDistance(float, float, float, float)
+0006e354 T AccelerationMath::GetAxisAccelerationRates(std::vector<float, std::allocator<float> > const&, float, float, std::vector<float, std::allocator<float> > const&)
+00038ad0 T AccelerationMath::IsSmall(float)
+00070cbc T StepperConversions::ChangeTool(std::shared_ptr<ExtruderInterface>)
+0008f5c8 T StepperConversions::Initialize(std::vector<float, std::allocator<float> > const&)
+00079960 T StepperConversions::ConvertMove(acceleration::Move const&)
+00070f28 T StepperConversions::SetPosition(machine::AxisName, float)
+00070f10 T StepperConversions::BufferIsFull(bool)
+00079e34 T StepperConversions::MoveTrapezoid(std::tuple<acceleration::Move, acceleration::Move, acceleration::Move> const&, double*)
+00079e34 T _ZN18StepperConversions13MoveTrapezoidERKSt5tupleIJN12acceleration4MoveES2_S2_EEPd
+00070f94 T StepperConversions::SetFilamentFan(unsigned char, bool)
+00070f6c T StepperConversions::SetFilamentFanDuty(unsigned char, float)
+0007ab40 T StepperConversions::Move(acceleration::Move const&)
+00070c54 T StepperConversions::StepperConversions(std::shared_ptr<AbstractTransceiver>)
+00070c54 T StepperConversions::StepperConversions(std::shared_ptr<AbstractTransceiver>)
+000517bc T ToolheadProgrammer::GetHexFile(char const*, ToolheadProgrammer::Target)
+00065354 T ToolheadProgrammer::ClearProgramFile()
+0004ebf0 T ToolheadProgrammer::Power(bool)
+00066b28 T ToolheadProgrammer::Reset()
+00075a7c T ToolheadProgrammer::Program(std::unique_ptr<HAL::ToolheadSPI, std::default_delete<HAL::ToolheadSPI> > const&)
+00065378 T ToolheadProgrammer::GetState()
+00066f44 T ToolheadProgrammer::SendData(unsigned char const*, unsigned int, std::unique_ptr<HAL::ToolheadSPI, std::default_delete<HAL::ToolheadSPI> > const&)
+00075100 T ToolheadProgrammer::SendPage(unsigned char const*, unsigned char, std::unique_ptr<HAL::ToolheadSPI, std::default_delete<HAL::ToolheadSPI> > const&)
+0004ec04 T ToolheadProgrammer::ToolheadProgrammer(unsigned char)
+0004ec04 T ToolheadProgrammer::ToolheadProgrammer(unsigned char)
+00065364 T ToolheadProgrammer::~ToolheadProgrammer()
+00065364 T ToolheadProgrammer::~ToolheadProgrammer()
+0007992c T AbstractTransceiver::ConvertedMove::ConvertedMove()
+0007992c T AbstractTransceiver::ConvertedMove::ConvertedMove()
+00069fa4 T AccelerationManager::Initialize()
+00069fc8 T AccelerationManager::ClearBuffer()
+00092048 T AccelerationManager::LoadSettings(Json::Value)
+0007ebf0 T AccelerationManager::LogChannelName()
+0006955c T AccelerationManager::QueueFilamentFan(unsigned char, bool, unsigned int)
+0008921c T AccelerationManager::ToggleAcceleration(bool)
+0008923c T AccelerationManager::ToggleExpendBuffer(bool)
+00068d8c T AccelerationManager::QueueFilamentFanDuty(unsigned char, float, unsigned int)
+0007ebb0 T AccelerationManager::TelemetryChannelName()
+00069170 T AccelerationManager::QueueTemperatureTarget(unsigned char, short, unsigned int)
+0007ef78 T AccelerationManager::Abort()
+00072598 T AccelerationManager::AddMove(std::vector<float, std::allocator<float> > const&, float)
+00072a40 T AccelerationManager::AddMove(std::vector<float, std::allocator<float> > const&, float, float, int, std::vector<MakerBot::ToolpathTag, std::allocator<MakerBot::ToolpathTag> > const&)
+00087d14 T AccelerationManager::Iterate()
+00069b18 T AccelerationManager::AccelerationManager(std::shared_ptr<StepperConversions>)
+00069b18 T AccelerationManager::AccelerationManager(std::shared_ptr<StepperConversions>)
+0006a354 T AccelerationManager::~AccelerationManager()
+0006a354 T AccelerationManager::~AccelerationManager()
+0005ebe8 T BirdwingTransceiver::ChangeTool(std::shared_ptr<ExtruderInterface>)
+000819cc T BirdwingTransceiver::Initialize()
+0008221c T BirdwingTransceiver::SetPosition(machine::AxisName, int)
+000824a4 T BirdwingTransceiver::MoveTrapezoid(std::array<std::vector<AbstractTransceiver::ConvertedMove, std::allocator<AbstractTransceiver::ConvertedMove> >, 3u> const&)
+0008d76c T BirdwingTransceiver::ToggleSyncing(bool)
+000396f4 T BirdwingTransceiver::SetFilamentFan(unsigned char, bool)
+0008d2a4 T BirdwingTransceiver::SetExtruderDelay(unsigned short)
+000878e8 T BirdwingTransceiver::GetAvailableSpace(machine::AxisName, int*)
+000811a8 T BirdwingTransceiver::UpdateStallStatus()
+000396d4 T BirdwingTransceiver::SetFilamentFanDuty(unsigned char, float)
+00082294 T BirdwingTransceiver::Move(std::vector<AbstractTransceiver::ConvertedMove, std::allocator<AbstractTransceiver::ConvertedMove> > const&)
+00081c4c T BirdwingTransceiver::Abort(bool)
+0008c698 T BirdwingTransceiver::Enable(machine::AxisName, bool)
+00039710 T BirdwingTransceiver::SetVref(machine::AxisName, bool)
+0008d574 T BirdwingTransceiver::SetPaused(bool)
+00046fb8 T BirdwingTransceiver::BirdwingTransceiver()
+00046fb8 T BirdwingTransceiver::BirdwingTransceiver()
+00060474 T BirdwingTransceiver::~BirdwingTransceiver()
+00060394 T BirdwingTransceiver::~BirdwingTransceiver()
+00060394 T BirdwingTransceiver::~BirdwingTransceiver()
+0004c2c8 T BronxToolheadManager::ReadHESLog()
+0004bf54 T BronxToolheadManager::SetFanDuty(float, unsigned char)
+0004bd80 T BronxToolheadManager::BeginHESLog(unsigned short, bool)
+0004c480 T BronxToolheadManager::SetLEDBlink(unsigned char, float)
+0004bd04 T BronxToolheadManager::SetPosition(int)
+0004bfe8 T BronxToolheadManager::ConfigureHES(unsigned char, unsigned short)
+00048cf4 T BronxToolheadManager::GetRawHESVal(bool*, short*)
+00066c24 T BronxToolheadManager::ProgramReset()
+00039600 T BronxToolheadManager::HESConfigured()
+0004c7ec T BronxToolheadManager::MoveTrapezoid(short const (&) [3], int const (&) [3], int const (&) [3], unsigned int const (&) [3], int const (&) [3], bool const (&) [3])
+0004be70 T BronxToolheadManager::ToggleSyncing(bool)
+000518ec T BronxToolheadManager::ProgramYonkers(char const*)
+0004beb4 T BronxToolheadManager::QueryRawHESVal()
+0004ccec T BronxToolheadManager::ResetToolUsage()
+0004bf20 T BronxToolheadManager::SetFilamentFan(bool)
+00046720 T BronxToolheadManager::LogExtruderInfo()
+000395bc T BronxToolheadManager::SpecializedInit()
+00046708 T BronxToolheadManager::PackMoveBitfield(bool)
+0004bd50 T BronxToolheadManager::RetrievePosition()
+0004be3c T BronxToolheadManager::SetLEDBrightness(unsigned char)
+000479d8 T BronxToolheadManager::UpdateCurrentUID(unsigned int)
+00039400 T BronxToolheadManager::FilamentIsPresent()
+000395d0 T BronxToolheadManager::LoadAccelSettings(unsigned char, unsigned char, int, unsigned char, unsigned char)
+0005d21c T BronxToolheadManager::ProcessStatusBytes()
+0004beec T BronxToolheadManager::ToggleJamDetection(bool)
+00045fe0 T BronxToolheadManager::ToolSelfCheckState::stringify_results()
+00046b04 T BronxToolheadManager::ToolSelfCheckState::succeeded()
+00046b90 T BronxToolheadManager::ToolSelfCheckState::ToolSelfCheckState()
+00046b90 T BronxToolheadManager::ToolSelfCheckState::ToolSelfCheckState()
+000462c8 T BronxToolheadManager::BronxSelfCheckState::stringify_results()
+00046b5c T BronxToolheadManager::BronxSelfCheckState::succeeded()
+00046bac T BronxToolheadManager::BronxSelfCheckState::BronxSelfCheckState()
+00046bac T BronxToolheadManager::BronxSelfCheckState::BronxSelfCheckState()
+0004c5e8 T BronxToolheadManager::ChangeHESSampleRate(float, float*)
+00046afc T BronxToolheadManager::SetFanHeaterPreload(unsigned char)
+0004c064 T BronxToolheadManager::UploadAccelSettings()
+0003949c T BronxToolheadManager::PacketContainsStatus(toolhead::Commands)
+0004cba4 T BronxToolheadManager::UpdateToolUsageStats()
+0004bde4 T BronxToolheadManager::ConfigureJamDetection(float)
+0004c030 T BronxToolheadManager::UpdateToolRefurbCount(bool)
+0004caac T BronxToolheadManager::CheckToolEEPROMVersion()
+00039428 T BronxToolheadManager::ResetExtrusionDistance()
+0004c994 T BronxToolheadManager::RetrieveToolUsageStats()
+0006c200 T BronxToolheadManager::IncrementExtrusionDistance(unsigned short)
+00039414 T BronxToolheadManager::ToggleExtrusionPercentUpdate(bool)
+0004c1ac T BronxToolheadManager::Idle()
+0004c118 T BronxToolheadManager::Move(short, int, int, unsigned int, int)
+0004cee8 T BronxToolheadManager::Abort()
+00076f80 T BronxToolheadManager::Program(char const*)
+0004c0c8 T BronxToolheadManager::EndHESLog()
+0003a788 T BronxToolheadManager::GetHESLog(unsigned short, int*)
+00059014 T BronxToolheadManager::BronxToolheadManager(unsigned char)
+00059014 T BronxToolheadManager::BronxToolheadManager(unsigned char)
+0004fb0c T BronxToolheadManager::~BronxToolheadManager()
+0004f8a8 T BronxToolheadManager::~BronxToolheadManager()
+0004f8a8 T BronxToolheadManager::~BronxToolheadManager()
+0008978c T SimpleRotatingLogger::FileExists(unsigned char)
+00089430 T SimpleRotatingLogger::FileTooLarge(unsigned char)
+00089838 T SimpleRotatingLogger::InitializeLogIndex()
+000896fc T SimpleRotatingLogger::Log(std::string const&)
+000898bc T SimpleRotatingLogger::Open(std::string const&)
+000898ec T SimpleRotatingLogger::Close()
+000894e8 T SimpleRotatingLogger::Update(bool)
+0008924c T SimpleRotatingLogger::GetName(unsigned char)
+000899b8 T SimpleRotatingLogger::SimpleRotatingLogger(unsigned char, int)
+000899b8 T SimpleRotatingLogger::SimpleRotatingLogger(unsigned char, int)
+00089918 T SimpleRotatingLogger::~SimpleRotatingLogger()
+00089918 T SimpleRotatingLogger::~SimpleRotatingLogger()
+0008f694 T InitializationHelpers::BuildSettings(Json::Value const&, Machine*)
+00059b88 T InitializationHelpers::BuildToolheads(Json::Value const&, Machine*)
+0004b3f0 T InitializationHelpers::ContainsAllAxes(Json::Value const&, std::string, std::function<bool (Json::Value const&)>)
+00050b28 T InitializationHelpers::BuildHomeSettings(Json::Value const&, Machine*)
+000506f4 T InitializationHelpers::InitializeEndstop(machine::AxisName, std::string, bool)
+0004ae9c T InitializationHelpers::ContainsGantryAxes(Json::Value const&, std::string, std::function<bool (Json::Value const&)>)
+000654b0 T InitializationHelpers::ShouldRebuildToolheads(Json::Value const&, std::map<std::string, std::vector<unsigned char, std::allocator<unsigned char> >, std::less<std::string>, std::allocator<std::pair<std::string const, std::vector<unsigned char, std::allocator<unsigned char> > > > > const&)
+00059584 T InitializationHelpers::BuildToolheadFromSettings(Json::Value const&, std::string, unsigned char, machine::MachineResponseStatus*, std::array<std::shared_ptr<ToolheadManager>, 2u>&, std::map<int, std::shared_ptr<ExtruderInterface>, std::less<int>, std::allocator<std::pair<int const, std::shared_ptr<ExtruderInterface> > > >&, std::map<int, std::shared_ptr<HESInterface>, std::less<int>, std::allocator<std::pair<int const, std::shared_ptr<HESInterface> > > >&)
+000660dc T InitializationHelpers::AddToolheadToSpecificArray(std::shared_ptr<ToolheadManager>, std::string, unsigned char, std::map<int, std::shared_ptr<ExtruderInterface>, std::less<int>, std::allocator<std::pair<int const, std::shared_ptr<ExtruderInterface> > > >&, std::map<int, std::shared_ptr<HESInterface>, std::less<int>, std::allocator<std::pair<int const, std::shared_ptr<HESInterface> > > >&)
+0006635c T InitializationHelpers::IsToolheadStructureCorrect(Json::Value const&)
+0004d1d4 T InitializationHelpers::InitializeHeaterFromSettings(Json::Value const&, unsigned char, Machine*)
+0005e8b4 T ChamberToolheadManager::SetFanDuty(float, unsigned char)
+00066c0c T ChamberToolheadManager::ProgramReset()
+0005e848 T ChamberToolheadManager::SetHeaterDuty(float)
+0005e9e4 T ChamberToolheadManager::SetFilamentFan(bool)
+000390dc T ChamberToolheadManager::SpecializedInit()
+0006c438 T ChamberToolheadManager::ProcessStatusBytes()
+000390d0 T ChamberToolheadManager::PacketContainsStatus(toolhead::Commands)
+00041db0 T ChamberToolheadManager::ChamberSelfCheckState::stringify_results()
+000390e0 T ChamberToolheadManager::ChamberSelfCheckState::succeeded()
+0006531c T ChamberToolheadManager::ChamberSelfCheckState::ChamberSelfCheckState()
+0006531c T ChamberToolheadManager::ChamberSelfCheckState::ChamberSelfCheckState()
+0005e890 T ChamberToolheadManager::Abort()
+00076874 T ChamberToolheadManager::Program(char const*)
+00058f90 T ChamberToolheadManager::ChamberToolheadManager(unsigned char)
+00058f90 T ChamberToolheadManager::ChamberToolheadManager(unsigned char)
+00069fb8 T AccelerationManagerImpl::Initialize()
+00091be0 T AccelerationManagerImpl::AddRawMoves()
+0006e78c T AccelerationManagerImpl::BlendBlocks(acceleration::Block&, acceleration::Block&, std::vector<acceleration::ModifiedJerkFunctor, std::allocator<acceleration::ModifiedJerkFunctor> > const&)
+00069cc4 T AccelerationManagerImpl::ClearBuffer()
+0007abe4 T AccelerationManagerImpl::PopMoveFlat()
+00078088 T AccelerationManagerImpl::LoadSettings(Json::Value const&)
+0006e554 T AccelerationManagerImpl::LimitEndSpeed(acceleration::Block&)
+0006f514 T AccelerationManagerImpl::LookAheadCore(acceleration::Block&, acceleration::Block&, bool, bool)
+00088fbc T AccelerationManagerImpl::ScaleEndSpeed(acceleration::Block&, float)
+00091264 T AccelerationManagerImpl::AddMovePrivate(acceleration::RawMove&)
+0006e5a8 T AccelerationManagerImpl::LimitStartSpeed(acceleration::Block&)
+00089038 T AccelerationManagerImpl::ScaleStartSpeed(acceleration::Block&, float)
+0007fbb8 T AccelerationManagerImpl::GetMoveTrapezoid(acceleration::Block const&)
+0007a848 T AccelerationManagerImpl::PopMoveTrapezoid()
+000691b0 T AccelerationManagerImpl::QueueFilamentFan(unsigned char, bool, unsigned int)
+00088a84 T AccelerationManagerImpl::ScaleToDirection(float const*, float const*, float*)
+00088f58 T AccelerationManagerImpl::LimitNominalSpeed(acceleration::Block&)
+00069b58 T AccelerationManagerImpl::TestExtrudersMove(acceleration::Block const&)
+00069ca0 T AccelerationManagerImpl::TestOnlyExtruders(acceleration::Block const&)
+00069c7c T AccelerationManagerImpl::TestOnlyExtruders(acceleration::RawMove const&)
+0006a388 T AccelerationManagerImpl::VectorizeJunction(acceleration::Block const&, acceleration::Block const&)
+000720ec T AccelerationManagerImpl::PopNonMoveCommands()
+00089a70 T AccelerationManagerImpl::SmoothTriangleMove(acceleration::Block&, std::vector<acceleration::ModifiedJerkFunctor, std::allocator<acceleration::ModifiedJerkFunctor> > const&)
+0008c0ec T AccelerationManagerImpl::SplitAndAddRawMove(acceleration::RawMove&)
+0008af1c T AccelerationManagerImpl::SplitAndAddRawMove(acceleration::RawMove&, float, unsigned int)
+00089188 T AccelerationManagerImpl::ToggleAcceleration(bool)
+00088a78 T AccelerationManagerImpl::ToggleExpendBuffer(bool)
+00070654 T AccelerationManagerImpl::ComputeTrapezoidLeg(acceleration::Block const&, float, float, float, int)
+00088a60 T AccelerationManagerImpl::BufferLengthAbovePop()
+000689e0 T AccelerationManagerImpl::QueueFilamentFanDuty(unsigned char, float, unsigned int)
+00088e0c T AccelerationManagerImpl::AdjustExtrusionSpeeds(acceleration::Move&)
+00068dcc T AccelerationManagerImpl::QueueTemperatureTarget(unsigned char, short, unsigned int)
+00091ca4 T AccelerationManagerImpl::AddMove(std::vector<float, std::allocator<float> > const&, float, float, int)
+00087c58 T AccelerationManagerImpl::Iterate()
+0007b318 T AccelerationManagerImpl::PopMove()
+0006f974 T AccelerationManagerImpl::LookAhead()
+0006959c T AccelerationManagerImpl::AccelerationManagerImpl(std::shared_ptr<StepperConversions>&&)
+0006959c T AccelerationManagerImpl::AccelerationManagerImpl(std::shared_ptr<StepperConversions>&&)
+00069fd0 T AccelerationManagerImpl::~AccelerationManagerImpl()
+00069fd0 T AccelerationManagerImpl::~AccelerationManagerImpl()
+0004ede0 T HAL::ToolheadSPI::DisableSPI()
+00050164 T HAL::ToolheadSPI::Initialize(unsigned char)
+0004edb0 T HAL::ToolheadSPI::Deinitialize()
+000484c8 T HAL::ToolheadSPI::Send(unsigned char const*, unsigned short)
+0004810c T HAL::ToolheadSPI::Receive(unsigned char*, unsigned short)
+00047e08 T HAL::ToolheadSPI::Transact(unsigned char const*, unsigned short)
+0004ece8 T HAL::ToolheadSPI::EnableSPI()
+0004ec38 T HAL::ToolheadCommPins::Setup(HAL::ToolheadCommPins::CommPinsTarget, unsigned char)
+000569f4 T HAL::ToolheadCommPins::GetState(HAL::ToolheadCommPins::CommPinsTarget, unsigned char)
+0004ed2c T HAL::ToolheadCommPins::Teardown(HAL::ToolheadCommPins::CommPinsTarget, unsigned char)
+0004dd34 T HAL::LED::InitializeLEDs()
+0004eb30 T HAL::Power::TogglePower(HAL::Power::Powerable, unsigned char, bool)
+00056a64 T HAL::Endstop::Triggered()
+0004ee24 T HAL::Endstop::Endstop(int, HAL::Endstop::EndstopType, bool)
+0004ee24 T HAL::Endstop::Endstop(int, HAL::Endstop::EndstopType, bool)
+000530a4 T I2C::SendPacket(unsigned char*, int)
+00052c4c T I2C::SetAddress(unsigned char)
+00054888 T I2C::ConfigureDevice(i2c_rdwr_ioctl_data*)
+00052dd8 T I2C::Open()
+00052114 T I2C::Close()
+00052f28 T I2C::GetData(unsigned char*, int)
+0004dd50 T gpio::GPIO::Initialize()
+00074b28 T gpio::GPIO::WaitOnEdge(unsigned int)
+0004e59c T gpio::GPIO::SetDirection(bool)
+0004d79c T gpio::GPIO::SetLEDTrigger(char const*, char const*)
+000745ec T gpio::GPIO::SetEdge(std::string)
+00056490 T gpio::GPIO::GetValue()
+0004e048 T gpio::GPIO::SetValue(bool)
+0004eb1c T gpio::GPIO::GPIO(GpioId const*)
+0004ef0c T gpio::GPIO::GPIO(int, int)
+0004eb1c T gpio::GPIO::GPIO(GpioId const*)
+0004ef0c T gpio::GPIO::GPIO(int, int)
+0004eafc T gpio::GPIO::~GPIO()
+0004eafc T gpio::GPIO::~GPIO()
+00045098 W boost::lock_error::~lock_error()
+00045144 W boost::lock_error::~lock_error()
+00045144 W boost::lock_error::~lock_error()
+00080bf8 W boost::shared_ptr<boost::log::v2_mt_posix::sources::aux::logger_holder<boost::log::v2_mt_posix::sources::severity_channel_logger<boost::log::v2_mt_posix::trivial::severity_level, std::string> > >::~shared_ptr()
+00080bf8 W boost::shared_ptr<boost::log::v2_mt_posix::sources::aux::logger_holder<boost::log::v2_mt_posix::sources::severity_channel_logger<boost::log::v2_mt_posix::trivial::severity_level, std::string> > >::~shared_ptr()
+0006493c W boost::detail::sp_if_not_array<boost::log::v2_mt_posix::sinks::basic_text_ostream_backend<char> >::type boost::make_shared<boost::log::v2_mt_posix::sinks::basic_text_ostream_backend<char> >()
+000832ec W boost::unique_lock<boost::mutex>::try_lock()
+00040798 W boost::bad_weak_ptr::~bad_weak_ptr()
+000407d4 W boost::bad_weak_ptr::~bad_weak_ptr()
+000407d4 W boost::bad_weak_ptr::~bad_weak_ptr()
+00045338 W boost::condition_error::~condition_error()
+000453e4 W boost::condition_error::~condition_error()
+000453e4 W boost::condition_error::~condition_error()
+00055a1c W void boost::throw_exception<boost::lock_error>(boost::lock_error const&)
+00055ef4 W void boost::throw_exception<boost::thread_resource_error>(boost::thread_resource_error const&)
+0005600c W void boost::throw_exception<boost::gregorian::bad_day_of_month>(boost::gregorian::bad_day_of_month const&)
+00064bc0 W void boost::throw_exception<boost::gregorian::bad_year>(boost::gregorian::bad_year const&)
+00064aa4 W void boost::throw_exception<boost::gregorian::bad_month>(boost::gregorian::bad_month const&)
+000562f4 W void boost::throw_exception<std::runtime_error>(std::runtime_error const&)
+0003e368 W boost::bad_lexical_cast::~bad_lexical_cast()
+0003e3a4 W boost::bad_lexical_cast::~bad_lexical_cast()
+0003e3a4 W boost::bad_lexical_cast::~bad_lexical_cast()
+000408b8 W boost::exception_detail::clone_base::~clone_base()
+000408ec W boost::exception_detail::clone_base::~clone_base()
+000408ec W boost::exception_detail::clone_base::~clone_base()
+000442d4 W boost::exception_detail::clone_impl<boost::exception_detail::error_info_injector<boost::lock_error> >::~clone_impl()
+00044e38 W boost::exception_detail::clone_impl<boost::exception_detail::error_info_injector<boost::lock_error> >::~clone_impl()
+0003e488 W boost::exception_detail::clone_impl<boost::exception_detail::error_info_injector<boost::bad_weak_ptr> >::~clone_impl()
+0003e1b0 W boost::exception_detail::clone_impl<boost::exception_detail::error_info_injector<boost::bad_weak_ptr> >::~clone_impl()
+000447d8 W boost::exception_detail::clone_impl<boost::exception_detail::error_info_injector<boost::condition_error> >::~clone_impl()
+00044f68 W boost::exception_detail::clone_impl<boost::exception_detail::error_info_injector<boost::condition_error> >::~clone_impl()
+000445a8 W boost::exception_detail::clone_impl<boost::exception_detail::error_info_injector<boost::thread_resource_error> >::~clone_impl()
+00044d08 W boost::exception_detail::clone_impl<boost::exception_detail::error_info_injector<boost::thread_resource_error> >::~clone_impl()
+000620fc W boost::exception_detail::clone_impl<boost::exception_detail::error_info_injector<boost::gregorian::bad_weekday> >::~clone_impl()
+0003dfcc W boost::exception_detail::clone_impl<boost::exception_detail::error_info_injector<boost::gregorian::bad_weekday> >::~clone_impl()
+00061fa4 W boost::exception_detail::clone_impl<boost::exception_detail::error_info_injector<boost::gregorian::bad_day_of_year> >::~clone_impl()
+0003dcbc W boost::exception_detail::clone_impl<boost::exception_detail::error_info_injector<boost::gregorian::bad_day_of_year> >::~clone_impl()
+00061bc4 W boost::exception_detail::clone_impl<boost::exception_detail::error_info_injector<boost::gregorian::bad_day_of_month> >::~clone_impl()
+0003de44 W boost::exception_detail::clone_impl<boost::exception_detail::error_info_injector<boost::gregorian::bad_day_of_month> >::~clone_impl()
+00061e4c W boost::exception_detail::clone_impl<boost::exception_detail::error_info_injector<boost::gregorian::bad_year> >::~clone_impl()
+0003dd80 W boost::exception_detail::clone_impl<boost::exception_detail::error_info_injector<boost::gregorian::bad_year> >::~clone_impl()
+00062254 W boost::exception_detail::clone_impl<boost::exception_detail::error_info_injector<boost::gregorian::bad_month> >::~clone_impl()
+0003df08 W boost::exception_detail::clone_impl<boost::exception_detail::error_info_injector<boost::gregorian::bad_month> >::~clone_impl()
+00061a94 W boost::exception_detail::clone_impl<boost::exception_detail::error_info_injector<std::out_of_range> >::~clone_impl()
+0003e3d8 W boost::exception_detail::clone_impl<boost::exception_detail::error_info_injector<std::out_of_range> >::~clone_impl()
+00061d1c W boost::exception_detail::clone_impl<boost::exception_detail::error_info_injector<std::runtime_error> >::~clone_impl()
+0003e090 W boost::exception_detail::clone_impl<boost::exception_detail::error_info_injector<std::runtime_error> >::~clone_impl()
+00043e80 W boost::exception_detail::refcount_ptr<boost::exception_detail::error_info_container>::adopt(boost::exception_detail::error_info_container*)
+00043d30 W boost::exception_detail::refcount_ptr<boost::exception_detail::error_info_container>::release()
+00044b08 W boost::exception_detail::error_info_injector<boost::lock_error>::~error_info_injector()
+0004440c W boost::exception_detail::error_info_injector<boost::lock_error>::~error_info_injector()
+0004440c W boost::exception_detail::error_info_injector<boost::lock_error>::~error_info_injector()
+0003e5e0 W boost::exception_detail::error_info_injector<boost::bad_weak_ptr>::~error_info_injector()
+0003e554 W boost::exception_detail::error_info_injector<boost::bad_weak_ptr>::~error_info_injector()
+0003e554 W boost::exception_detail::error_info_injector<boost::bad_weak_ptr>::~error_info_injector()
+00044c08 W boost::exception_detail::error_info_injector<boost::condition_error>::~error_info_injector()
+00044910 W boost::exception_detail::error_info_injector<boost::condition_error>::~error_info_injector()
+00044910 W boost::exception_detail::error_info_injector<boost::condition_error>::~error_info_injector()
+00044a08 W boost::exception_detail::error_info_injector<boost::thread_resource_error>::~error_info_injector()
+000446e0 W boost::exception_detail::error_info_injector<boost::thread_resource_error>::~error_info_injector()
+000446e0 W boost::exception_detail::error_info_injector<boost::thread_resource_error>::~error_info_injector()
+000623ac W boost::exception_detail::error_info_injector<boost::gregorian::bad_weekday>::~error_info_injector()
+000621c8 W boost::exception_detail::error_info_injector<boost::gregorian::bad_weekday>::~error_info_injector()
+000621c8 W boost::exception_detail::error_info_injector<boost::gregorian::bad_weekday>::~error_info_injector()
+00062554 W boost::exception_detail::error_info_injector<boost::gregorian::bad_day_of_year>::~error_info_injector()
+00062070 W boost::exception_detail::error_info_injector<boost::gregorian::bad_day_of_year>::~error_info_injector()
+00062070 W boost::exception_detail::error_info_injector<boost::gregorian::bad_day_of_year>::~error_info_injector()
+00062440 W boost::exception_detail::error_info_injector<boost::gregorian::bad_day_of_month>::~error_info_injector()
+00061c90 W boost::exception_detail::error_info_injector<boost::gregorian::bad_day_of_month>::~error_info_injector()
+00061c90 W boost::exception_detail::error_info_injector<boost::gregorian::bad_day_of_month>::~error_info_injector()
+00062668 W boost::exception_detail::error_info_injector<boost::gregorian::bad_year>::~error_info_injector()
+00061f18 W boost::exception_detail::error_info_injector<boost::gregorian::bad_year>::~error_info_injector()
+00061f18 W boost::exception_detail::error_info_injector<boost::gregorian::bad_year>::~error_info_injector()
+000626fc W boost::exception_detail::error_info_injector<boost::gregorian::bad_month>::~error_info_injector()
+00062320 W boost::exception_detail::error_info_injector<boost::gregorian::bad_month>::~error_info_injector()
+00062320 W boost::exception_detail::error_info_injector<boost::gregorian::bad_month>::~error_info_injector()
+000557e8 W boost::exception_detail::error_info_injector<std::out_of_range>::error_info_injector(boost::exception_detail::error_info_injector<std::out_of_range> const&)
+000557e8 W boost::exception_detail::error_info_injector<std::out_of_range>::error_info_injector(boost::exception_detail::error_info_injector<std::out_of_range> const&)
+000624d4 W boost::exception_detail::error_info_injector<std::out_of_range>::~error_info_injector()
+00061b4c W boost::exception_detail::error_info_injector<std::out_of_range>::~error_info_injector()
+00061b4c W boost::exception_detail::error_info_injector<std::out_of_range>::~error_info_injector()
+000625e8 W boost::exception_detail::error_info_injector<std::runtime_error>::~error_info_injector()
+00061dd4 W boost::exception_detail::error_info_injector<std::runtime_error>::~error_info_injector()
+00061dd4 W boost::exception_detail::error_info_injector<std::runtime_error>::~error_info_injector()
+00043d60 W boost::exception_detail::copy_boost_exception(boost::exception*, boost::exception const*)
+0005565c W boost::thread_exception::thread_exception(int, char const*)
+0005565c W boost::thread_exception::thread_exception(int, char const*)
+00045488 W boost::thread_exception::~thread_exception()
+00045534 W boost::thread_exception::~thread_exception()
+00045534 W boost::thread_exception::~thread_exception()
+0003e140 W boost::bad_function_call::~bad_function_call()
+0003e17c W boost::bad_function_call::~bad_function_call()
+0003e17c W boost::bad_function_call::~bad_function_call()
+000889c4 W boost::condition_variable::~condition_variable()
+000889c4 W boost::condition_variable::~condition_variable()
+0004045c W boost::thread_specific_ptr<boost::log::v2_mt_posix::sinks::basic_formatting_sink_frontend<char>::formatting_context>::delete_data::~delete_data()
+00040490 W boost::thread_specific_ptr<boost::log::v2_mt_posix::sinks::basic_formatting_sink_frontend<char>::formatting_context>::delete_data::~delete_data()
+00040490 W boost::thread_specific_ptr<boost::log::v2_mt_posix::sinks::basic_formatting_sink_frontend<char>::formatting_context>::delete_data::~delete_data()
+000441c8 W boost::thread_specific_ptr<boost::log::v2_mt_posix::sinks::basic_formatting_sink_frontend<char>::formatting_context>::delete_data::operator()(void*)
+000845cc W boost::thread_specific_ptr<boost::log::v2_mt_posix::sinks::basic_formatting_sink_frontend<char>::formatting_context>::reset(boost::log::v2_mt_posix::sinks::basic_formatting_sink_frontend<char>::formatting_context*)
+00040404 W boost::thread_specific_ptr<boost::log::v2_mt_posix::sinks::basic_formatting_sink_frontend<wchar_t>::formatting_context>::delete_data::~delete_data()
+00040438 W boost::thread_specific_ptr<boost::log::v2_mt_posix::sinks::basic_formatting_sink_frontend<wchar_t>::formatting_context>::delete_data::~delete_data()
+00040438 W boost::thread_specific_ptr<boost::log::v2_mt_posix::sinks::basic_formatting_sink_frontend<wchar_t>::formatting_context>::delete_data::~delete_data()
+0003eb04 W boost::thread_specific_ptr<boost::log::v2_mt_posix::sinks::basic_formatting_sink_frontend<wchar_t>::formatting_context>::delete_data::operator()(void*)
+000451e8 W boost::thread_resource_error::~thread_resource_error()
+00045294 W boost::thread_resource_error::~thread_resource_error()
+00045294 W boost::thread_resource_error::~thread_resource_error()
+0003e340 W boost::log::v2_mt_posix::attribute_value::impl::detach_from_thread()
+0003e318 W boost::log::v2_mt_posix::attribute_value::impl::get_value()
+0003fdf0 W boost::log::v2_mt_posix::attribute_value::impl::~impl()
+0003fe28 W boost::log::v2_mt_posix::attribute_value::impl::~impl()
+0003fe28 W boost::log::v2_mt_posix::attribute_value::impl::~impl()
+00064000 W void boost::log::v2_mt_posix::type_dispatcher::callback_base::trampoline<boost::log::v2_mt_posix::aux::value_ref_initializer<boost::log::v2_mt_posix::value_ref<boost::log::v2_mt_posix::trivial::severity_level, boost::log::v2_mt_posix::trivial::tag::severity> >, boost::log::v2_mt_posix::trivial::severity_level>(void*, boost::log::v2_mt_posix::trivial::severity_level const&)
+00064010 W void boost::log::v2_mt_posix::type_dispatcher::callback_base::trampoline<boost::log::v2_mt_posix::aux::value_ref_initializer<boost::log::v2_mt_posix::value_ref<std::string, tag::tag_attr> >, std::string>(void*, std::string const&)
+00085fb4 W void boost::log::v2_mt_posix::type_dispatcher::callback_base::trampoline<boost::log::v2_mt_posix::aux::value_ref_initializer<boost::log::v2_mt_posix::value_ref<std::string, void> >, std::string>(void*, std::string const&)
+0006400c W void boost::log::v2_mt_posix::type_dispatcher::callback_base::trampoline<boost::log::v2_mt_posix::nop, std::string>(void*, std::string const&)
+0006183c W void boost::log::v2_mt_posix::type_dispatcher::callback_base::trampoline<boost::log::v2_mt_posix::binder1st<boost::log::v2_mt_posix::output_fun, boost::log::v2_mt_posix::basic_formatting_ostream<char, std::char_traits<char>, std::allocator<char> >&>, std::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t> > >(void*, std::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t> > const&)
+0006d170 W void boost::log::v2_mt_posix::type_dispatcher::callback_base::trampoline<boost::log::v2_mt_posix::binder1st<boost::log::v2_mt_posix::output_fun, boost::log::v2_mt_posix::basic_formatting_ostream<char, std::char_traits<char>, std::allocator<char> >&>, std::string>(void*, std::string const&)
+000559e4 W boost::log::v2_mt_posix::intrusive_ptr_release(boost::log::v2_mt_posix::intrusive_ref_counter const*)
+00040808 W boost::log::v2_mt_posix::intrusive_ref_counter::~intrusive_ref_counter()
+0004083c W boost::log::v2_mt_posix::intrusive_ref_counter::~intrusive_ref_counter()
+0004083c W boost::log::v2_mt_posix::intrusive_ref_counter::~intrusive_ref_counter()
+0006cf18 W boost::log::v2_mt_posix::basic_formatting_ostream<char, std::char_traits<char>, std::allocator<char> >& boost::log::v2_mt_posix::basic_formatting_ostream<char, std::char_traits<char>, std::allocator<char> >::formatted_write<char>(char const*, int)
+0008308c W boost::log::v2_mt_posix::basic_formatting_ostream<char, std::char_traits<char>, std::allocator<char> >& boost::log::v2_mt_posix::basic_formatting_ostream<char, std::char_traits<char>, std::allocator<char> >::formatted_write<wchar_t>(wchar_t const*, int)
+00082a84 W boost::log::v2_mt_posix::basic_formatting_ostream<char, std::char_traits<char>, std::allocator<char> >::~basic_formatting_ostream()
+00082a84 W boost::log::v2_mt_posix::basic_formatting_ostream<char, std::char_traits<char>, std::allocator<char> >::~basic_formatting_ostream()
+00082d9c W boost::log::v2_mt_posix::basic_formatting_ostream<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t> >::~basic_formatting_ostream()
+00082d9c W boost::log::v2_mt_posix::basic_formatting_ostream<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t> >::~basic_formatting_ostream()
+00082a34 W boost::log::v2_mt_posix::aux::cleanup_guard<std::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t> > >::~cleanup_guard()
+00082a34 W boost::log::v2_mt_posix::aux::cleanup_guard<std::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t> > >::~cleanup_guard()
+00082a5c W boost::log::v2_mt_posix::aux::cleanup_guard<std::string>::~cleanup_guard()
+00082a5c W boost::log::v2_mt_posix::aux::cleanup_guard<std::string>::~cleanup_guard()
+0003e2cc W boost::log::v2_mt_posix::aux::light_function<bool (boost::log::v2_mt_posix::attribute_value_set const&)>::impl<boost::log::v2_mt_posix::filter::default_filter>::clone_impl(boost::log::v2_mt_posix::aux::light_function<bool (boost::log::v2_mt_posix::attribute_value_set const&)>::impl_base const*)
+0003db5c W boost::log::v2_mt_posix::aux::light_function<bool (boost::log::v2_mt_posix::attribute_value_set const&)>::impl<boost::log::v2_mt_posix::filter::default_filter>::invoke_impl(boost::log::v2_mt_posix::aux::light_function<bool (boost::log::v2_mt_posix::attribute_value_set const&)>::impl_base*, boost::log::v2_mt_posix::attribute_value_set const&)
+0003dc50 W boost::log::v2_mt_posix::aux::light_function<bool (boost::log::v2_mt_posix::attribute_value_set const&)>::impl<boost::log::v2_mt_posix::filter::default_filter>::destroy_impl(boost::log::v2_mt_posix::aux::light_function<bool (boost::log::v2_mt_posix::attribute_value_set const&)>::impl_base*)
+000640d8 W boost::log::v2_mt_posix::aux::light_function<bool (boost::log::v2_mt_posix::attribute_value_set const&)>::impl<boost::phoenix::actor<boost::proto::exprns_::expr<boost::proto::tagns_::tag::logical_and, boost::proto::argsns_::list2<boost::phoenix::actor<boost::log::v2_mt_posix::expressions::aux::unary_function_terminal<boost::log::v2_mt_posix::expressions::has_attribute<std::string> > >, boost::phoenix::actor<boost::proto::exprns_::expr<boost::proto::tagns_::tag::equal_to, boost::proto::argsns_::list2<boost::log::v2_mt_posix::expressions::attribute_actor<std::string, boost::log::v2_mt_posix::fallback_to_none, tag::tag_attr, boost::phoenix::actor>, boost::phoenix::actor<boost::proto::exprns_::expr<boost::proto::tagns_::tag::terminal, boost::proto::argsns_::term<char const*>, 0l> > >, 2l> > >, 2l> > >::clone_impl(boost::log::v2_mt_posix::aux::light_function<bool (boost::log::v2_mt_posix::attribute_value_set const&)>::impl_base const*)
+000643b8 W boost::log::v2_mt_posix::aux::light_function<bool (boost::log::v2_mt_posix::attribute_value_set const&)>::impl<boost::phoenix::actor<boost::proto::exprns_::expr<boost::proto::tagns_::tag::logical_and, boost::proto::argsns_::list2<boost::phoenix::actor<boost::log::v2_mt_posix::expressions::aux::unary_function_terminal<boost::log::v2_mt_posix::expressions::has_attribute<std::string> > >, boost::phoenix::actor<boost::proto::exprns_::expr<boost::proto::tagns_::tag::equal_to, boost::proto::argsns_::list2<boost::log::v2_mt_posix::expressions::attribute_actor<std::string, boost::log::v2_mt_posix::fallback_to_none, tag::tag_attr, boost::phoenix::actor>, boost::phoenix::actor<boost::proto::exprns_::expr<boost::proto::tagns_::tag::terminal, boost::proto::argsns_::term<char const*>, 0l> > >, 2l> > >, 2l> > >::invoke_impl(boost::log::v2_mt_posix::aux::light_function<bool (boost::log::v2_mt_posix::attribute_value_set const&)>::impl_base*, boost::log::v2_mt_posix::attribute_value_set const&)
+00064148 W boost::log::v2_mt_posix::aux::light_function<bool (boost::log::v2_mt_posix::attribute_value_set const&)>::impl<boost::phoenix::actor<boost::proto::exprns_::expr<boost::proto::tagns_::tag::logical_and, boost::proto::argsns_::list2<boost::phoenix::actor<boost::log::v2_mt_posix::expressions::aux::unary_function_terminal<boost::log::v2_mt_posix::expressions::has_attribute<std::string> > >, boost::phoenix::actor<boost::proto::exprns_::expr<boost::proto::tagns_::tag::equal_to, boost::proto::argsns_::list2<boost::log::v2_mt_posix::expressions::attribute_actor<std::string, boost::log::v2_mt_posix::fallback_to_none, tag::tag_attr, boost::phoenix::actor>, boost::phoenix::actor<boost::proto::exprns_::expr<boost::proto::tagns_::tag::terminal, boost::proto::argsns_::term<char const*>, 0l> > >, 2l> > >, 2l> > >::destroy_impl(boost::log::v2_mt_posix::aux::light_function<bool (boost::log::v2_mt_posix::attribute_value_set const&)>::impl_base*)
+00085fc0 W boost::log::v2_mt_posix::aux::light_function<bool (boost::log::v2_mt_posix::attribute_value_set const&)>::impl<boost::phoenix::actor<boost::proto::exprns_::expr<boost::proto::tagns_::tag::logical_and, boost::proto::argsns_::list2<boost::phoenix::actor<boost::proto::exprns_::expr<boost::proto::tagns_::tag::greater_equal, boost::proto::argsns_::list2<boost::log::v2_mt_posix::expressions::attribute_actor<boost::log::v2_mt_posix::trivial::severity_level, boost::log::v2_mt_posix::fallback_to_none, boost::log::v2_mt_posix::trivial::tag::severity, boost::phoenix::actor>, boost::phoenix::actor<boost::proto::exprns_::expr<boost::proto::tagns_::tag::terminal, boost::proto::argsns_::term<boost::log::v2_mt_posix::trivial::severity_level>, 0l> > >, 2l> >, boost::phoenix::actor<boost::proto::exprns_::expr<boost::proto::tagns_::tag::not_equal_to, boost::proto::argsns_::list2<boost::log::v2_mt_posix::expressions::attribute_actor<std::string, boost::log::v2_mt_posix::fallback_to_default<std::string>, void, boost::phoenix::actor>, boost::phoenix::actor<boost::proto::exprns_::expr<boost::proto::tagns_::tag::terminal, boost::proto::argsns_::term<char [10]>, 0l> > >, 2l> > >, 2l> > >::clone_impl(boost::log::v2_mt_posix::aux::light_function<bool (boost::log::v2_mt_posix::attribute_value_set const&)>::impl_base const*)
+00086238 W boost::log::v2_mt_posix::aux::light_function<bool (boost::log::v2_mt_posix::attribute_value_set const&)>::impl<boost::phoenix::actor<boost::proto::exprns_::expr<boost::proto::tagns_::tag::logical_and, boost::proto::argsns_::list2<boost::phoenix::actor<boost::proto::exprns_::expr<boost::proto::tagns_::tag::greater_equal, boost::proto::argsns_::list2<boost::log::v2_mt_posix::expressions::attribute_actor<boost::log::v2_mt_posix::trivial::severity_level, boost::log::v2_mt_posix::fallback_to_none, boost::log::v2_mt_posix::trivial::tag::severity, boost::phoenix::actor>, boost::phoenix::actor<boost::proto::exprns_::expr<boost::proto::tagns_::tag::terminal, boost::proto::argsns_::term<boost::log::v2_mt_posix::trivial::severity_level>, 0l> > >, 2l> >, boost::phoenix::actor<boost::proto::exprns_::expr<boost::proto::tagns_::tag::not_equal_to, boost::proto::argsns_::list2<boost::log::v2_mt_posix::expressions::attribute_actor<std::string, boost::log::v2_mt_posix::fallback_to_default<std::string>, void, boost::phoenix::actor>, boost::phoenix::actor<boost::proto::exprns_::expr<boost::proto::tagns_::tag::terminal, boost::proto::argsns_::term<char [10]>, 0l> > >, 2l> > >, 2l> > >::invoke_impl(boost::log::v2_mt_posix::aux::light_function<bool (boost::log::v2_mt_posix::attribute_value_set const&)>::impl_base*, boost::log::v2_mt_posix::attribute_value_set const&)
+00086064 W boost::log::v2_mt_posix::aux::light_function<bool (boost::log::v2_mt_posix::attribute_value_set const&)>::impl<boost::phoenix::actor<boost::proto::exprns_::expr<boost::proto::tagns_::tag::logical_and, boost::proto::argsns_::list2<boost::phoenix::actor<boost::proto::exprns_::expr<boost::proto::tagns_::tag::greater_equal, boost::proto::argsns_::list2<boost::log::v2_mt_posix::expressions::attribute_actor<boost::log::v2_mt_posix::trivial::severity_level, boost::log::v2_mt_posix::fallback_to_none, boost::log::v2_mt_posix::trivial::tag::severity, boost::phoenix::actor>, boost::phoenix::actor<boost::proto::exprns_::expr<boost::proto::tagns_::tag::terminal, boost::proto::argsns_::term<boost::log::v2_mt_posix::trivial::severity_level>, 0l> > >, 2l> >, boost::phoenix::actor<boost::proto::exprns_::expr<boost::proto::tagns_::tag::not_equal_to, boost::proto::argsns_::list2<boost::log::v2_mt_posix::expressions::attribute_actor<std::string, boost::log::v2_mt_posix::fallback_to_default<std::string>, void, boost::phoenix::actor>, boost::phoenix::actor<boost::proto::exprns_::expr<boost::proto::tagns_::tag::terminal, boost::proto::argsns_::term<char [10]>, 0l> > >, 2l> > >, 2l> > >::destroy_impl(boost::log::v2_mt_posix::aux::light_function<bool (boost::log::v2_mt_posix::attribute_value_set const&)>::impl_base*)
+00064080 W boost::log::v2_mt_posix::aux::light_function<bool (boost::log::v2_mt_posix::attribute_value_set const&)>::impl<boost::phoenix::actor<boost::proto::exprns_::expr<boost::proto::tagns_::tag::logical_not, boost::proto::argsns_::list1<boost::phoenix::actor<boost::log::v2_mt_posix::expressions::aux::unary_function_terminal<boost::log::v2_mt_posix::expressions::has_attribute<std::string> > > >, 1l> > >::clone_impl(boost::log::v2_mt_posix::aux::light_function<bool (boost::log::v2_mt_posix::attribute_value_set const&)>::impl_base const*)
+000642bc W boost::log::v2_mt_posix::aux::light_function<bool (boost::log::v2_mt_posix::attribute_value_set const&)>::impl<boost::phoenix::actor<boost::proto::exprns_::expr<boost::proto::tagns_::tag::logical_not, boost::proto::argsns_::list1<boost::phoenix::actor<boost::log::v2_mt_posix::expressions::aux::unary_function_terminal<boost::log::v2_mt_posix::expressions::has_attribute<std::string> > > >, 1l> > >::invoke_impl(boost::log::v2_mt_posix::aux::light_function<bool (boost::log::v2_mt_posix::attribute_value_set const&)>::impl_base*, boost::log::v2_mt_posix::attribute_value_set const&)
+00064144 W boost::log::v2_mt_posix::aux::light_function<bool (boost::log::v2_mt_posix::attribute_value_set const&)>::impl<boost::phoenix::actor<boost::proto::exprns_::expr<boost::proto::tagns_::tag::logical_not, boost::proto::argsns_::list1<boost::phoenix::actor<boost::log::v2_mt_posix::expressions::aux::unary_function_terminal<boost::log::v2_mt_posix::expressions::has_attribute<std::string> > > >, 1l> > >::destroy_impl(boost::log::v2_mt_posix::aux::light_function<bool (boost::log::v2_mt_posix::attribute_value_set const&)>::impl_base*)
+0006401c W boost::log::v2_mt_posix::aux::light_function<bool (boost::log::v2_mt_posix::attribute_value_set const&)>::impl<boost::phoenix::actor<boost::proto::exprns_::expr<boost::proto::tagns_::tag::greater_equal, boost::proto::argsns_::list2<boost::log::v2_mt_posix::expressions::attribute_actor<boost::log::v2_mt_posix::trivial::severity_level, boost::log::v2_mt_posix::fallback_to_none, boost::log::v2_mt_posix::trivial::tag::severity, boost::phoenix::actor>, boost::phoenix::actor<boost::proto::exprns_::expr<boost::proto::tagns_::tag::terminal, boost::proto::argsns_::term<boost::log::v2_mt_posix::trivial::severity_level>, 0l> > >, 2l> > >::clone_impl(boost::log::v2_mt_posix::aux::light_function<bool (boost::log::v2_mt_posix::attribute_value_set const&)>::impl_base const*)
+00064198 W boost::log::v2_mt_posix::aux::light_function<bool (boost::log::v2_mt_posix::attribute_value_set const&)>::impl<boost::phoenix::actor<boost::proto::exprns_::expr<boost::proto::tagns_::tag::greater_equal, boost::proto::argsns_::list2<boost::log::v2_mt_posix::expressions::attribute_actor<boost::log::v2_mt_posix::trivial::severity_level, boost::log::v2_mt_posix::fallback_to_none, boost::log::v2_mt_posix::trivial::tag::severity, boost::phoenix::actor>, boost::phoenix::actor<boost::proto::exprns_::expr<boost::proto::tagns_::tag::terminal, boost::proto::argsns_::term<boost::log::v2_mt_posix::trivial::severity_level>, 0l> > >, 2l> > >::invoke_impl(boost::log::v2_mt_posix::aux::light_function<bool (boost::log::v2_mt_posix::attribute_value_set const&)>::impl_base*, boost::log::v2_mt_posix::attribute_value_set const&)
+00064140 W boost::log::v2_mt_posix::aux::light_function<bool (boost::log::v2_mt_posix::attribute_value_set const&)>::impl<boost::phoenix::actor<boost::proto::exprns_::expr<boost::proto::tagns_::tag::greater_equal, boost::proto::argsns_::list2<boost::log::v2_mt_posix::expressions::attribute_actor<boost::log::v2_mt_posix::trivial::severity_level, boost::log::v2_mt_posix::fallback_to_none, boost::log::v2_mt_posix::trivial::tag::severity, boost::phoenix::actor>, boost::phoenix::actor<boost::proto::exprns_::expr<boost::proto::tagns_::tag::terminal, boost::proto::argsns_::term<boost::log::v2_mt_posix::trivial::severity_level>, 0l> > >, 2l> > >::destroy_impl(boost::log::v2_mt_posix::aux::light_function<bool (boost::log::v2_mt_posix::attribute_value_set const&)>::impl_base*)
+0003e274 W boost::log::v2_mt_posix::aux::light_function<void (boost::log::v2_mt_posix::record_view const&, boost::log::v2_mt_posix::basic_formatting_ostream<char, std::char_traits<char>, std::allocator<char> >&)>::impl<boost::log::v2_mt_posix::basic_formatter<char>::default_formatter>::clone_impl(boost::log::v2_mt_posix::aux::light_function<void (boost::log::v2_mt_posix::record_view const&, boost::log::v2_mt_posix::basic_formatting_ostream<char, std::char_traits<char>, std::allocator<char> >&)>::impl_base const*)
+000848fc W boost::log::v2_mt_posix::aux::light_function<void (boost::log::v2_mt_posix::record_view const&, boost::log::v2_mt_posix::basic_formatting_ostream<char, std::char_traits<char>, std::allocator<char> >&)>::impl<boost::log::v2_mt_posix::basic_formatter<char>::default_formatter>::invoke_impl(boost::log::v2_mt_posix::aux::light_function<void (boost::log::v2_mt_posix::record_view const&, boost::log::v2_mt_posix::basic_formatting_ostream<char, std::char_traits<char>, std::allocator<char> >&)>::impl_base*, boost::log::v2_mt_posix::record_view const&, boost::log::v2_mt_posix::basic_formatting_ostream<char, std::char_traits<char>, std::allocator<char> >&)
+0003dc4c W boost::log::v2_mt_posix::aux::light_function<void (boost::log::v2_mt_posix::record_view const&, boost::log::v2_mt_posix::basic_formatting_ostream<char, std::char_traits<char>, std::allocator<char> >&)>::impl<boost::log::v2_mt_posix::basic_formatter<char>::default_formatter>::destroy_impl(boost::log::v2_mt_posix::aux::light_function<void (boost::log::v2_mt_posix::record_view const&, boost::log::v2_mt_posix::basic_formatting_ostream<char, std::char_traits<char>, std::allocator<char> >&)>::impl_base*)
+0003ece4 W boost::log::v2_mt_posix::aux::basic_ostringstreambuf<char, std::char_traits<char>, std::allocator<char> >::sync()
+0003ec10 W boost::log::v2_mt_posix::aux::basic_ostringstreambuf<char, std::char_traits<char>, std::allocator<char> >::xsputn(char const*, int)
+0003ed48 W boost::log::v2_mt_posix::aux::basic_ostringstreambuf<char, std::char_traits<char>, std::allocator<char> >::overflow(int)
+00040194 W boost::log::v2_mt_posix::aux::basic_ostringstreambuf<char, std::char_traits<char>, std::allocator<char> >::~basic_ostringstreambuf()
+000401d0 W boost::log::v2_mt_posix::aux::basic_ostringstreambuf<char, std::char_traits<char>, std::allocator<char> >::~basic_ostringstreambuf()
+000401d0 W boost::log::v2_mt_posix::aux::basic_ostringstreambuf<char, std::char_traits<char>, std::allocator<char> >::~basic_ostringstreambuf()
+0003e964 W boost::log::v2_mt_posix::aux::basic_ostringstreambuf<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t> >::sync()
+0003e880 W boost::log::v2_mt_posix::aux::basic_ostringstreambuf<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t> >::xsputn(wchar_t const*, int)
+0003e9d8 W boost::log::v2_mt_posix::aux::basic_ostringstreambuf<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t> >::overflow(unsigned int)
+00040124 W boost::log::v2_mt_posix::aux::basic_ostringstreambuf<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t> >::~basic_ostringstreambuf()
+00040160 W boost::log::v2_mt_posix::aux::basic_ostringstreambuf<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t> >::~basic_ostringstreambuf()
+00040160 W boost::log::v2_mt_posix::aux::basic_ostringstreambuf<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t> >::~basic_ostringstreambuf()
+0003fea8 W boost::log::v2_mt_posix::aux::single_type_dispatcher<boost::log::v2_mt_posix::trivial::severity_level>::get_callback(boost::log::v2_mt_posix::type_dispatcher*, std::type_info const&)
+0006414c W boost::log::v2_mt_posix::aux::single_type_dispatcher<std::string>::get_callback(boost::log::v2_mt_posix::type_dispatcher*, std::type_info const&)
+00040564 W boost::log::v2_mt_posix::aux::locking_ptr_counter_base::~locking_ptr_counter_base()
+00040598 W boost::log::v2_mt_posix::aux::locking_ptr_counter_base::~locking_ptr_counter_base()
+00040598 W boost::log::v2_mt_posix::aux::locking_ptr_counter_base::~locking_ptr_counter_base()
+0003f6a4 W boost::log::v2_mt_posix::aux::type_sequence_dispatcher<boost::mpl::vector2<std::string, std::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t> > > >::get_callback(boost::log::v2_mt_posix::type_dispatcher*, std::type_info const&)
+00084708 W boost::array<std::pair<boost::log::v2_mt_posix::type_info_wrapper, void*>, 2u> const& boost::log::v2_mt_posix::aux::type_sequence_dispatcher<boost::mpl::vector2<std::string, std::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t> > > >::get_dispatching_map<boost::log::v2_mt_posix::binder1st<boost::log::v2_mt_posix::output_fun, boost::log::v2_mt_posix::basic_formatting_ostream<char, std::char_traits<char>, std::allocator<char> >&> >()
+0007e274 W boost::log::v2_mt_posix::sinks::synchronous_sink<boost::log::v2_mt_posix::sinks::text_file_backend>::try_consume(boost::log::v2_mt_posix::record_view const&)
+00055db4 W boost::log::v2_mt_posix::sinks::synchronous_sink<boost::log::v2_mt_posix::sinks::text_file_backend>::lock()
+00064e0c W boost::log::v2_mt_posix::sinks::synchronous_sink<boost::log::v2_mt_posix::sinks::text_file_backend>::flush()
+00055bd4 W boost::log::v2_mt_posix::sinks::synchronous_sink<boost::log::v2_mt_posix::sinks::text_file_backend>::unlock()
+0007de8c W boost::log::v2_mt_posix::sinks::synchronous_sink<boost::log::v2_mt_posix::sinks::text_file_backend>::consume(boost::log::v2_mt_posix::record_view const&)
+0003f83c W boost::log::v2_mt_posix::sinks::synchronous_sink<boost::log::v2_mt_posix::sinks::text_file_backend>::try_lock()
+00067e30 W boost::log::v2_mt_posix::sinks::synchronous_sink<boost::log::v2_mt_posix::sinks::text_file_backend>::~synchronous_sink()
+00067fa4 W boost::log::v2_mt_posix::sinks::synchronous_sink<boost::log::v2_mt_posix::sinks::text_file_backend>::~synchronous_sink()
+00067fa4 W boost::log::v2_mt_posix::sinks::synchronous_sink<boost::log::v2_mt_posix::sinks::text_file_backend>::~synchronous_sink()
+0007e6fc W boost::log::v2_mt_posix::sinks::synchronous_sink<boost::log::v2_mt_posix::sinks::basic_text_ostream_backend<char> >::try_consume(boost::log::v2_mt_posix::record_view const&)
+00055e54 W boost::log::v2_mt_posix::sinks::synchronous_sink<boost::log::v2_mt_posix::sinks::basic_text_ostream_backend<char> >::lock()
+00064fbc W boost::log::v2_mt_posix::sinks::synchronous_sink<boost::log::v2_mt_posix::sinks::basic_text_ostream_backend<char> >::flush()
+00055b34 W boost::log::v2_mt_posix::sinks::synchronous_sink<boost::log::v2_mt_posix::sinks::basic_text_ostream_backend<char> >::unlock()
+0007daa4 W boost::log::v2_mt_posix::sinks::synchronous_sink<boost::log::v2_mt_posix::sinks::basic_text_ostream_backend<char> >::consume(boost::log::v2_mt_posix::record_view const&)
+0003f878 W boost::log::v2_mt_posix::sinks::synchronous_sink<boost::log::v2_mt_posix::sinks::basic_text_ostream_backend<char> >::try_lock()
+00068110 W boost::log::v2_mt_posix::sinks::synchronous_sink<boost::log::v2_mt_posix::sinks::basic_text_ostream_backend<char> >::~synchronous_sink()
+00068284 W boost::log::v2_mt_posix::sinks::synchronous_sink<boost::log::v2_mt_posix::sinks::basic_text_ostream_backend<char> >::~synchronous_sink()
+00068284 W boost::log::v2_mt_posix::sinks::synchronous_sink<boost::log::v2_mt_posix::sinks::basic_text_ostream_backend<char> >::~synchronous_sink()
+000838d0 W boost::log::v2_mt_posix::sinks::synchronous_sink<boost::log::v2_mt_posix::sinks::basic_text_ostream_backend<wchar_t> >::try_consume(boost::log::v2_mt_posix::record_view const&)
+00055d14 W boost::log::v2_mt_posix::sinks::synchronous_sink<boost::log::v2_mt_posix::sinks::basic_text_ostream_backend<wchar_t> >::lock()
+0006516c W boost::log::v2_mt_posix::sinks::synchronous_sink<boost::log::v2_mt_posix::sinks::basic_text_ostream_backend<wchar_t> >::flush()
+00055c74 W boost::log::v2_mt_posix::sinks::synchronous_sink<boost::log::v2_mt_posix::sinks::basic_text_ostream_backend<wchar_t> >::unlock()
+000845ac W boost::log::v2_mt_posix::sinks::synchronous_sink<boost::log::v2_mt_posix::sinks::basic_text_ostream_backend<wchar_t> >::consume(boost::log::v2_mt_posix::record_view const&)
+0003f8b4 W boost::log::v2_mt_posix::sinks::synchronous_sink<boost::log::v2_mt_posix::sinks::basic_text_ostream_backend<wchar_t> >::try_lock()
+000685f8 W boost::log::v2_mt_posix::sinks::synchronous_sink<boost::log::v2_mt_posix::sinks::basic_text_ostream_backend<wchar_t> >::~synchronous_sink()
+0006876c W boost::log::v2_mt_posix::sinks::synchronous_sink<boost::log::v2_mt_posix::sinks::basic_text_ostream_backend<wchar_t> >::~synchronous_sink()
+0006876c W boost::log::v2_mt_posix::sinks::synchronous_sink<boost::log::v2_mt_posix::sinks::basic_text_ostream_backend<wchar_t> >::~synchronous_sink()
+00040204 W boost::log::v2_mt_posix::sinks::basic_sink_frontend::will_consume(boost::log::v2_mt_posix::attribute_value_set const&)
+000833e4 W void boost::log::v2_mt_posix::sinks::basic_sink_frontend::flush_backend_impl<boost::mutex, boost::log::v2_mt_posix::sinks::text_file_backend>(boost::mutex&, boost::log::v2_mt_posix::sinks::text_file_backend&, mpl_::bool_<true>)
+00083588 W void boost::log::v2_mt_posix::sinks::basic_sink_frontend::flush_backend_impl<boost::mutex, boost::log::v2_mt_posix::sinks::basic_text_ostream_backend<char> >(boost::mutex&, boost::log::v2_mt_posix::sinks::basic_text_ostream_backend<char>&, mpl_::bool_<true>)
+0008372c W void boost::log::v2_mt_posix::sinks::basic_sink_frontend::flush_backend_impl<boost::mutex, boost::log::v2_mt_posix::sinks::basic_text_ostream_backend<wchar_t> >(boost::mutex&, boost::log::v2_mt_posix::sinks::basic_text_ostream_backend<wchar_t>&, mpl_::bool_<true>)
+0003e770 W boost::log::v2_mt_posix::sinks::basic_sink_frontend::~basic_sink_frontend()
+0003e7fc W boost::log::v2_mt_posix::sinks::basic_sink_frontend::~basic_sink_frontend()
+0003e7fc W boost::log::v2_mt_posix::sinks::basic_sink_frontend::~basic_sink_frontend()
+0007d2fc W void boost::log::v2_mt_posix::sinks::basic_formatting_sink_frontend<char>::feed_record<boost::mutex, boost::log::v2_mt_posix::sinks::text_file_backend>(boost::log::v2_mt_posix::record_view const&, boost::mutex&, boost::log::v2_mt_posix::sinks::text_file_backend&)
+0007d6d0 W void boost::log::v2_mt_posix::sinks::basic_formatting_sink_frontend<char>::feed_record<boost::mutex, boost::log::v2_mt_posix::sinks::basic_text_ostream_backend<char> >(boost::log::v2_mt_posix::record_view const&, boost::mutex&, boost::log::v2_mt_posix::sinks::basic_text_ostream_backend<char>&)
+0006459c W void boost::log::v2_mt_posix::sinks::basic_formatting_sink_frontend<char>::set_formatter<boost::log::v2_mt_posix::basic_formatter<char> >(boost::log::v2_mt_posix::basic_formatter<char> const&)
+00082b00 W boost::log::v2_mt_posix::sinks::basic_formatting_sink_frontend<char>::formatting_context::formatting_context(unsigned int, std::locale const&, boost::log::v2_mt_posix::basic_formatter<char> const&)
+00082b00 W boost::log::v2_mt_posix::sinks::basic_formatting_sink_frontend<char>::formatting_context::formatting_context(unsigned int, std::locale const&, boost::log::v2_mt_posix::basic_formatter<char> const&)
+00064610 W boost::log::v2_mt_posix::sinks::basic_formatting_sink_frontend<char>::basic_formatting_sink_frontend(bool)
+00064610 W boost::log::v2_mt_posix::sinks::basic_formatting_sink_frontend<char>::basic_formatting_sink_frontend(bool)
+000683f0 W boost::log::v2_mt_posix::sinks::basic_formatting_sink_frontend<char>::~basic_formatting_sink_frontend()
+00067d30 W boost::log::v2_mt_posix::sinks::basic_formatting_sink_frontend<char>::~basic_formatting_sink_frontend()
+00067d30 W boost::log::v2_mt_posix::sinks::basic_formatting_sink_frontend<char>::~basic_formatting_sink_frontend()
+00083fa0 W void boost::log::v2_mt_posix::sinks::basic_formatting_sink_frontend<wchar_t>::feed_record<boost::mutex, boost::log::v2_mt_posix::sinks::basic_text_ostream_backend<wchar_t> >(boost::log::v2_mt_posix::record_view const&, boost::mutex&, boost::log::v2_mt_posix::sinks::basic_text_ostream_backend<wchar_t>&)
+00082e18 W boost::log::v2_mt_posix::sinks::basic_formatting_sink_frontend<wchar_t>::formatting_context::formatting_context(unsigned int, std::locale const&, boost::log::v2_mt_posix::basic_formatter<wchar_t> const&)
+00082e18 W boost::log::v2_mt_posix::sinks::basic_formatting_sink_frontend<wchar_t>::formatting_context::formatting_context(unsigned int, std::locale const&, boost::log::v2_mt_posix::basic_formatter<wchar_t> const&)
+000688d8 W boost::log::v2_mt_posix::sinks::basic_formatting_sink_frontend<wchar_t>::~basic_formatting_sink_frontend()
+000684f8 W boost::log::v2_mt_posix::sinks::basic_formatting_sink_frontend<wchar_t>::~basic_formatting_sink_frontend()
+000684f8 W boost::log::v2_mt_posix::sinks::basic_formatting_sink_frontend<wchar_t>::~basic_formatting_sink_frontend()
+0003dc54 W boost::log::v2_mt_posix::sinks::file::collector::~collector()
+0003db64 W boost::log::v2_mt_posix::sinks::file::collector::~collector()
+0003db64 W boost::log::v2_mt_posix::sinks::file::collector::~collector()
+00040654 W boost::log::v2_mt_posix::sinks::sink::try_consume(boost::log::v2_mt_posix::record_view const&)
+0004050c W boost::log::v2_mt_posix::sinks::sink::~sink()
+00040540 W boost::log::v2_mt_posix::sinks::sink::~sink()
+00040540 W boost::log::v2_mt_posix::sinks::sink::~sink()
+00080c18 W boost::log::v2_mt_posix::sources::aux::logger_singleton<log_obj>::construct_logger()
+00092178 W boost::log::v2_mt_posix::sources::aux::logger_singleton<telem_obj>::construct_logger()
+0003fe4c W boost::log::v2_mt_posix::attribute::impl::~impl()
+0003fe84 W boost::log::v2_mt_posix::attribute::impl::~impl()
+0003fe84 W boost::log::v2_mt_posix::attribute::impl::~impl()
+00064cdc W boost::mutex::lock()
+00064d74 W boost::mutex::unlock()
+000559b8 W boost::mutex::~mutex()
+000559b8 W boost::mutex::~mutex()
+00055574 W boost::detail::shared_count::shared_count(boost::detail::shared_count const&)
+00055574 W boost::detail::shared_count::shared_count(boost::detail::shared_count const&)
+000b4da8 V boost::detail::spinlock_pool<1>::pool_
+000496fc W boost::detail::sp_counted_base::weak_release()
+00040910 W boost::detail::sp_counted_base::destroy()
+00049558 W boost::detail::sp_counted_base::release()
+00040860 W boost::detail::sp_counted_base::~sp_counted_base()
+00040894 W boost::detail::sp_counted_base::~sp_counted_base()
+00040894 W boost::detail::sp_counted_base::~sp_counted_base()
+0003f734 W boost::detail::thread_data_base::notify_all_at_thread_exit(boost::condition_variable*, boost::mutex*)
+000400b4 W boost::detail::sp_counted_impl_pd<boost::thread_specific_ptr<boost::log::v2_mt_posix::sinks::basic_formatting_sink_frontend<char>::formatting_context>::delete_data*, boost::detail::do_heap_delete<boost::thread_specific_ptr<boost::log::v2_mt_posix::sinks::basic_formatting_sink_frontend<char>::formatting_context>::delete_data> >::get_deleter(std::type_info const&)
+00040604 W boost::detail::sp_counted_impl_pd<boost::thread_specific_ptr<boost::log::v2_mt_posix::sinks::basic_formatting_sink_frontend<char>::formatting_context>::delete_data*, boost::detail::do_heap_delete<boost::thread_specific_ptr<boost::log::v2_mt_posix::sinks::basic_formatting_sink_frontend<char>::formatting_context>::delete_data> >::get_untyped_deleter()
+0004060c W boost::detail::sp_counted_impl_pd<boost::thread_specific_ptr<boost::log::v2_mt_posix::sinks::basic_formatting_sink_frontend<char>::formatting_context>::delete_data*, boost::detail::do_heap_delete<boost::thread_specific_ptr<boost::log::v2_mt_posix::sinks::basic_formatting_sink_frontend<char>::formatting_context>::delete_data> >::dispose()
+00040354 W boost::detail::sp_counted_impl_pd<boost::thread_specific_ptr<boost::log::v2_mt_posix::sinks::basic_formatting_sink_frontend<char>::formatting_context>::delete_data*, boost::detail::do_heap_delete<boost::thread_specific_ptr<boost::log::v2_mt_posix::sinks::basic_formatting_sink_frontend<char>::formatting_context>::delete_data> >::~sp_counted_impl_pd()
+00040388 W boost::detail::sp_counted_impl_pd<boost::thread_specific_ptr<boost::log::v2_mt_posix::sinks::basic_formatting_sink_frontend<char>::formatting_context>::delete_data*, boost::detail::do_heap_delete<boost::thread_specific_ptr<boost::log::v2_mt_posix::sinks::basic_formatting_sink_frontend<char>::formatting_context>::delete_data> >::~sp_counted_impl_pd()
+00040388 W boost::detail::sp_counted_impl_pd<boost::thread_specific_ptr<boost::log::v2_mt_posix::sinks::basic_formatting_sink_frontend<char>::formatting_context>::delete_data*, boost::detail::do_heap_delete<boost::thread_specific_ptr<boost::log::v2_mt_posix::sinks::basic_formatting_sink_frontend<char>::formatting_context>::delete_data> >::~sp_counted_impl_pd()
+000400ec W boost::detail::sp_counted_impl_pd<boost::thread_specific_ptr<boost::log::v2_mt_posix::sinks::basic_formatting_sink_frontend<wchar_t>::formatting_context>::delete_data*, boost::detail::do_heap_delete<boost::thread_specific_ptr<boost::log::v2_mt_posix::sinks::basic_formatting_sink_frontend<wchar_t>::formatting_context>::delete_data> >::get_deleter(std::type_info const&)
+0004062c W boost::detail::sp_counted_impl_pd<boost::thread_specific_ptr<boost::log::v2_mt_posix::sinks::basic_formatting_sink_frontend<wchar_t>::formatting_context>::delete_data*, boost::detail::do_heap_delete<boost::thread_specific_ptr<boost::log::v2_mt_posix::sinks::basic_formatting_sink_frontend<wchar_t>::formatting_context>::delete_data> >::get_untyped_deleter()
+00040634 W boost::detail::sp_counted_impl_pd<boost::thread_specific_ptr<boost::log::v2_mt_posix::sinks::basic_formatting_sink_frontend<wchar_t>::formatting_context>::delete_data*, boost::detail::do_heap_delete<boost::thread_specific_ptr<boost::log::v2_mt_posix::sinks::basic_formatting_sink_frontend<wchar_t>::formatting_context>::delete_data> >::dispose()
+000403ac W boost::detail::sp_counted_impl_pd<boost::thread_specific_ptr<boost::log::v2_mt_posix::sinks::basic_formatting_sink_frontend<wchar_t>::formatting_context>::delete_data*, boost::detail::do_heap_delete<boost::thread_specific_ptr<boost::log::v2_mt_posix::sinks::basic_formatting_sink_frontend<wchar_t>::formatting_context>::delete_data> >::~sp_counted_impl_pd()
+000403e0 W boost::detail::sp_counted_impl_pd<boost::thread_specific_ptr<boost::log::v2_mt_posix::sinks::basic_formatting_sink_frontend<wchar_t>::formatting_context>::delete_data*, boost::detail::do_heap_delete<boost::thread_specific_ptr<boost::log::v2_mt_posix::sinks::basic_formatting_sink_frontend<wchar_t>::formatting_context>::delete_data> >::~sp_counted_impl_pd()
+000403e0 W boost::detail::sp_counted_impl_pd<boost::thread_specific_ptr<boost::log::v2_mt_posix::sinks::basic_formatting_sink_frontend<wchar_t>::formatting_context>::delete_data*, boost::detail::do_heap_delete<boost::thread_specific_ptr<boost::log::v2_mt_posix::sinks::basic_formatting_sink_frontend<wchar_t>::formatting_context>::delete_data> >::~sp_counted_impl_pd()
+0004007c W boost::detail::sp_counted_impl_pd<boost::log::v2_mt_posix::sinks::synchronous_sink<boost::log::v2_mt_posix::sinks::text_file_backend>*, boost::detail::sp_ms_deleter<boost::log::v2_mt_posix::sinks::synchronous_sink<boost::log::v2_mt_posix::sinks::text_file_backend> > >::get_deleter(std::type_info const&)
+000405fc W boost::detail::sp_counted_impl_pd<boost::log::v2_mt_posix::sinks::synchronous_sink<boost::log::v2_mt_posix::sinks::text_file_backend>*, boost::detail::sp_ms_deleter<boost::log::v2_mt_posix::sinks::synchronous_sink<boost::log::v2_mt_posix::sinks::text_file_backend> > >::get_untyped_deleter()
+0003f644 W boost::detail::sp_counted_impl_pd<boost::log::v2_mt_posix::sinks::synchronous_sink<boost::log::v2_mt_posix::sinks::text_file_backend>*, boost::detail::sp_ms_deleter<boost::log::v2_mt_posix::sinks::synchronous_sink<boost::log::v2_mt_posix::sinks::text_file_backend> > >::dispose()
+0003f5a4 W boost::detail::sp_counted_impl_pd<boost::log::v2_mt_posix::sinks::synchronous_sink<boost::log::v2_mt_posix::sinks::text_file_backend>*, boost::detail::sp_ms_deleter<boost::log::v2_mt_posix::sinks::synchronous_sink<boost::log::v2_mt_posix::sinks::text_file_backend> > >::~sp_counted_impl_pd()
+0003f53c W boost::detail::sp_counted_impl_pd<boost::log::v2_mt_posix::sinks::synchronous_sink<boost::log::v2_mt_posix::sinks::text_file_backend>*, boost::detail::sp_ms_deleter<boost::log::v2_mt_posix::sinks::synchronous_sink<boost::log::v2_mt_posix::sinks::text_file_backend> > >::~sp_counted_impl_pd()
+0003f53c W boost::detail::sp_counted_impl_pd<boost::log::v2_mt_posix::sinks::synchronous_sink<boost::log::v2_mt_posix::sinks::text_file_backend>*, boost::detail::sp_ms_deleter<boost::log::v2_mt_posix::sinks::synchronous_sink<boost::log::v2_mt_posix::sinks::text_file_backend> > >::~sp_counted_impl_pd()
+0003ff9c W boost::detail::sp_counted_impl_pd<boost::log::v2_mt_posix::sinks::synchronous_sink<boost::log::v2_mt_posix::sinks::basic_text_ostream_backend<char> >*, boost::detail::sp_ms_deleter<boost::log::v2_mt_posix::sinks::synchronous_sink<boost::log::v2_mt_posix::sinks::basic_text_ostream_backend<char> > > >::get_deleter(std::type_info const&)
+000405dc W boost::detail::sp_counted_impl_pd<boost::log::v2_mt_posix::sinks::synchronous_sink<boost::log::v2_mt_posix::sinks::basic_text_ostream_backend<char> >*, boost::detail::sp_ms_deleter<boost::log::v2_mt_posix::sinks::synchronous_sink<boost::log::v2_mt_posix::sinks::basic_text_ostream_backend<char> > > >::get_untyped_deleter()
+0003f674 W boost::detail::sp_counted_impl_pd<boost::log::v2_mt_posix::sinks::synchronous_sink<boost::log::v2_mt_posix::sinks::basic_text_ostream_backend<char> >*, boost::detail::sp_ms_deleter<boost::log::v2_mt_posix::sinks::synchronous_sink<boost::log::v2_mt_posix::sinks::basic_text_ostream_backend<char> > > >::dispose()
+0003f3f4 W boost::detail::sp_counted_impl_pd<boost::log::v2_mt_posix::sinks::synchronous_sink<boost::log::v2_mt_posix::sinks::basic_text_ostream_backend<char> >*, boost::detail::sp_ms_deleter<boost::log::v2_mt_posix::sinks::synchronous_sink<boost::log::v2_mt_posix::sinks::basic_text_ostream_backend<char> > > >::~sp_counted_impl_pd()
+0003f38c W boost::detail::sp_counted_impl_pd<boost::log::v2_mt_posix::sinks::synchronous_sink<boost::log::v2_mt_posix::sinks::basic_text_ostream_backend<char> >*, boost::detail::sp_ms_deleter<boost::log::v2_mt_posix::sinks::synchronous_sink<boost::log::v2_mt_posix::sinks::basic_text_ostream_backend<char> > > >::~sp_counted_impl_pd()
+0003f38c W boost::detail::sp_counted_impl_pd<boost::log::v2_mt_posix::sinks::synchronous_sink<boost::log::v2_mt_posix::sinks::basic_text_ostream_backend<char> >*, boost::detail::sp_ms_deleter<boost::log::v2_mt_posix::sinks::synchronous_sink<boost::log::v2_mt_posix::sinks::basic_text_ostream_backend<char> > > >::~sp_counted_impl_pd()
+0004000c W boost::detail::sp_counted_impl_pd<boost::log::v2_mt_posix::sinks::synchronous_sink<boost::log::v2_mt_posix::sinks::basic_text_ostream_backend<wchar_t> >*, boost::detail::sp_ms_deleter<boost::log::v2_mt_posix::sinks::synchronous_sink<boost::log::v2_mt_posix::sinks::basic_text_ostream_backend<wchar_t> > > >::get_deleter(std::type_info const&)
+000405ec W boost::detail::sp_counted_impl_pd<boost::log::v2_mt_posix::sinks::synchronous_sink<boost::log::v2_mt_posix::sinks::basic_text_ostream_backend<wchar_t> >*, boost::detail::sp_ms_deleter<boost::log::v2_mt_posix::sinks::synchronous_sink<boost::log::v2_mt_posix::sinks::basic_text_ostream_backend<wchar_t> > > >::get_untyped_deleter()
+0003f614 W boost::detail::sp_counted_impl_pd<boost::log::v2_mt_posix::sinks::synchronous_sink<boost::log::v2_mt_posix::sinks::basic_text_ostream_backend<wchar_t> >*, boost::detail::sp_ms_deleter<boost::log::v2_mt_posix::sinks::synchronous_sink<boost::log::v2_mt_posix::sinks::basic_text_ostream_backend<wchar_t> > > >::dispose()
+0003f4cc W boost::detail::sp_counted_impl_pd<boost::log::v2_mt_posix::sinks::synchronous_sink<boost::log::v2_mt_posix::sinks::basic_text_ostream_backend<wchar_t> >*, boost::detail::sp_ms_deleter<boost::log::v2_mt_posix::sinks::synchronous_sink<boost::log::v2_mt_posix::sinks::basic_text_ostream_backend<wchar_t> > > >::~sp_counted_impl_pd()
+0003f464 W boost::detail::sp_counted_impl_pd<boost::log::v2_mt_posix::sinks::synchronous_sink<boost::log::v2_mt_posix::sinks::basic_text_ostream_backend<wchar_t> >*, boost::detail::sp_ms_deleter<boost::log::v2_mt_posix::sinks::synchronous_sink<boost::log::v2_mt_posix::sinks::basic_text_ostream_backend<wchar_t> > > >::~sp_counted_impl_pd()
+0003f464 W boost::detail::sp_counted_impl_pd<boost::log::v2_mt_posix::sinks::synchronous_sink<boost::log::v2_mt_posix::sinks::basic_text_ostream_backend<wchar_t> >*, boost::detail::sp_ms_deleter<boost::log::v2_mt_posix::sinks::synchronous_sink<boost::log::v2_mt_posix::sinks::basic_text_ostream_backend<wchar_t> > > >::~sp_counted_impl_pd()
+00040044 W boost::detail::sp_counted_impl_pd<boost::log::v2_mt_posix::sinks::text_file_backend*, boost::detail::sp_ms_deleter<boost::log::v2_mt_posix::sinks::text_file_backend> >::get_deleter(std::type_info const&)
+000405f4 W boost::detail::sp_counted_impl_pd<boost::log::v2_mt_posix::sinks::text_file_backend*, boost::detail::sp_ms_deleter<boost::log::v2_mt_posix::sinks::text_file_backend> >::get_untyped_deleter()
+0003fad0 W boost::detail::sp_counted_impl_pd<boost::log::v2_mt_posix::sinks::text_file_backend*, boost::detail::sp_ms_deleter<boost::log::v2_mt_posix::sinks::text_file_backend> >::dispose()
+0003faf8 W boost::detail::sp_counted_impl_pd<boost::log::v2_mt_posix::sinks::text_file_backend*, boost::detail::sp_ms_deleter<boost::log::v2_mt_posix::sinks::text_file_backend> >::~sp_counted_impl_pd()
+0003fb60 W boost::detail::sp_counted_impl_pd<boost::log::v2_mt_posix::sinks::text_file_backend*, boost::detail::sp_ms_deleter<boost::log::v2_mt_posix::sinks::text_file_backend> >::~sp_counted_impl_pd()
+0003fb60 W boost::detail::sp_counted_impl_pd<boost::log::v2_mt_posix::sinks::text_file_backend*, boost::detail::sp_ms_deleter<boost::log::v2_mt_posix::sinks::text_file_backend> >::~sp_counted_impl_pd()
+0003ff64 W boost::detail::sp_counted_impl_pd<boost::log::v2_mt_posix::sinks::basic_text_ostream_backend<char>*, boost::detail::sp_ms_deleter<boost::log::v2_mt_posix::sinks::basic_text_ostream_backend<char> > >::get_deleter(std::type_info const&)
+000405d4 W boost::detail::sp_counted_impl_pd<boost::log::v2_mt_posix::sinks::basic_text_ostream_backend<char>*, boost::detail::sp_ms_deleter<boost::log::v2_mt_posix::sinks::basic_text_ostream_backend<char> > >::get_untyped_deleter()
+0003f8f0 W boost::detail::sp_counted_impl_pd<boost::log::v2_mt_posix::sinks::basic_text_ostream_backend<char>*, boost::detail::sp_ms_deleter<boost::log::v2_mt_posix::sinks::basic_text_ostream_backend<char> > >::dispose()
+0003f918 W boost::detail::sp_counted_impl_pd<boost::log::v2_mt_posix::sinks::basic_text_ostream_backend<char>*, boost::detail::sp_ms_deleter<boost::log::v2_mt_posix::sinks::basic_text_ostream_backend<char> > >::~sp_counted_impl_pd()
+0003f980 W boost::detail::sp_counted_impl_pd<boost::log::v2_mt_posix::sinks::basic_text_ostream_backend<char>*, boost::detail::sp_ms_deleter<boost::log::v2_mt_posix::sinks::basic_text_ostream_backend<char> > >::~sp_counted_impl_pd()
+0003f980 W boost::detail::sp_counted_impl_pd<boost::log::v2_mt_posix::sinks::basic_text_ostream_backend<char>*, boost::detail::sp_ms_deleter<boost::log::v2_mt_posix::sinks::basic_text_ostream_backend<char> > >::~sp_counted_impl_pd()
+0003ffd4 W boost::detail::sp_counted_impl_pd<boost::log::v2_mt_posix::sinks::basic_text_ostream_backend<wchar_t>*, boost::detail::sp_ms_deleter<boost::log::v2_mt_posix::sinks::basic_text_ostream_backend<wchar_t> > >::get_deleter(std::type_info const&)
+000405e4 W boost::detail::sp_counted_impl_pd<boost::log::v2_mt_posix::sinks::basic_text_ostream_backend<wchar_t>*, boost::detail::sp_ms_deleter<boost::log::v2_mt_posix::sinks::basic_text_ostream_backend<wchar_t> > >::get_untyped_deleter()
+0003f9e0 W boost::detail::sp_counted_impl_pd<boost::log::v2_mt_posix::sinks::basic_text_ostream_backend<wchar_t>*, boost::detail::sp_ms_deleter<boost::log::v2_mt_posix::sinks::basic_text_ostream_backend<wchar_t> > >::dispose()
+0003fa08 W boost::detail::sp_counted_impl_pd<boost::log::v2_mt_posix::sinks::basic_text_ostream_backend<wchar_t>*, boost::detail::sp_ms_deleter<boost::log::v2_mt_posix::sinks::basic_text_ostream_backend<wchar_t> > >::~sp_counted_impl_pd()
+0003fa70 W boost::detail::sp_counted_impl_pd<boost::log::v2_mt_posix::sinks::basic_text_ostream_backend<wchar_t>*, boost::detail::sp_ms_deleter<boost::log::v2_mt_posix::sinks::basic_text_ostream_backend<wchar_t> > >::~sp_counted_impl_pd()
+0003fa70 W boost::detail::sp_counted_impl_pd<boost::log::v2_mt_posix::sinks::basic_text_ostream_backend<wchar_t>*, boost::detail::sp_ms_deleter<boost::log::v2_mt_posix::sinks::basic_text_ostream_backend<wchar_t> > >::~sp_counted_impl_pd()
+0003fef4 W boost::detail::sp_counted_impl_pd<std::ostream*, boost::log::v2_mt_posix::empty_deleter>::get_deleter(std::type_info const&)
+000405bc W boost::detail::sp_counted_impl_pd<std::ostream*, boost::log::v2_mt_posix::empty_deleter>::get_untyped_deleter()
+000405c4 W boost::detail::sp_counted_impl_pd<std::ostream*, boost::log::v2_mt_posix::empty_deleter>::dispose()
+000402a4 W boost::detail::sp_counted_impl_pd<std::ostream*, boost::log::v2_mt_posix::empty_deleter>::~sp_counted_impl_pd()
+000402d8 W boost::detail::sp_counted_impl_pd<std::ostream*, boost::log::v2_mt_posix::empty_deleter>::~sp_counted_impl_pd()
+000402d8 W boost::detail::sp_counted_impl_pd<std::ostream*, boost::log::v2_mt_posix::empty_deleter>::~sp_counted_impl_pd()
+0003ff2c W boost::detail::sp_counted_impl_pd<std::basic_ostream<wchar_t, std::char_traits<wchar_t> >*, boost::log::v2_mt_posix::empty_deleter>::get_deleter(std::type_info const&)
+000405c8 W boost::detail::sp_counted_impl_pd<std::basic_ostream<wchar_t, std::char_traits<wchar_t> >*, boost::log::v2_mt_posix::empty_deleter>::get_untyped_deleter()
+000405d0 W boost::detail::sp_counted_impl_pd<std::basic_ostream<wchar_t, std::char_traits<wchar_t> >*, boost::log::v2_mt_posix::empty_deleter>::dispose()
+000402fc W boost::detail::sp_counted_impl_pd<std::basic_ostream<wchar_t, std::char_traits<wchar_t> >*, boost::log::v2_mt_posix::empty_deleter>::~sp_counted_impl_pd()
+00040330 W boost::detail::sp_counted_impl_pd<std::basic_ostream<wchar_t, std::char_traits<wchar_t> >*, boost::log::v2_mt_posix::empty_deleter>::~sp_counted_impl_pd()
+00040330 W boost::detail::sp_counted_impl_pd<std::basic_ostream<wchar_t, std::char_traits<wchar_t> >*, boost::log::v2_mt_posix::empty_deleter>::~sp_counted_impl_pd()
+000404b4 W boost::detail::tss_cleanup_function::~tss_cleanup_function()
+000404e8 W boost::detail::tss_cleanup_function::~tss_cleanup_function()
+000404e8 W boost::detail::tss_cleanup_function::~tss_cleanup_function()
+000497e0 W boost::detail::spinlock::lock()
+00055754 W boost::system::system_error::system_error(boost::system::system_error const&)
+00055754 W boost::system::system_error::system_error(boost::system::system_error const&)
+000455d8 W boost::system::system_error::~system_error()
+00044504 W boost::system::system_error::~system_error()
+00044504 W boost::system::system_error::~system_error()
+0003dc88 W boost::system::error_category::~error_category()
+0003db88 W boost::system::error_category::~error_category()
+0003db88 W boost::system::error_category::~error_category()
+00090a14 W void boost::algorithm::detail::find_format_all_impl2<std::string, boost::algorithm::detail::first_finderF<char const*, boost::algorithm::is_equal>, boost::algorithm::detail::const_formatF<boost::iterator_range<char const*> >, boost::iterator_range<__gnu_cxx::__normal_iterator<char*, std::string> >, boost::iterator_range<char const*> >(std::string&, boost::algorithm::detail::first_finderF<char const*, boost::algorithm::is_equal>, boost::algorithm::detail::const_formatF<boost::iterator_range<char const*> >, boost::iterator_range<__gnu_cxx::__normal_iterator<char*, std::string> >, boost::iterator_range<char const*>)
+000735c4 W __gnu_cxx::__normal_iterator<char*, std::string> boost::algorithm::detail::process_segment_helper<false>::operator()<std::deque<char, std::allocator<char> >, std::string, __gnu_cxx::__normal_iterator<char*, std::string> >(std::deque<char, std::allocator<char> >&, std::string&, __gnu_cxx::__normal_iterator<char*, std::string>, __gnu_cxx::__normal_iterator<char*, std::string>, __gnu_cxx::__normal_iterator<char*, std::string>)
+000743c4 W void boost::algorithm::detail::insert<std::string, std::_Deque_iterator<char, char&, char*> >(std::string&, std::string::iterator, std::_Deque_iterator<char, char&, char*>, std::_Deque_iterator<char, char&, char*>)
+00064800 W boost::date_time::counted_time_rep<boost::posix_time::millisec_posix_time_system_config>::counted_time_rep(boost::gregorian::date const&, boost::posix_time::time_duration const&)
+00064800 W boost::date_time::counted_time_rep<boost::posix_time::millisec_posix_time_system_config>::counted_time_rep(boost::gregorian::date const&, boost::posix_time::time_duration const&)
+00056410 W boost::date_time::c_time::localtime(long const*, tm*)
+00043ec4 W boost::exception::~exception()
+00043f20 W boost::exception::~exception()
+00043f20 W boost::exception::~exception()
+0003fd10 W boost::gregorian::bad_weekday::~bad_weekday()
+0003fd4c W boost::gregorian::bad_weekday::~bad_weekday()
+0003fd4c W boost::gregorian::bad_weekday::~bad_weekday()
+0003fbc0 W boost::gregorian::bad_day_of_year::~bad_day_of_year()
+0003fbfc W boost::gregorian::bad_day_of_year::~bad_day_of_year()
+0003fbfc W boost::gregorian::bad_day_of_year::~bad_day_of_year()
+0003fd80 W boost::gregorian::bad_day_of_month::~bad_day_of_month()
+0003fdbc W boost::gregorian::bad_day_of_month::~bad_day_of_month()
+0003fdbc W boost::gregorian::bad_day_of_month::~bad_day_of_month()
+00056128 W boost::gregorian::date::date(boost::gregorian::greg_year, boost::gregorian::greg_month, boost::gregorian::greg_day)
+00056128 W boost::gregorian::date::date(boost::gregorian::greg_year, boost::gregorian::greg_month, boost::gregorian::greg_day)
+0003fca0 W boost::gregorian::bad_year::~bad_year()
+0003fcdc W boost::gregorian::bad_year::~bad_year()
+0003fcdc W boost::gregorian::bad_year::~bad_year()
+0003fc30 W boost::gregorian::bad_month::~bad_month()
+0003fc6c W boost::gregorian::bad_month::~bad_month()
+0003fc6c W boost::gregorian::bad_month::~bad_month()
+0004a154 T Heater::Heater()
+0004a154 T Heater::Heater()
+00086444 T PRUMap::CheckStatus()
+000864b0 T PRUMap::ClearPosition()
+0008677c T PRUMap::InitExtraPins(unsigned char, unsigned char, unsigned char)
+00086494 T PRUMap::RequestStatus()
+0008d2ac T PRUMap::GetRuntimeState()
+0008d278 T PRUMap::SetPruSyncDelay(unsigned char)
+0008d2b8 T PRUMap::SetRuntimeState(unsigned char, bool)
+0008ce1c T PRUMap::VerifyClearBuffer(bool)
+00086548 T PRUMap::ClearCommandBuffer(bool)
+0008d4fc T PRUMap::Init()
+0008d2d8 T PRUMap::Abort()
+0008ca04 T PRUMap::DumpAxis(int)
+00086790 T PRUMap::InitAxis(unsigned char, unsigned char, unsigned char, unsigned char, unsigned char, unsigned int)
+0004f29c T common::Direction(float)
+00074550 T GpioMem::SetDirection(int, bool)
+00052138 T GpioMem::GetValue(int)
+00074500 T GpioMem::SetValue(int, bool)
+0008adf0 T GpioMem::GpioMem()
+0008adf0 T GpioMem::GpioMem()
+000827f0 W GpioMem::~GpioMem()
+000827f0 W GpioMem::~GpioMem()
+00062790 T Logging::Initialize(char const*, char const*, char const*, bool)
+000b4d98 B Logging::log_level_
+00084a30 T Logging::ChangeLevel(std::string, bool)
+00051fa4 T Logging::GetLevel()
+00070de4 T Machine::ChangeTool(unsigned char)
+0004edf4 T Machine::DisableSpi()
+00043348 T Machine::GetToolUid(unsigned char, unsigned int*)
+00089e68 T Machine::HomingDone(machine::AxisName)
+00071acc T Machine::Initialize()
+0007fb20 T Machine::MotorAbort(bool)
+000576b8 T Machine::QuickPause(bool)
+000391d8 T Machine::SetFanDuty(unsigned char, float)
+00068d94 T Machine::SetFanDuty(unsigned char, float, int)
+00040f8c T Machine::BeginHesLog(unsigned char, unsigned short, bool)
+0007f874 T Machine::ConnectTool(unsigned char, bool)
+0003922c T Machine::MotorEnable(machine::AxisName, bool)
+0005533c T Machine::SamplePower(machine::PowerMonitorRail, machine::PowerMonitorValue, unsigned short)
+000433e8 T Machine::SetLedBlink(unsigned char, unsigned char, float)
+000723f8 T Machine::SetPosition(machine::AxisName, float)
+0003a84c T Machine::SetZPauseMm(float)
+000411cc T Machine::ConfigureHes(unsigned char, unsigned char, unsigned short)
+00065d2c T Machine::ConvertUnits(float, MakerBot::AxisUnit)
+000392d0 T Machine::EnableZPause()
+00065df4 T Machine::GetMoveDelta(float const (&) [4], float*)
+000578c0 T Machine::LoadToolhead(unsigned char)
+00053c98 T Machine::SetKnobBlink(float)
+00054650 T Machine::SetKnobColor(float, float, float, float)
+00065bd0 T Machine::ClearPosition()
+0003a6c8 T Machine::ClearZPauseMm(float)
+000392c0 T Machine::DisableZPause()
+0004705c T Machine::GetPowerValue(machine::PowerMonitorRail, machine::PowerMonitorValue, unsigned short*, float*, float*)
+0005d1ec T Machine::LogToolEeprom(unsigned char)
+00039354 T Machine::ScanToolheads()
+00039160 T Machine::SetHeaterDuty(unsigned char, float)
+0003a768 T Machine::ClearAllZPause()
+00048a54 T Machine::GetRawHesValue(unsigned char, bool*, short*)
+00066060 T Machine::HomingSettings::~HomingSettings()
+00066060 T Machine::HomingSettings::~HomingSettings()
+00043564 T Machine::ProgramYonkers(char const*, unsigned char)
+00055434 T Machine::QueryPowerInfo()
+000431a8 T Machine::ResetToolUsage(unsigned char)
+0006a75c T Machine::ClearAllBuffers()
+00057868 T Machine::CloseAndCleanup()
+00065380 T Machine::ProcessMoveTags(MakerBot::ToolpathTag const*, int)
+00057900 T Machine::ProgramToolhead(char const*, unsigned char)
+00053cf0 T Machine::SetChamberBlink(float)
+000542dc T Machine::SetChamberColor(float, float, float, float)
+0008aacc T Machine::SetPrintContext(bool, char const*)
+00065e98 T Machine::LoadDefaultState()
+000554bc T Machine::PowerMonitorInit()
+000392e0 T Machine::ResetZPauseIndex()
+0006c024 T Machine::SetExtruderDelay(int)
+00043480 T Machine::SetLedBrightness(unsigned char, float)
+0006b7c4 T Machine::GetToolUsageStats(unsigned char, unsigned char, machine::ToolUsage*)
+00052130 T Machine::PowerMonitorClose()
+00041828 T Machine::ToggleFilamentJam(bool)
+00041be0 T Machine::EnableToolheadIdle()
+00089228 T Machine::ToggleAcceleration(bool)
+00089d7c T Machine::ToggleExpendBuffer(bool)
+00040d30 T Machine::ChangeHesSampleRate(unsigned char, float, float*)
+00045fd8 T Machine::ResetHeaterWatchdog()
+00054bd0 T Machine::SetInterfaceAddress(unsigned char)
+00058f34 T Machine::ToggleToolheadPower(unsigned char, bool)
+00066d48 T Machine::MoveWithinAxisBounds(float (&) [4])
+00066c3c T Machine::ProgramToolheadReset(unsigned char)
+00039218 T Machine::SetPositionReference(machine::AxisName)
+000479ac T Machine::SetTemperatureTarget(unsigned char, short)
+00069178 T Machine::SetTemperatureTarget(unsigned char, short, int)
+000432c0 T Machine::UpdateToolUsageStats(unsigned char)
+00048f98 T Machine::LoadPrintMetaSettings(char const*)
+00039250 T Machine::SetMoveBufferPosition(float const*)
+0006cbc0 T Machine::ToggleToolheadSyncing(bool)
+00043230 T Machine::UpdateToolRefurbCount(unsigned char, bool)
+0007f0e4 T Machine::AbortAndUpdatePosition()
+0003927c T Machine::ClearPositionReference()
+0007b354 T Machine::InitializeFromSettings(char const*)
+00041a10 T Machine::ResetExtrusionDistance()
+000672e8 T Machine::WaitForHeatersAtTarget(unsigned char, bool const*)
+00066f54 T Machine::WaitForHeatersAtTarget(unsigned char, unsigned char, bool)
+0006c8ec T Machine::GetCachedToolUsageStats(unsigned char, machine::ToolUsage*)
+000435f0 T Machine::LoadFilamentJamSettings(unsigned char, float)
+00045c10 T Machine::LoadTemperatureSettings(short const*)
+0005e83c T Machine::PerformToolheadSelfCheck(unsigned char)
+00065fb0 T Machine::InitializeParserInterface(BirdWing::ParserInterface*)
+000538f8 T Machine::SetMooseChamberBrightness(float)
+000574b0 T Machine::CheckToolheadInitialization()
+0004a0f8 T Machine::SetToolheadIdleUpdatePeriod(unsigned char, float)
+00039248 T Machine::ToggleAccelerationLookahead(bool)
+00067324 T Machine::WaitForHeatersAtLeastTarget(unsigned char, bool const*)
+00041640 T Machine::ToggleExtrusionPercentUpdate(bool)
+00047918 T Machine::Cool()
+0004799c T Machine::Heat()
+00065d04 T Machine::Move(float const*, float)
+000732b0 T Machine::Move(float const*, float, bool const*)
+00072b74 T Machine::Move(float const*, float, bool const*, MakerBot::AxisUnit const*, int, MakerBot::ToolpathTag const*, int)
+0007fb34 T Machine::Abort()
+00087e3c T Machine::Iterate(machine::MachineResponseStatus*)
+00054880 T Machine::LedWake()
+0008a084 T Machine::HomeAxis(machine::AxisName, float, bool, bool, bool)
+00054770 T Machine::LedSleep()
+00065b70 T Machine::LogError(machine::Error)
+00065be8 T Machine::MoveAxis(machine::AxisName, float, float)
+00072a1c T Machine::MoveAxis(machine::AxisName, float, float, bool)
+000726d0 T Machine::MoveAxis(machine::AxisName, float, float, bool, MakerBot::AxisUnit)
+0007f648 T Machine::Shutdown(bool)
+0007fbb0 T Machine::Shutdown()
+0004ecfc T Machine::EnableSpi()
+0004140c T Machine::EndHesLog(unsigned char)
+00065f6c T Machine::FastAbort()
+0007f178 T Machine::FindKnobZ(float, float)
+00042c58 T Machine::GetHesLog(unsigned char, unsigned short, int*)
+0003919c T Machine::ToggleFan(unsigned char, bool)
+00069564 T Machine::ToggleFan(unsigned char, bool, int)
+0007122c T Machine::Machine(std::shared_ptr<MachineTransceiverInterface>&&)
+0007122c T Machine::Machine(std::shared_ptr<MachineTransceiverInterface>&&)
+0006aaec T Machine::~Machine()
+0006a7dc T Machine::~Machine()
+0006a7dc T Machine::~Machine()
+0008c53c T L3RAMMap::AxisBuffer::BufferCommand(PRUCmd_s const&)
+0008c808 T L3RAMMap::AxisBuffer::AxisBuffer(unsigned char*)
+0008c808 T L3RAMMap::AxisBuffer::AxisBuffer(unsigned char*)
+00081e04 T L3RAMMap::BufferMove(int, unsigned int, unsigned int, unsigned int, bool, bool, bool, int, int, unsigned int)
+0008c5e4 T L3RAMMap::BufferVref(int, bool)
+0008c6c4 T L3RAMMap::BufferPause(int, unsigned int, bool)
+00080f18 T L3RAMMap::PruLogBuffer::FlushLog(int, std::vector<unsigned int, std::allocator<unsigned int> >&, std::vector<unsigned int, std::allocator<unsigned int> >&)
+0008c510 T L3RAMMap::PruLogBuffer::PruLogBuffer(unsigned char*)
+0008c510 T L3RAMMap::PruLogBuffer::PruLogBuffer(unsigned char*)
+00082048 T L3RAMMap::BufferPosition(int, unsigned int)
+0008c4bc T L3RAMMap::Init()
+0008c468 T L3RAMMap::Clear()
+000811bc T L3RAMMap::BufferOff(int)
+0008c8a0 T Timer64P::configure32WithFreq(unsigned int)
+0008c854 T Timer64P::configure32WithPeriodTicks(unsigned int)
+0008c900 T Timer64P::configure32WithPeriodMicros(unsigned int)
+0008c95c T Timer64P::halt()
+0008c840 T Timer64P::start()
+0008d57c T Timer64P::Timer64P(int)
+0008d57c T Timer64P::Timer64P(int)
+000745a0 T DebugGPIO::Initialize()
+000554c4 T DebugGPIO::ToggleGpio(int, bool)
+000b4d9c B DebugGPIO::debug_gpio_
+00055500 T DebugGPIO::PulseGpio(int)
+0005b06c T HexParser::VerifyLine(char*, unsigned int)
+0005af18 T HexParser::char2binary(char)
+0005b034 T HexParser::str2byte(char*)
+0005b0b4 T HexParser::ParseFile(char const*, unsigned char**, unsigned int*, unsigned short)
+0004aca4 T JsonTools::ReadFileString(char const*, Json::Value*)
+0004a8b8 T JsonTools::ReadFileStringWithDefault(char const*, char const*, Json::Value*)
+000b4e70 B MemRegion::mem_fd
+000b4e74 B MemRegion::ref_count
+0007c1ac T MemRegion::MemRegion(long, unsigned int)
+0007c1ac T MemRegion::MemRegion(long, unsigned int)
+00089a00 T MemRegion::~MemRegion()
+00089a00 T MemRegion::~MemRegion()
+0007ebc4 T accel_log::log_channel_name()
+0007eb84 T accel_log::telem_channel_name()
+0007ec04 T accel_log::log()
+00090ef0 T accel_log::telem()
+0004711c T InterfaceLED::period_ms_to_uint8(float) const
+000470f8 T InterfaceLED::period_uint8_to_ms(unsigned char) const
+0006e4f0 T acceleration::Block::EnforceExtruderSpeed() const
+00045e94 T HeaterManager::GetTemperature(unsigned char) const
+00045f00 T HeaterManager::AnyHeaterAboveTemp(unsigned short) const
+00045b90 T HeaterManager::GetTemperatureSettings(short*) const
+0008ecdc T UnitConverter::FloorTicks(float) const
+000711dc T UnitConverter::GetMoveTicks(float, float, machine::AxisName) const
+00070fbc T UnitConverter::SecondsToTicks(machine::AxisName, float) const
+00070fd8 T UnitConverter::TicksToSeconds(machine::AxisName, unsigned int) const
+00071144 T UnitConverter::StepsToMMPrecise(machine::AxisName, long long) const
+000710cc T UnitConverter::GetStepsPerPeriod(machine::AxisName, float) const
+00071050 T UnitConverter::GetStepsPerPeriodSq(machine::AxisName, float) const
+000711bc T UnitConverter::MMtoSteps(machine::AxisName, float) const
+00071198 T UnitConverter::StepsToMM(machine::AxisName, int) const
+00070ffc T UnitConverter::TicksToUs(machine::AxisName, unsigned int) const
+0003aca4 T NullTransceiver::GetRadices() const
+00038b34 T NullTransceiver::BufferIsFull(bool) const
+0003a620 T NullTransceiver::GetTickTimes() const
+00038b2c T NullTransceiver::GetAxesPositions(std::vector<int, std::allocator<int> >*) const
+00038b24 T NullTransceiver::AxisCount() const
+0004a088 T ToolheadManager::MightBlock() const
+00049fd4 T ToolheadManager::IsConnected() const
+00039054 T ToolheadManager::BufferIsFull() const
+00049fcc T ToolheadManager::IsInitialized() const
+0004a080 T ToolheadManager::BufferClearDone() const
+00049f4c T ToolheadManager::FirmwareVersion(unsigned char*, unsigned char*, unsigned short*) const
+0005ac6c T ToolheadManager::GetPrintLogLine() const
+00049994 T ToolheadManager::GetPrintLogTitles() const
+00049d50 T ToolheadManager::LocalBufferIsEmpty() const
+0004a2f8 T ToolheadManager::GetSelfCheckResults(char const*) const
+00049fbc T ToolheadManager::IsIdle() const
+00049b48 T ToolheadManager::GetError() const
+0008eab0 T StepperConversions::GetAxesPositions(std::vector<float, std::allocator<float> >&) const
+00070ef8 T StepperConversions::AxisCount() const
+00086f74 T AbstractTransceiver::ConvertedMove::to_string() const
+000891c0 T AccelerationManager::BufferSize() const
+000891e8 T AccelerationManager::BufferIsFull() const
+000890f8 T AccelerationManager::BufferIsEmpty() const
+00089190 T AccelerationManager::BufferSpaceFor(unsigned int) const
+0003a7dc T BirdwingTransceiver::GetRadices() const
+00087a70 T BirdwingTransceiver::BufferIsFull(bool) const
+00046c7c T BirdwingTransceiver::GetMoveSteps(int, int, unsigned int) const
+00086c98 T BirdwingTransceiver::GetTickTimes() const
+00046bf4 T BirdwingTransceiver::FixExtruderSign(AbstractTransceiver::ConvertedMove const&) const
+0008e308 T BirdwingTransceiver::GetAxesPositions(std::vector<int, std::allocator<int> >*) const
+00086c88 T BirdwingTransceiver::CurrentCommandIndex() const
+00046ccc T BirdwingTransceiver::GetPositionCorrection(std::vector<AbstractTransceiver::ConvertedMove, std::allocator<AbstractTransceiver::ConvertedMove> > const&) const
+00046e68 T BirdwingTransceiver::GetTrapezoidPositionCorrection(std::array<std::vector<AbstractTransceiver::ConvertedMove, std::allocator<AbstractTransceiver::ConvertedMove> >, 3u> const&) const
+0008e1a4 T BirdwingTransceiver::Halted() const
+00087a5c T BirdwingTransceiver::Paused() const
+000396cc T BirdwingTransceiver::AxisCount() const
+00039610 T BronxToolheadManager::GetPosition() const
+0006ccec T BronxToolheadManager::IsHESLogged() const
+00039088 T BronxToolheadManager::BufferIsFull() const
+00039458 T BronxToolheadManager::GetToolUsageStats() const
+00039620 T BronxToolheadManager::IsPositionRetrieved() const
+00039448 T BronxToolheadManager::GetExtrusionDistance() const
+00042554 T BronxToolheadManager::SpecificPrintLogLine() const
+0003b170 T BronxToolheadManager::SpecificPrintLogTitles() const
+0006be20 T BronxToolheadManager::VerifyToolUsageStatsRetrieved(unsigned char) const
+0003948c T BronxToolheadManager::GetToolID() const
+000420cc T ChamberToolheadManager::SpecificPrintLogLine() const
+0003b144 T ChamberToolheadManager::SpecificPrintLogTitles() const
+000890b4 T AccelerationManagerImpl::BufferSize() const
+000890cc T AccelerationManagerImpl::HasSpaceFor(unsigned int) const
+0008912c T AccelerationManagerImpl::BufferIsFull() const
+000890bc T AccelerationManagerImpl::BufferIsEmpty() const
+0008915c T AccelerationManagerImpl::BufferFillCount() const
+00089164 T AccelerationManagerImpl::SlipCompensationCompare::operator()(std::pair<float, float> const&, std::pair<float, float> const&) const
+00088ba4 T AccelerationManagerImpl::GetSlipCompensationSpeed(machine::AxisName, float) const
+00042938 T HAL::ToolheadSPI::initialized() const
+0004092c W boost::bad_weak_ptr::what() const
+0003dbac W boost::bad_lexical_cast::what() const
+0006d304 W boost::exception_detail::clone_impl<boost::exception_detail::error_info_injector<boost::lock_error> >::clone() const
+0006156c W boost::exception_detail::clone_impl<boost::exception_detail::error_info_injector<boost::lock_error> >::rethrow() const
+00043f74 W boost::exception_detail::clone_impl<boost::exception_detail::error_info_injector<boost::bad_weak_ptr> >::clone() const
+0004066c W boost::exception_detail::clone_impl<boost::exception_detail::error_info_injector<boost::bad_weak_ptr> >::rethrow() const
+0006d180 W boost::exception_detail::clone_impl<boost::exception_detail::error_info_injector<boost::condition_error> >::clone() const
+000613f4 W boost::exception_detail::clone_impl<boost::exception_detail::error_info_injector<boost::condition_error> >::rethrow() const
+0006d4a4 W boost::exception_detail::clone_impl<boost::exception_detail::error_info_injector<boost::thread_resource_error> >::clone() const
+00061618 W boost::exception_detail::clone_impl<boost::exception_detail::error_info_injector<boost::thread_resource_error> >::rethrow() const
+0006d9ec W boost::exception_detail::clone_impl<boost::exception_detail::error_info_injector<boost::gregorian::bad_weekday> >::clone() const
+0003f0fc W boost::exception_detail::clone_impl<boost::exception_detail::error_info_injector<boost::gregorian::bad_weekday> >::rethrow() const
+0006ddb8 W boost::exception_detail::clone_impl<boost::exception_detail::error_info_injector<boost::gregorian::bad_day_of_year> >::clone() const
+0003ee6c W boost::exception_detail::clone_impl<boost::exception_detail::error_info_injector<boost::gregorian::bad_day_of_year> >::rethrow() const
+0006d780 W boost::exception_detail::clone_impl<boost::exception_detail::error_info_injector<boost::gregorian::bad_day_of_month> >::clone() const
+0003f234 W boost::exception_detail::clone_impl<boost::exception_detail::error_info_injector<boost::gregorian::bad_day_of_month> >::rethrow() const
+0006db30 W boost::exception_detail::clone_impl<boost::exception_detail::error_info_injector<boost::gregorian::bad_year> >::clone() const
+0003f050 W boost::exception_detail::clone_impl<boost::exception_detail::error_info_injector<boost::gregorian::bad_year> >::rethrow() const
+0006dc74 W boost::exception_detail::clone_impl<boost::exception_detail::error_info_injector<boost::gregorian::bad_month> >::clone() const
+0003efa4 W boost::exception_detail::clone_impl<boost::exception_detail::error_info_injector<boost::gregorian::bad_month> >::rethrow() const
+0006d644 W boost::exception_detail::clone_impl<boost::exception_detail::error_info_injector<std::out_of_range> >::clone() const
+000558c0 W boost::exception_detail::clone_impl<boost::exception_detail::error_info_injector<std::out_of_range> >::rethrow() const
+0006d8c4 W boost::exception_detail::clone_impl<boost::exception_detail::error_info_injector<std::runtime_error> >::clone() const
+0003f2e0 W boost::exception_detail::clone_impl<boost::exception_detail::error_info_injector<std::runtime_error> >::rethrow() const
+00040778 W boost::log::v2_mt_posix::attribute_value::impl::get_type() const
+0003e674 W boost::system::system_error::what() const
+0003dbbc W boost::system::error_category::equivalent(boost::system::error_code const&, int) const
+0003dbe4 W boost::system::error_category::equivalent(int, boost::system::error_condition const&) const
+0003dc40 W boost::system::error_category::default_error_condition(int) const
+00049fe0 T Machine::ToolheadOk(unsigned char) const
+0004a018 T Machine::ToolheadOk(unsigned char, bool*) const
+00039314 T Machine::PruIsPaused(bool*) const
+0005f03c T Machine::GetSyncState(unsigned char, bool*) const
+0005f110 T Machine::HesLogLoaded(unsigned char, bool*) const
+00065f98 T Machine::IsInitialized(bool*) const
+00065f90 T Machine::IsInitialized() const
+00049b54 T Machine::ToolheadError(unsigned char) const
+00045eb8 T Machine::GetTemperature(unsigned char, short*) const
+0008ec04 T Machine::GetAxesPosition(float*) const
+0005ece4 T Machine::IsToolConnected(unsigned char, bool*) const
+00089b58 T Machine::MoveBufferEmpty(bool) const
+00089d64 T Machine::MoveBufferEmpty(bool, bool*) const
+00056a88 T Machine::EndstopTriggered(machine::AxisName) const
+00056ad8 T Machine::EndstopTriggered(machine::AxisName, bool*) const
+0004a090 T Machine::ToolheadBlocking(unsigned char) const
+0004a09c T Machine::ToolheadBlocking(unsigned char, bool*) const
+00045f54 T Machine::AnyHeaterAboveTemp(unsigned short, bool*) const
+00065c0c T Machine::DistanceToBoundary(float const*) const
+0005edb8 T Machine::SyncStateConfirmed(unsigned char, bool*) const
+0005ee8c T Machine::GetFilamentPresence(unsigned char, bool*) const
+00065d88 T Machine::GetHGantryConversion(float const (&) [4], float*) const
+00039294 T Machine::GetMoveBufferPosition(float*) const
+000891cc T Machine::AccelerationBufferSize() const
+000392f0 T Machine::GetCurrentCommandIndex(int*) const
+00045bc8 T Machine::GetTemperatureSettings(short*) const
+00049d38 T Machine::ImmediateToolheadError(bool*) const
+00049ce8 T Machine::ImmediateToolheadError() const
+00089114 T Machine::AccelerationBufferEmpty(bool*) const
+0008910c T Machine::AccelerationBufferEmpty() const
+0004a130 T Machine::ToolheadAcknowledgedHes(unsigned char) const
+0004a13c T Machine::ToolheadAcknowledgedHes(unsigned char, bool*) const
+00039338 T Machine::GetHeaterProgressPercent(float*) const
+00065e8c T Machine::GetMaxSequentialIterates() const
+0006ca4c T Machine::HasValidPositionReference(unsigned char, bool*) const
+00049f84 T Machine::GetToolheadFirmwareVersion(unsigned char, unsigned char*, unsigned char*, unsigned short*) const
+00039d9c T Machine::GetExtrusionDistancePercent(float*) const
+0004a584 T Machine::GetToolheadSelfCheckResults(unsigned char, char const*, bool*) const
+0003b19c T Machine::GetExtendedToolheadSelfCheckResults(unsigned char, char*, unsigned short*) const
+00065bac T Machine::GetToolId(unsigned char) const
+0005ef68 T Machine::GetToolId(unsigned char, unsigned char*) const
+0006ac4c W std::_Deque_iterator<char, char&, char*>::operator-(int) const
+000441a4 W std::ctype<char>::do_widen(char const*, char const*, char*) const
+000441c0 W std::ctype<char>::do_widen(char) const
+00044180 W std::ctype<char>::do_narrow(char const*, char const*, char, char*) const
+0004419c W std::ctype<char>::do_narrow(char, char) const
+000498c8 W char* std::string::_S_construct<char*>(char*, char*, std::allocator<char> const&, std::forward_iterator_tag)
+0006ab08 W std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string<std::_Deque_iterator<char, char&, char*> >(std::_Deque_iterator<char, char&, char*>, std::_Deque_iterator<char, char&, char*>, std::allocator<char> const&)
+0006ab08 W std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string<std::_Deque_iterator<char, char&, char*> >(std::_Deque_iterator<char, char&, char*>, std::_Deque_iterator<char, char&, char*>, std::allocator<char> const&)
+0006acb4 W std::_Deque_base<char, std::allocator<char> >::_Deque_base()
+0006acb4 W std::_Deque_base<char, std::allocator<char> >::_Deque_base()
+0006ad90 W std::_Deque_base<char, std::allocator<char> >::~_Deque_base()
+0006ad90 W std::_Deque_base<char, std::allocator<char> >::~_Deque_base()
+0005596c W std::logic_error::logic_error(std::logic_error const&)
+0005596c W std::logic_error::logic_error(std::logic_error const&)
+0004987c W std::runtime_error::runtime_error(std::runtime_error const&)
+0004987c W std::runtime_error::runtime_error(std::runtime_error const&)
+000616c4 W std::basic_stringbuf<char, std::char_traits<char>, std::allocator<char> >::~basic_stringbuf()
+00061784 W std::basic_stringbuf<char, std::char_traits<char>, std::allocator<char> >::~basic_stringbuf()
+00061784 W std::basic_stringbuf<char, std::char_traits<char>, std::allocator<char> >::~basic_stringbuf()
+000827b0 W std::set<machine::AxisName, std::less<machine::AxisName>, std::allocator<machine::AxisName> >::~set()
+000827b0 W std::set<machine::AxisName, std::less<machine::AxisName>, std::allocator<machine::AxisName> >::~set()
+00073960 W void std::deque<char, std::allocator<char> >::_M_insert_aux<char const*>(std::_Deque_iterator<char, char&, char*>, char const*, char const*, unsigned int)
+00073384 W std::deque<char, std::allocator<char> >::_M_reallocate_map(unsigned int, bool)
+00090840 W void std::deque<char, std::allocator<char> >::_M_range_insert_aux<char const*>(std::_Deque_iterator<char, char&, char*>, char const*, char const*, std::forward_iterator_tag)
+000734d0 W std::deque<char, std::allocator<char> >::_M_new_elements_at_back(unsigned int)
+000737d0 W std::deque<char, std::allocator<char> >::_M_new_elements_at_front(unsigned int)
+000738c8 W std::deque<char, std::allocator<char> >::_M_reserve_elements_at_front(unsigned int)
+00067c48 W std::vector<std::string, std::allocator<std::string> >::~vector()
+00067c48 W std::vector<std::string, std::allocator<std::string> >::~vector()
+00055554 W std::vector<short, std::allocator<short> >::~vector()
+00055554 W std::vector<short, std::allocator<short> >::~vector()
+000860f4 W void std::__adjust_heap<std::pair<boost::log::v2_mt_posix::type_info_wrapper, void*>*, int, std::pair<boost::log::v2_mt_posix::type_info_wrapper, void*>, boost::log::v2_mt_posix::aux::dispatching_map_order>(std::pair<boost::log::v2_mt_posix::type_info_wrapper, void*>*, int, int, std::pair<boost::log::v2_mt_posix::type_info_wrapper, void*>, boost::log::v2_mt_posix::aux::dispatching_map_order)
+0004f104 T std::abs(q14 const&)
+00049854 W std::dec(std::ios_base&)
+00049868 W std::hex(std::ios_base&)
+0006abe8 W std::_Deque_iterator<char, char&, char*> std::copy<char const*, std::_Deque_iterator<char, char&, char*> >(char const*, char const*, std::_Deque_iterator<char, char&, char*>)
+0008ae10 W std::basic_string<char, std::char_traits<char>, std::allocator<char> > std::operator+<char, std::char_traits<char>, std::allocator<char> >(std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, char const*)
+000b0c1c V typeinfo for HESInterface
+000b275c D typeinfo for NullTransceiver
+000b17f4 D typeinfo for ToolheadManager
+000b0bf8 V typeinfo for MachineInterface
+000b0c00 V typeinfo for ExtruderInterface
+000b0de8 V typeinfo for AbstractTransceiver
+000b2814 D typeinfo for BirdwingTransceiver
+000b170c D typeinfo for BronxToolheadManager
+000b16a8 D typeinfo for ChamberToolheadManager
+000b0c10 V typeinfo for MachineTransceiverInterface
+000b0c08 V typeinfo for Heater
+000b2b0c D typeinfo for Machine
+000b1a98 V typeinfo for log_obj
+000b2d50 V typeinfo for telem_obj
+000b1374 D typeinfo for acceleration::FanCommand
+000b138c D typeinfo for acceleration::FanDutyCommand
+000b1380 D typeinfo for acceleration::TemperatureCommand
+000b0d94 V typeinfo for acceleration::Command
+000b1088 V typeinfo for ToolheadManager::ToolheadSelfCheckState
+000b1180 D typeinfo for BronxToolheadManager::BronxSelfCheckState
+000b1160 D typeinfo for ChamberToolheadManager::ChamberSelfCheckState
+000b25c0 V typeinfo for boost::lock_error
+000b0e80 V typeinfo for boost::posix_time::ptime
+000b2394 V typeinfo for boost::bad_weak_ptr
+000b0ca4 V typeinfo for boost::noncopyable_::noncopyable
+000b2408 V typeinfo for boost::condition_error
+000b0cc0 V typeinfo for boost::bad_lexical_cast
+000b2430 V typeinfo for boost::exception_detail::clone_base
+000b2198 V typeinfo for boost::exception_detail::clone_impl<boost::exception_detail::error_info_injector<boost::lock_error> >
+000b2150 V typeinfo for boost::exception_detail::clone_impl<boost::exception_detail::error_info_injector<boost::bad_weak_ptr> >
+000b2108 V typeinfo for boost::exception_detail::clone_impl<boost::exception_detail::error_info_injector<boost::condition_error> >
+000b2438 V typeinfo for boost::exception_detail::clone_impl<boost::exception_detail::error_info_injector<boost::thread_resource_error> >
+000b1fa0 V typeinfo for boost::exception_detail::clone_impl<boost::exception_detail::error_info_injector<boost::gregorian::bad_weekday> >
+000b20c0 V typeinfo for boost::exception_detail::clone_impl<boost::exception_detail::error_info_injector<boost::gregorian::bad_day_of_year> >
+000b2030 V typeinfo for boost::exception_detail::clone_impl<boost::exception_detail::error_info_injector<boost::gregorian::bad_day_of_month> >
+000b1f10 V typeinfo for boost::exception_detail::clone_impl<boost::exception_detail::error_info_injector<boost::gregorian::bad_year> >
+000b1f58 V typeinfo for boost::exception_detail::clone_impl<boost::exception_detail::error_info_injector<boost::gregorian::bad_month> >
+000b0f84 V typeinfo for boost::exception_detail::clone_impl<boost::exception_detail::error_info_injector<std::length_error> >
+000b1fe8 V typeinfo for boost::exception_detail::clone_impl<boost::exception_detail::error_info_injector<std::out_of_range> >
+000b2078 V typeinfo for boost::exception_detail::clone_impl<boost::exception_detail::error_info_injector<std::runtime_error> >
+000b23d0 V typeinfo for boost::exception_detail::error_info_injector<boost::lock_error>
+000b23a0 V typeinfo for boost::exception_detail::error_info_injector<boost::bad_weak_ptr>
+000b2374 V typeinfo for boost::exception_detail::error_info_injector<boost::condition_error>
+000b25d4 V typeinfo for boost::exception_detail::error_info_injector<boost::thread_resource_error>
+000b22bc V typeinfo for boost::exception_detail::error_info_injector<boost::gregorian::bad_weekday>
+000b2354 V typeinfo for boost::exception_detail::error_info_injector<boost::gregorian::bad_day_of_year>
+000b2308 V typeinfo for boost::exception_detail::error_info_injector<boost::gregorian::bad_day_of_month>
+000b2264 V typeinfo for boost::exception_detail::error_info_injector<boost::gregorian::bad_year>
+000b2290 V typeinfo for boost::exception_detail::error_info_injector<boost::gregorian::bad_month>
+000b0e38 V typeinfo for boost::exception_detail::error_info_injector<std::length_error>
+000b22dc V typeinfo for boost::exception_detail::error_info_injector<std::out_of_range>
+000b2328 V typeinfo for boost::exception_detail::error_info_injector<std::runtime_error>
+000b1080 V typeinfo for boost::exception_detail::error_info_container
+000b1074 V typeinfo for boost::exception_detail::error_info_container_impl
+000b2678 V typeinfo for boost::thread_exception
+000b0c24 V typeinfo for boost::bad_function_call
+000b1a90 V typeinfo for boost::thread_interrupted
+000b0c68 V typeinfo for boost::equality_comparable<boost::posix_time::ptime, boost::posix_time::ptime, boost::detail::empty_base<boost::posix_time::ptime>, boost::detail::false_t>
+000b11c4 V typeinfo for boost::thread_specific_ptr<boost::log::v2_mt_posix::sinks::basic_formatting_sink_frontend<char>::formatting_context>::delete_data
+000b11b8 V typeinfo for boost::thread_specific_ptr<boost::log::v2_mt_posix::sinks::basic_formatting_sink_frontend<wchar_t>::formatting_context>::delete_data
+000b0c5c V typeinfo for boost::equality_comparable1<boost::posix_time::ptime, boost::detail::empty_base<boost::posix_time::ptime> >
+000b0c80 V typeinfo for boost::less_than_comparable<boost::posix_time::ptime, boost::equality_comparable<boost::posix_time::ptime, boost::posix_time::ptime, boost::detail::empty_base<boost::posix_time::ptime>, boost::detail::false_t>, boost::detail::empty_base<boost::posix_time::ptime>, boost::detail::true_t>
+000b0c74 V typeinfo for boost::less_than_comparable1<boost::posix_time::ptime, boost::equality_comparable<boost::posix_time::ptime, boost::posix_time::ptime, boost::detail::empty_base<boost::posix_time::ptime>, boost::detail::false_t> >
+000b2684 V typeinfo for boost::thread_resource_error
+000b0ccc V typeinfo for boost::log::v2_mt_posix::attributes::basic_clock<boost::log::v2_mt_posix::attributes::local_time_traits>::impl
+000b1190 V typeinfo for boost::log::v2_mt_posix::attributes::mutable_constant<std::string, void, void, void>::impl
+000b0d20 V typeinfo for boost::log::v2_mt_posix::attributes::current_thread_id::impl
+000b0e20 V typeinfo for boost::log::v2_mt_posix::attributes::attribute_value_impl<boost::log::v2_mt_posix::aux::id<boost::log::v2_mt_posix::aux::thread> >
+000b0d08 V typeinfo for boost::log::v2_mt_posix::attributes::attribute_value_impl<boost::log::v2_mt_posix::aux::id<boost::log::v2_mt_posix::aux::process> >
+000b0e08 V typeinfo for boost::log::v2_mt_posix::attributes::attribute_value_impl<boost::log::v2_mt_posix::trivial::severity_level>
+000b0d2c V typeinfo for boost::log::v2_mt_posix::attributes::attribute_value_impl<boost::posix_time::ptime>
+000b1068 V typeinfo for boost::log::v2_mt_posix::attributes::attribute_value_impl<std::string>
+000b0e2c V typeinfo for boost::log::v2_mt_posix::attributes::attribute_value_impl<unsigned int>
+000b0cd8 V typeinfo for boost::log::v2_mt_posix::attributes::counter<unsigned int>::impl_generic
+000b0cf0 V typeinfo for boost::log::v2_mt_posix::attributes::counter<unsigned int>::impl
+000b0ce4 V typeinfo for boost::log::v2_mt_posix::attributes::counter<unsigned int>::impl_dec
+000b0cfc V typeinfo for boost::log::v2_mt_posix::attributes::counter<unsigned int>::impl_inc
+000b0d14 V typeinfo for boost::log::v2_mt_posix::attributes::constant<boost::log::v2_mt_posix::aux::id<boost::log::v2_mt_posix::aux::process> >::impl
+000b0f10 V typeinfo for boost::log::v2_mt_posix::empty_deleter
+000b2cfc V typeinfo for boost::log::v2_mt_posix::attribute_value::impl
+000b28b8 V typeinfo for boost::log::v2_mt_posix::type_info_wrapper::uninitialized
+000b2ce8 V typeinfo for boost::log::v2_mt_posix::intrusive_ref_counter
+000b1aa0 V typeinfo for boost::log::v2_mt_posix::aux::visible_type<log_obj>
+000b2d58 V typeinfo for boost::log::v2_mt_posix::aux::visible_type<telem_obj>
+000b0f7c V typeinfo for boost::log::v2_mt_posix::aux::visible_type<boost::log::v2_mt_posix::trivial::severity_level>
+000b0f74 V typeinfo for boost::log::v2_mt_posix::aux::visible_type<boost::log::v2_mt_posix::aux::id<boost::log::v2_mt_posix::aux::thread> >
+000b0f18 V typeinfo for boost::log::v2_mt_posix::aux::visible_type<boost::log::v2_mt_posix::aux::id<boost::log::v2_mt_posix::aux::process> >
+000b0f28 V typeinfo for boost::log::v2_mt_posix::aux::visible_type<boost::posix_time::ptime>
+000b28a8 V typeinfo for boost::log::v2_mt_posix::aux::visible_type<std::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t> > >
+000b28b0 V typeinfo for boost::log::v2_mt_posix::aux::visible_type<std::string>
+000b0f20 V typeinfo for boost::log::v2_mt_posix::aux::visible_type<unsigned int>
+000b289c V typeinfo for boost::log::v2_mt_posix::aux::basic_ostringstreambuf<char, std::char_traits<char>, std::allocator<char> >
+000b2890 V typeinfo for boost::log::v2_mt_posix::aux::basic_ostringstreambuf<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t> >
+000b1a14 V typeinfo for boost::log::v2_mt_posix::aux::locking_ptr_counter_base
+000b0e78 V typeinfo for boost::log::v2_mt_posix::aux::id<boost::log::v2_mt_posix::aux::thread>
+000b0e70 V typeinfo for boost::log::v2_mt_posix::aux::id<boost::log::v2_mt_posix::aux::process>
+000b19c0 V typeinfo for boost::log::v2_mt_posix::sinks::synchronous_sink<boost::log::v2_mt_posix::sinks::text_file_backend>
+000b1a28 V typeinfo for boost::log::v2_mt_posix::sinks::synchronous_sink<boost::log::v2_mt_posix::sinks::basic_text_ostream_backend<char> >
+000b197c V typeinfo for boost::log::v2_mt_posix::sinks::synchronous_sink<boost::log::v2_mt_posix::sinks::basic_text_ostream_backend<wchar_t> >
+000b1a08 V typeinfo for boost::log::v2_mt_posix::sinks::basic_sink_frontend
+000b1a1c V typeinfo for boost::log::v2_mt_posix::sinks::basic_formatting_sink_frontend<char>
+000b1970 V typeinfo for boost::log::v2_mt_posix::sinks::basic_formatting_sink_frontend<wchar_t>
+000b0cb8 V typeinfo for boost::log::v2_mt_posix::sinks::file::collector
+000b1a00 V typeinfo for boost::log::v2_mt_posix::sinks::sink
+000b0da4 V typeinfo for boost::log::v2_mt_posix::sources::basic_logger<char, boost::log::v2_mt_posix::sources::severity_channel_logger<boost::log::v2_mt_posix::trivial::severity_level, std::string>, boost::log::v2_mt_posix::sources::single_thread_model>
+000b0d9c V typeinfo for boost::log::v2_mt_posix::sources::single_thread_model
+000b0db0 V typeinfo for boost::log::v2_mt_posix::sources::basic_channel_logger<boost::log::v2_mt_posix::sources::basic_logger<char, boost::log::v2_mt_posix::sources::severity_channel_logger<boost::log::v2_mt_posix::trivial::severity_level, std::string>, boost::log::v2_mt_posix::sources::single_thread_model>, std::string>
+000b0dbc V typeinfo for boost::log::v2_mt_posix::sources::basic_severity_logger<boost::log::v2_mt_posix::sources::basic_channel_logger<boost::log::v2_mt_posix::sources::basic_logger<char, boost::log::v2_mt_posix::sources::severity_channel_logger<boost::log::v2_mt_posix::trivial::severity_level, std::string>, boost::log::v2_mt_posix::sources::single_thread_model>, std::string>, boost::log::v2_mt_posix::trivial::severity_level>
+000b0dc8 V typeinfo for boost::log::v2_mt_posix::sources::basic_composite_logger<char, boost::log::v2_mt_posix::sources::severity_channel_logger<boost::log::v2_mt_posix::trivial::severity_level, std::string>, boost::log::v2_mt_posix::sources::single_thread_model, boost::log::v2_mt_posix::sources::features<boost::log::v2_mt_posix::sources::severity<boost::log::v2_mt_posix::trivial::severity_level>, boost::log::v2_mt_posix::sources::channel<std::string> > >
+000b0f58 V typeinfo for boost::log::v2_mt_posix::sources::severity_channel_logger<boost::log::v2_mt_posix::trivial::severity_level, std::string>
+000b1090 V typeinfo for boost::log::v2_mt_posix::sources::aux::logger_holder<boost::log::v2_mt_posix::sources::severity_channel_logger<boost::log::v2_mt_posix::trivial::severity_level, std::string> >
+000b0ddc V typeinfo for boost::log::v2_mt_posix::sources::aux::severity_level<boost::log::v2_mt_posix::trivial::severity_level>::impl
+000b0dd4 V typeinfo for boost::log::v2_mt_posix::sources::aux::logger_holder_base
+000b0f64 V typeinfo for boost::log::v2_mt_posix::trivial::severity_level
+000b2cf0 V typeinfo for boost::log::v2_mt_posix::attribute::impl
+000b0c54 V typeinfo for boost::detail::empty_base<boost::posix_time::ptime>
+000b0dfc V typeinfo for boost::detail::thread_data<StatusThread>
+000b0ee0 V typeinfo for boost::detail::sp_ms_deleter<boost::log::v2_mt_posix::sinks::synchronous_sink<boost::log::v2_mt_posix::sinks::text_file_backend> >
+000b0f00 V typeinfo for boost::detail::sp_ms_deleter<boost::log::v2_mt_posix::sinks::synchronous_sink<boost::log::v2_mt_posix::sinks::basic_text_ostream_backend<char> > >
+000b0ef0 V typeinfo for boost::detail::sp_ms_deleter<boost::log::v2_mt_posix::sinks::synchronous_sink<boost::log::v2_mt_posix::sinks::basic_text_ostream_backend<wchar_t> > >
+000b0ee8 V typeinfo for boost::detail::sp_ms_deleter<boost::log::v2_mt_posix::sinks::text_file_backend>
+000b0f08 V typeinfo for boost::detail::sp_ms_deleter<boost::log::v2_mt_posix::sinks::basic_text_ostream_backend<char> >
+000b0ef8 V typeinfo for boost::detail::sp_ms_deleter<boost::log::v2_mt_posix::sinks::basic_text_ostream_backend<wchar_t> >
+000b0f6c V typeinfo for boost::detail::sp_ms_deleter<boost::log::v2_mt_posix::sources::aux::logger_holder<boost::log::v2_mt_posix::sources::severity_channel_logger<boost::log::v2_mt_posix::trivial::severity_level, std::string> > >
+000b0ed8 V typeinfo for boost::detail::do_heap_delete<boost::thread_specific_ptr<boost::log::v2_mt_posix::sinks::basic_formatting_sink_frontend<char>::formatting_context>::delete_data>
+000b0ed0 V typeinfo for boost::detail::do_heap_delete<boost::thread_specific_ptr<boost::log::v2_mt_posix::sinks::basic_formatting_sink_frontend<wchar_t>::formatting_context>::delete_data>
+000b2690 V typeinfo for boost::detail::sp_counted_base
+000b0df0 V typeinfo for boost::detail::sp_counted_impl_p<boost::detail::thread_data<StatusThread> >
+000b2648 V typeinfo for boost::detail::sp_counted_impl_pd<boost::thread_specific_ptr<boost::log::v2_mt_posix::sinks::basic_formatting_sink_frontend<char>::formatting_context>::delete_data*, boost::detail::do_heap_delete<boost::thread_specific_ptr<boost::log::v2_mt_posix::sinks::basic_formatting_sink_frontend<char>::formatting_context>::delete_data> >
+000b25f4 V typeinfo for boost::detail::sp_counted_impl_pd<boost::thread_specific_ptr<boost::log::v2_mt_posix::sinks::basic_formatting_sink_frontend<wchar_t>::formatting_context>::delete_data*, boost::detail::do_heap_delete<boost::thread_specific_ptr<boost::log::v2_mt_posix::sinks::basic_formatting_sink_frontend<wchar_t>::formatting_context>::delete_data> >
+000b2660 V typeinfo for boost::detail::sp_counted_impl_pd<boost::log::v2_mt_posix::sinks::synchronous_sink<boost::log::v2_mt_posix::sinks::text_file_backend>*, boost::detail::sp_ms_deleter<boost::log::v2_mt_posix::sinks::synchronous_sink<boost::log::v2_mt_posix::sinks::text_file_backend> > >
+000b260c V typeinfo for boost::detail::sp_counted_impl_pd<boost::log::v2_mt_posix::sinks::synchronous_sink<boost::log::v2_mt_posix::sinks::basic_text_ostream_backend<char> >*, boost::detail::sp_ms_deleter<boost::log::v2_mt_posix::sinks::synchronous_sink<boost::log::v2_mt_posix::sinks::basic_text_ostream_backend<char> > > >
+000b263c V typeinfo for boost::detail::sp_counted_impl_pd<boost::log::v2_mt_posix::sinks::synchronous_sink<boost::log::v2_mt_posix::sinks::basic_text_ostream_backend<wchar_t> >*, boost::detail::sp_ms_deleter<boost::log::v2_mt_posix::sinks::synchronous_sink<boost::log::v2_mt_posix::sinks::basic_text_ostream_backend<wchar_t> > > >
+000b2654 V typeinfo for boost::detail::sp_counted_impl_pd<boost::log::v2_mt_posix::sinks::text_file_backend*, boost::detail::sp_ms_deleter<boost::log::v2_mt_posix::sinks::text_file_backend> >
+000b2618 V typeinfo for boost::detail::sp_counted_impl_pd<boost::log::v2_mt_posix::sinks::basic_text_ostream_backend<char>*, boost::detail::sp_ms_deleter<boost::log::v2_mt_posix::sinks::basic_text_ostream_backend<char> > >
+000b2600 V typeinfo for boost::detail::sp_counted_impl_pd<boost::log::v2_mt_posix::sinks::basic_text_ostream_backend<wchar_t>*, boost::detail::sp_ms_deleter<boost::log::v2_mt_posix::sinks::basic_text_ostream_backend<wchar_t> > >
+000b0e14 V typeinfo for boost::detail::sp_counted_impl_pd<boost::log::v2_mt_posix::sources::aux::logger_holder<boost::log::v2_mt_posix::sources::severity_channel_logger<boost::log::v2_mt_posix::trivial::severity_level, std::string> >*, boost::detail::sp_ms_deleter<boost::log::v2_mt_posix::sources::aux::logger_holder<boost::log::v2_mt_posix::sources::severity_channel_logger<boost::log::v2_mt_posix::trivial::severity_level, std::string> > > >
+000b2630 V typeinfo for boost::detail::sp_counted_impl_pd<std::ostream*, boost::log::v2_mt_posix::empty_deleter>
+000b2624 V typeinfo for boost::detail::sp_counted_impl_pd<std::basic_ostream<wchar_t, std::char_traits<wchar_t> >*, boost::log::v2_mt_posix::empty_deleter>
+000b11d0 V typeinfo for boost::detail::tss_cleanup_function
+000b266c V typeinfo for boost::system::system_error
+000b0cac V typeinfo for boost::system::error_category
+000b0c8c V typeinfo for boost::date_time::base_time<boost::posix_time::ptime, boost::date_time::counted_time_system<boost::date_time::counted_time_rep<boost::posix_time::millisec_posix_time_system_config> > >
+000b25cc V typeinfo for boost::exception
+000b22b0 V typeinfo for boost::gregorian::bad_weekday
+000b2348 V typeinfo for boost::gregorian::bad_day_of_year
+000b22fc V typeinfo for boost::gregorian::bad_day_of_month
+000b2258 V typeinfo for boost::gregorian::bad_year
+000b2284 V typeinfo for boost::gregorian::bad_month
+000b0d5c V typeinfo for __gnu_cxx::__mutex
+000b0f50 V typeinfo for std::string
+000b0d64 V typeinfo for std::_Mutex_base<(__gnu_cxx::_Lock_policy)1>
+000b0d88 V typeinfo for std::_Sp_counted_ptr<acceleration::FanCommand*, (__gnu_cxx::_Lock_policy)1>
+000b0d44 V typeinfo for std::_Sp_counted_ptr<acceleration::FanDutyCommand*, (__gnu_cxx::_Lock_policy)1>
+000b0d50 V typeinfo for std::_Sp_counted_ptr<acceleration::TemperatureCommand*, (__gnu_cxx::_Lock_policy)1>
+000b0d70 V typeinfo for std::_Sp_counted_base<(__gnu_cxx::_Lock_policy)1>
+000b0f48 V typeinfo for std::_Sp_make_shared_tag
+000b0c30 V typeinfo for std::_Sp_counted_ptr_inplace<StepperConversions, std::allocator<StepperConversions>, (__gnu_cxx::_Lock_policy)1>
+000b0d38 V typeinfo for std::_Sp_counted_ptr_inplace<BirdwingTransceiver, std::allocator<BirdwingTransceiver>, (__gnu_cxx::_Lock_policy)1>
+000b0c48 V typeinfo for std::_Sp_counted_ptr_inplace<BronxToolheadManager, std::allocator<BronxToolheadManager>, (__gnu_cxx::_Lock_policy)1>
+000b0c3c V typeinfo for std::_Sp_counted_ptr_inplace<ChamberToolheadManager, std::allocator<ChamberToolheadManager>, (__gnu_cxx::_Lock_policy)1>
+00094374 V typeinfo name for HESInterface
+0009f81c R typeinfo name for NullTransceiver
+0009d658 R typeinfo name for ToolheadManager
+00094324 V typeinfo name for MachineInterface
+00094338 V typeinfo name for ExtruderInterface
+00095618 V typeinfo name for AbstractTransceiver
+0009f830 R typeinfo name for BirdwingTransceiver
+0009d640 R typeinfo name for BronxToolheadManager
+0009d624 R typeinfo name for ChamberToolheadManager
+00094354 V typeinfo name for MachineTransceiverInterface
+0009434c V typeinfo name for Heater
+0009fd18 R typeinfo name for Machine
+0009e890 V typeinfo name for log_obj
+000a09e8 V typeinfo name for telem_obj
+0009cedc R typeinfo name for acceleration::FanCommand
+0009ceb8 R typeinfo name for acceleration::FanDutyCommand
+0009cefc R typeinfo name for acceleration::TemperatureCommand
+00095134 V typeinfo name for acceleration::Command
+00099f68 V typeinfo name for ToolheadManager::ToolheadSelfCheckState
+0009c2a0 R typeinfo name for BronxToolheadManager::BronxSelfCheckState
+0009c26c R typeinfo name for ChamberToolheadManager::ChamberSelfCheckState
+0009f1e0 V typeinfo name for boost::lock_error
+000947a0 V typeinfo name for boost::posix_time::ptime
+0009edd0 V typeinfo name for boost::bad_weak_ptr
+000947bc V typeinfo name for boost::noncopyable_::noncopyable
+0009f150 V typeinfo name for boost::condition_error
+00094ca8 V typeinfo name for boost::bad_lexical_cast
+0009ee40 V typeinfo name for boost::exception_detail::clone_base
+0009ede8 V typeinfo name for boost::exception_detail::clone_impl<boost::exception_detail::error_info_injector<boost::lock_error> >
+0009ed78 V typeinfo name for boost::exception_detail::clone_impl<boost::exception_detail::error_info_injector<boost::bad_weak_ptr> >
+0009ed1c V typeinfo name for boost::exception_detail::clone_impl<boost::exception_detail::error_info_injector<boost::condition_error> >
+0009f16c V typeinfo name for boost::exception_detail::clone_impl<boost::exception_detail::error_info_injector<boost::thread_resource_error> >
+0009ead4 V typeinfo name for boost::exception_detail::clone_impl<boost::exception_detail::error_info_injector<boost::gregorian::bad_weekday> >
+0009ec94 V typeinfo name for boost::exception_detail::clone_impl<boost::exception_detail::error_info_injector<boost::gregorian::bad_day_of_year> >
+0009ebac V typeinfo name for boost::exception_detail::clone_impl<boost::exception_detail::error_info_injector<boost::gregorian::bad_day_of_month> >
+0009e9dc V typeinfo name for boost::exception_detail::clone_impl<boost::exception_detail::error_info_injector<boost::gregorian::bad_year> >
+0009ea54 V typeinfo name for boost::exception_detail::clone_impl<boost::exception_detail::error_info_injector<boost::gregorian::bad_month> >
+000958e0 V typeinfo name for boost::exception_detail::clone_impl<boost::exception_detail::error_info_injector<std::length_error> >
+0009eb54 V typeinfo name for boost::exception_detail::clone_impl<boost::exception_detail::error_info_injector<std::out_of_range> >
+0009ec3c V typeinfo name for boost::exception_detail::clone_impl<boost::exception_detail::error_info_injector<std::runtime_error> >
+0009f10c V typeinfo name for boost::exception_detail::error_info_injector<boost::lock_error>
+0009f0c8 V typeinfo name for boost::exception_detail::error_info_injector<boost::bad_weak_ptr>
+0009f080 V typeinfo name for boost::exception_detail::error_info_injector<boost::condition_error>
+0009f218 V typeinfo name for boost::exception_detail::error_info_injector<boost::thread_resource_error>
+0009ef00 V typeinfo name for boost::exception_detail::error_info_injector<boost::gregorian::bad_weekday>
+0009f02c V typeinfo name for boost::exception_detail::error_info_injector<boost::gregorian::bad_day_of_year>
+0009ef94 V typeinfo name for boost::exception_detail::error_info_injector<boost::gregorian::bad_day_of_month>
+0009ee68 V typeinfo name for boost::exception_detail::error_info_injector<boost::gregorian::bad_year>
+0009eeb4 V typeinfo name for boost::exception_detail::error_info_injector<boost::gregorian::bad_month>
+00095938 V typeinfo name for boost::exception_detail::error_info_injector<std::length_error>
+0009ef50 V typeinfo name for boost::exception_detail::error_info_injector<std::out_of_range>
+0009efe8 V typeinfo name for boost::exception_detail::error_info_injector<std::runtime_error>
+00099228 V typeinfo name for boost::exception_detail::error_info_container
+000991f0 V typeinfo name for boost::exception_detail::error_info_container_impl
+0009f7bc V typeinfo name for boost::thread_exception
+00094384 V typeinfo name for boost::bad_function_call
+0009e80c V typeinfo name for boost::thread_interrupted
+00094594 V typeinfo name for boost::equality_comparable<boost::posix_time::ptime, boost::posix_time::ptime, boost::detail::empty_base<boost::posix_time::ptime>, boost::detail::false_t>
+0009caec V typeinfo name for boost::thread_specific_ptr<boost::log::v2_mt_posix::sinks::basic_formatting_sink_frontend<char>::formatting_context>::delete_data
+0009ca6c V typeinfo name for boost::thread_specific_ptr<boost::log::v2_mt_posix::sinks::basic_formatting_sink_frontend<wchar_t>::formatting_context>::delete_data
+00094540 V typeinfo name for boost::equality_comparable1<boost::posix_time::ptime, boost::detail::empty_base<boost::posix_time::ptime> >
+0009467c V typeinfo name for boost::less_than_comparable<boost::posix_time::ptime, boost::equality_comparable<boost::posix_time::ptime, boost::posix_time::ptime, boost::detail::empty_base<boost::posix_time::ptime>, boost::detail::false_t>, boost::detail::empty_base<boost::posix_time::ptime>, boost::detail::true_t>
+000945f8 V typeinfo name for boost::less_than_comparable1<boost::posix_time::ptime, boost::equality_comparable<boost::posix_time::ptime, boost::posix_time::ptime, boost::detail::empty_base<boost::posix_time::ptime>, boost::detail::false_t> >
+0009f7d8 V typeinfo name for boost::thread_resource_error
+00094cc4 V typeinfo name for boost::log::v2_mt_posix::attributes::basic_clock<boost::log::v2_mt_posix::attributes::local_time_traits>::impl
+0009c9e8 V typeinfo name for boost::log::v2_mt_posix::attributes::mutable_constant<std::string, void, void, void>::impl
+00094eb8 V typeinfo name for boost::log::v2_mt_posix::attributes::current_thread_id::impl
+00095848 V typeinfo name for boost::log::v2_mt_posix::attributes::attribute_value_impl<boost::log::v2_mt_posix::aux::id<boost::log::v2_mt_posix::aux::thread> >
+00094e08 V typeinfo name for boost::log::v2_mt_posix::attributes::attribute_value_impl<boost::log::v2_mt_posix::aux::id<boost::log::v2_mt_posix::aux::process> >
+00095738 V typeinfo name for boost::log::v2_mt_posix::attributes::attribute_value_impl<boost::log::v2_mt_posix::trivial::severity_level>
+00094ef8 V typeinfo name for boost::log::v2_mt_posix::attributes::attribute_value_impl<boost::posix_time::ptime>
+000991b0 V typeinfo name for boost::log::v2_mt_posix::attributes::attribute_value_impl<std::string>
+000958a0 V typeinfo name for boost::log::v2_mt_posix::attributes::attribute_value_impl<unsigned int>
+00094d18 V typeinfo name for boost::log::v2_mt_posix::attributes::counter<unsigned int>::impl_generic
+00094d94 V typeinfo name for boost::log::v2_mt_posix::attributes::counter<unsigned int>::impl
+00094d58 V typeinfo name for boost::log::v2_mt_posix::attributes::counter<unsigned int>::impl_dec
+00094dcc V typeinfo name for boost::log::v2_mt_posix::attributes::counter<unsigned int>::impl_inc
+00094e64 V typeinfo name for boost::log::v2_mt_posix::attributes::constant<boost::log::v2_mt_posix::aux::id<boost::log::v2_mt_posix::aux::process> >::impl
+00094bc0 V typeinfo name for boost::log::v2_mt_posix::empty_deleter
+000a09b8 V typeinfo name for boost::log::v2_mt_posix::attribute_value::impl
+0009fa04 V typeinfo name for boost::log::v2_mt_posix::type_info_wrapper::uninitialized
+000a0958 V typeinfo name for boost::log::v2_mt_posix::intrusive_ref_counter
+0009e89c V typeinfo name for boost::log::v2_mt_posix::aux::visible_type<log_obj>
+000a09f4 V typeinfo name for boost::log::v2_mt_posix::aux::visible_type<telem_obj>
+000956ec V typeinfo name for boost::log::v2_mt_posix::aux::visible_type<boost::log::v2_mt_posix::trivial::severity_level>
+000956a8 V typeinfo name for boost::log::v2_mt_posix::aux::visible_type<boost::log::v2_mt_posix::aux::id<boost::log::v2_mt_posix::aux::thread> >
+00094bec V typeinfo name for boost::log::v2_mt_posix::aux::visible_type<boost::log::v2_mt_posix::aux::id<boost::log::v2_mt_posix::aux::process> >
+00094c64 V typeinfo name for boost::log::v2_mt_posix::aux::visible_type<boost::posix_time::ptime>
+0009f988 V typeinfo name for boost::log::v2_mt_posix::aux::visible_type<std::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t> > >
+0009f9d4 V typeinfo name for boost::log::v2_mt_posix::aux::visible_type<std::string>
+00094c34 V typeinfo name for boost::log::v2_mt_posix::aux::visible_type<unsigned int>
+0009fa90 V typeinfo name for boost::log::v2_mt_posix::aux::basic_ostringstreambuf<char, std::char_traits<char>, std::allocator<char> >
+0009fa40 V typeinfo name for boost::log::v2_mt_posix::aux::basic_ostringstreambuf<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t> >
+0009e738 V typeinfo name for boost::log::v2_mt_posix::aux::locking_ptr_counter_base
+000944dc V typeinfo name for boost::log::v2_mt_posix::aux::id<boost::log::v2_mt_posix::aux::thread>
+000944ac V typeinfo name for boost::log::v2_mt_posix::aux::id<boost::log::v2_mt_posix::aux::process>
+0009e6b4 V typeinfo name for boost::log::v2_mt_posix::sinks::synchronous_sink<boost::log::v2_mt_posix::sinks::text_file_backend>
+0009e7b4 V typeinfo name for boost::log::v2_mt_posix::sinks::synchronous_sink<boost::log::v2_mt_posix::sinks::basic_text_ostream_backend<char> >
+0009e65c V typeinfo name for boost::log::v2_mt_posix::sinks::synchronous_sink<boost::log::v2_mt_posix::sinks::basic_text_ostream_backend<wchar_t> >
+0009e700 V typeinfo name for boost::log::v2_mt_posix::sinks::basic_sink_frontend
+0009e770 V typeinfo name for boost::log::v2_mt_posix::sinks::basic_formatting_sink_frontend<char>
+0009e5f0 V typeinfo name for boost::log::v2_mt_posix::sinks::basic_formatting_sink_frontend<wchar_t>
+00094800 V typeinfo name for boost::log::v2_mt_posix::sinks::file::collector
+0009e634 V typeinfo name for boost::log::v2_mt_posix::sinks::sink
+0009518c V typeinfo name for boost::log::v2_mt_posix::sources::basic_logger<char, boost::log::v2_mt_posix::sources::severity_channel_logger<boost::log::v2_mt_posix::trivial::severity_level, std::string>, boost::log::v2_mt_posix::sources::single_thread_model>
+00095154 V typeinfo name for boost::log::v2_mt_posix::sources::single_thread_model
+00095218 V typeinfo name for boost::log::v2_mt_posix::sources::basic_channel_logger<boost::log::v2_mt_posix::sources::basic_logger<char, boost::log::v2_mt_posix::sources::severity_channel_logger<boost::log::v2_mt_posix::trivial::severity_level, std::string>, boost::log::v2_mt_posix::sources::single_thread_model>, std::string>
+000952c4 V typeinfo name for boost::log::v2_mt_posix::sources::basic_severity_logger<boost::log::v2_mt_posix::sources::basic_channel_logger<boost::log::v2_mt_posix::sources::basic_logger<char, boost::log::v2_mt_posix::sources::severity_channel_logger<boost::log::v2_mt_posix::trivial::severity_level, std::string>, boost::log::v2_mt_posix::sources::single_thread_model>, std::string>, boost::log::v2_mt_posix::trivial::severity_level>
+00095390 V typeinfo name for boost::log::v2_mt_posix::sources::basic_composite_logger<char, boost::log::v2_mt_posix::sources::severity_channel_logger<boost::log::v2_mt_posix::trivial::severity_level, std::string>, boost::log::v2_mt_posix::sources::single_thread_model, boost::log::v2_mt_posix::sources::features<boost::log::v2_mt_posix::sources::severity<boost::log::v2_mt_posix::trivial::severity_level>, boost::log::v2_mt_posix::sources::channel<std::string> > >
+0009545c V typeinfo name for boost::log::v2_mt_posix::sources::severity_channel_logger<boost::log::v2_mt_posix::trivial::severity_level, std::string>
+0009ac4c V typeinfo name for boost::log::v2_mt_posix::sources::aux::logger_holder<boost::log::v2_mt_posix::sources::severity_channel_logger<boost::log::v2_mt_posix::trivial::severity_level, std::string> >
+00095528 V typeinfo name for boost::log::v2_mt_posix::sources::aux::severity_level<boost::log::v2_mt_posix::trivial::severity_level>::impl
+000954ec V typeinfo name for boost::log::v2_mt_posix::sources::aux::logger_holder_base
+000954b8 V typeinfo name for boost::log::v2_mt_posix::trivial::severity_level
+000a098c V typeinfo name for boost::log::v2_mt_posix::attribute::impl
+0009450c V typeinfo name for boost::detail::empty_base<boost::posix_time::ptime>
+00095678 V typeinfo name for boost::detail::thread_data<StatusThread>
+00094968 V typeinfo name for boost::detail::sp_ms_deleter<boost::log::v2_mt_posix::sinks::synchronous_sink<boost::log::v2_mt_posix::sinks::text_file_backend> >
+00094af0 V typeinfo name for boost::detail::sp_ms_deleter<boost::log::v2_mt_posix::sinks::synchronous_sink<boost::log::v2_mt_posix::sinks::basic_text_ostream_backend<char> > >
+00094a20 V typeinfo name for boost::detail::sp_ms_deleter<boost::log::v2_mt_posix::sinks::synchronous_sink<boost::log::v2_mt_posix::sinks::basic_text_ostream_backend<wchar_t> > >
+000949d0 V typeinfo name for boost::detail::sp_ms_deleter<boost::log::v2_mt_posix::sinks::text_file_backend>
+00094b64 V typeinfo name for boost::detail::sp_ms_deleter<boost::log::v2_mt_posix::sinks::basic_text_ostream_backend<char> >
+00094a94 V typeinfo name for boost::detail::sp_ms_deleter<boost::log::v2_mt_posix::sinks::basic_text_ostream_backend<wchar_t> >
+00095584 V typeinfo name for boost::detail::sp_ms_deleter<boost::log::v2_mt_posix::sources::aux::logger_holder<boost::log::v2_mt_posix::sources::severity_channel_logger<boost::log::v2_mt_posix::trivial::severity_level, std::string> > >
+000948cc V typeinfo name for boost::detail::do_heap_delete<boost::thread_specific_ptr<boost::log::v2_mt_posix::sinks::basic_formatting_sink_frontend<char>::formatting_context>::delete_data>
+00094830 V typeinfo name for boost::detail::do_heap_delete<boost::thread_specific_ptr<boost::log::v2_mt_posix::sinks::basic_formatting_sink_frontend<wchar_t>::formatting_context>::delete_data>
+0009f7f8 V typeinfo name for boost::detail::sp_counted_base
+00095630 V typeinfo name for boost::detail::sp_counted_impl_p<boost::detail::thread_data<StatusThread> >
+0009f608 V typeinfo name for boost::detail::sp_counted_impl_pd<boost::thread_specific_ptr<boost::log::v2_mt_posix::sinks::basic_formatting_sink_frontend<char>::formatting_context>::delete_data*, boost::detail::do_heap_delete<boost::thread_specific_ptr<boost::log::v2_mt_posix::sinks::basic_formatting_sink_frontend<char>::formatting_context>::delete_data> >
+0009f268 V typeinfo name for boost::detail::sp_counted_impl_pd<boost::thread_specific_ptr<boost::log::v2_mt_posix::sinks::basic_formatting_sink_frontend<wchar_t>::formatting_context>::delete_data*, boost::detail::do_heap_delete<boost::thread_specific_ptr<boost::log::v2_mt_posix::sinks::basic_formatting_sink_frontend<wchar_t>::formatting_context>::delete_data> >
+0009f734 V typeinfo name for boost::detail::sp_counted_impl_pd<boost::log::v2_mt_posix::sinks::synchronous_sink<boost::log::v2_mt_posix::sinks::text_file_backend>*, boost::detail::sp_ms_deleter<boost::log::v2_mt_posix::sinks::synchronous_sink<boost::log::v2_mt_posix::sinks::text_file_backend> > >
+0009f3a0 V typeinfo name for boost::detail::sp_counted_impl_pd<boost::log::v2_mt_posix::sinks::synchronous_sink<boost::log::v2_mt_posix::sinks::basic_text_ostream_backend<char> >*, boost::detail::sp_ms_deleter<boost::log::v2_mt_posix::sinks::synchronous_sink<boost::log::v2_mt_posix::sinks::basic_text_ostream_backend<char> > > >
+0009f574 V typeinfo name for boost::detail::sp_counted_impl_pd<boost::log::v2_mt_posix::sinks::synchronous_sink<boost::log::v2_mt_posix::sinks::basic_text_ostream_backend<wchar_t> >*, boost::detail::sp_ms_deleter<boost::log::v2_mt_posix::sinks::synchronous_sink<boost::log::v2_mt_posix::sinks::basic_text_ostream_backend<wchar_t> > > >
+0009f6c4 V typeinfo name for boost::detail::sp_counted_impl_pd<boost::log::v2_mt_posix::sinks::text_file_backend*, boost::detail::sp_ms_deleter<boost::log::v2_mt_posix::sinks::text_file_backend> >
+0009f434 V typeinfo name for boost::detail::sp_counted_impl_pd<boost::log::v2_mt_posix::sinks::basic_text_ostream_backend<char>*, boost::detail::sp_ms_deleter<boost::log::v2_mt_posix::sinks::basic_text_ostream_backend<char> > >
+0009f324 V typeinfo name for boost::detail::sp_counted_impl_pd<boost::log::v2_mt_posix::sinks::basic_text_ostream_backend<wchar_t>*, boost::detail::sp_ms_deleter<boost::log::v2_mt_posix::sinks::basic_text_ostream_backend<wchar_t> > >
+00095794 V typeinfo name for boost::detail::sp_counted_impl_pd<boost::log::v2_mt_posix::sources::aux::logger_holder<boost::log::v2_mt_posix::sources::severity_channel_logger<boost::log::v2_mt_posix::trivial::severity_level, std::string> >*, boost::detail::sp_ms_deleter<boost::log::v2_mt_posix::sources::aux::logger_holder<boost::log::v2_mt_posix::sources::severity_channel_logger<boost::log::v2_mt_posix::trivial::severity_level, std::string> > > >
+0009f524 V typeinfo name for boost::detail::sp_counted_impl_pd<std::ostream*, boost::log::v2_mt_posix::empty_deleter>
+0009f4b0 V typeinfo name for boost::detail::sp_counted_impl_pd<std::basic_ostream<wchar_t, std::char_traits<wchar_t> >*, boost::log::v2_mt_posix::empty_deleter>
+0009cb6c V typeinfo name for boost::detail::tss_cleanup_function
+0009f1f8 V typeinfo name for boost::system::system_error
+000947e0 V typeinfo name for boost::system::error_category
+0009470c V typeinfo name for boost::date_time::base_time<boost::posix_time::ptime, boost::date_time::counted_time_system<boost::date_time::counted_time_rep<boost::posix_time::millisec_posix_time_system_config> > >
+0009f1cc V typeinfo name for boost::exception
+0009eb34 V typeinfo name for boost::gregorian::bad_weekday
+0009ecf8 V typeinfo name for boost::gregorian::bad_day_of_year
+0009ec14 V typeinfo name for boost::gregorian::bad_day_of_month
+0009ea38 V typeinfo name for boost::gregorian::bad_year
+0009eab4 V typeinfo name for boost::gregorian::bad_month
+00095068 V typeinfo name for __gnu_cxx::__mutex
+00095150 V typeinfo name for std::string
+00095080 V typeinfo name for std::_Mutex_base<(__gnu_cxx::_Lock_policy)1>
+000950e4 V typeinfo name for std::_Sp_counted_ptr<acceleration::FanCommand*, (__gnu_cxx::_Lock_policy)1>
+00094fbc V typeinfo name for std::_Sp_counted_ptr<acceleration::FanDutyCommand*, (__gnu_cxx::_Lock_policy)1>
+00095010 V typeinfo name for std::_Sp_counted_ptr<acceleration::TemperatureCommand*, (__gnu_cxx::_Lock_policy)1>
+000950b0 V typeinfo name for std::_Sp_counted_base<(__gnu_cxx::_Lock_policy)1>
+00094fa4 V typeinfo name for std::_Sp_make_shared_tag
+000943a0 V typeinfo name for std::_Sp_counted_ptr_inplace<StepperConversions, std::allocator<StepperConversions>, (__gnu_cxx::_Lock_policy)1>
+00094f4c V typeinfo name for std::_Sp_counted_ptr_inplace<BirdwingTransceiver, std::allocator<BirdwingTransceiver>, (__gnu_cxx::_Lock_policy)1>
+00094454 V typeinfo name for std::_Sp_counted_ptr_inplace<BronxToolheadManager, std::allocator<BronxToolheadManager>, (__gnu_cxx::_Lock_policy)1>
+000943f8 V typeinfo name for std::_Sp_counted_ptr_inplace<ChamberToolheadManager, std::allocator<ChamberToolheadManager>, (__gnu_cxx::_Lock_policy)1>
+000b1e98 V VTT for boost::exception_detail::clone_impl<boost::exception_detail::error_info_injector<boost::lock_error> >
+000b1e20 V VTT for boost::exception_detail::clone_impl<boost::exception_detail::error_info_injector<boost::bad_weak_ptr> >
+000b1dc0 V VTT for boost::exception_detail::clone_impl<boost::exception_detail::error_info_injector<boost::condition_error> >
+000b21f8 V VTT for boost::exception_detail::clone_impl<boost::exception_detail::error_info_injector<boost::thread_resource_error> >
+000b1b98 V VTT for boost::exception_detail::clone_impl<boost::exception_detail::error_info_injector<boost::gregorian::bad_weekday> >
+000b1d48 V VTT for boost::exception_detail::clone_impl<boost::exception_detail::error_info_injector<boost::gregorian::bad_day_of_year> >
+000b1c70 V VTT for boost::exception_detail::clone_impl<boost::exception_detail::error_info_injector<boost::gregorian::bad_day_of_month> >
+000b1aa8 V VTT for boost::exception_detail::clone_impl<boost::exception_detail::error_info_injector<boost::gregorian::bad_year> >
+000b1b20 V VTT for boost::exception_detail::clone_impl<boost::exception_detail::error_info_injector<boost::gregorian::bad_month> >
+000b1c10 V VTT for boost::exception_detail::clone_impl<boost::exception_detail::error_info_injector<std::out_of_range> >
+000b1ce8 V VTT for boost::exception_detail::clone_impl<boost::exception_detail::error_info_injector<std::runtime_error> >
+000b2720 D vtable for NullTransceiver
+000b16b8 D vtable for ToolheadManager
+000b2820 D vtable for BirdwingTransceiver
+000b14d0 D vtable for BronxToolheadManager
+000b1440 D vtable for ChamberToolheadManager
+000b2b18 D vtable for Machine
+000b1398 D vtable for acceleration::FanCommand
+000b13c8 D vtable for acceleration::FanDutyCommand
+000b13b0 D vtable for acceleration::TemperatureCommand
+000b1150 D vtable for BronxToolheadManager::BronxSelfCheckState
+000b1140 D vtable for ChamberToolheadManager::ChamberSelfCheckState
+000b23f0 V vtable for boost::lock_error
+000b1e80 V vtable for boost::bad_weak_ptr
+000b21e0 V vtable for boost::condition_error
+000b0f30 V vtable for boost::bad_lexical_cast
+000b1ef8 V vtable for boost::exception_detail::clone_base
+000b1ea0 V vtable for boost::exception_detail::clone_impl<boost::exception_detail::error_info_injector<boost::lock_error> >
+000b1e28 V vtable for boost::exception_detail::clone_impl<boost::exception_detail::error_info_injector<boost::bad_weak_ptr> >
+000b1dc8 V vtable for boost::exception_detail::clone_impl<boost::exception_detail::error_info_injector<boost::condition_error> >
+000b2200 V vtable for boost::exception_detail::clone_impl<boost::exception_detail::error_info_injector<boost::thread_resource_error> >
+000b1ba0 V vtable for boost::exception_detail::clone_impl<boost::exception_detail::error_info_injector<boost::gregorian::bad_weekday> >
+000b1d50 V vtable for boost::exception_detail::clone_impl<boost::exception_detail::error_info_injector<boost::gregorian::bad_day_of_year> >
+000b1c78 V vtable for boost::exception_detail::clone_impl<boost::exception_detail::error_info_injector<boost::gregorian::bad_day_of_month> >
+000b1ab0 V vtable for boost::exception_detail::clone_impl<boost::exception_detail::error_info_injector<boost::gregorian::bad_year> >
+000b1b28 V vtable for boost::exception_detail::clone_impl<boost::exception_detail::error_info_injector<boost::gregorian::bad_month> >
+000b1c18 V vtable for boost::exception_detail::clone_impl<boost::exception_detail::error_info_injector<std::out_of_range> >
+000b1cf0 V vtable for boost::exception_detail::clone_impl<boost::exception_detail::error_info_injector<std::runtime_error> >
+000b21b8 V vtable for boost::exception_detail::error_info_injector<boost::lock_error>
+000b2170 V vtable for boost::exception_detail::error_info_injector<boost::bad_weak_ptr>
+000b2128 V vtable for boost::exception_detail::error_info_injector<boost::condition_error>
+000b2458 V vtable for boost::exception_detail::error_info_injector<boost::thread_resource_error>
+000b1fc0 V vtable for boost::exception_detail::error_info_injector<boost::gregorian::bad_weekday>
+000b20e0 V vtable for boost::exception_detail::error_info_injector<boost::gregorian::bad_day_of_year>
+000b2050 V vtable for boost::exception_detail::error_info_injector<boost::gregorian::bad_day_of_month>
+000b1f30 V vtable for boost::exception_detail::error_info_injector<boost::gregorian::bad_year>
+000b1f78 V vtable for boost::exception_detail::error_info_injector<boost::gregorian::bad_month>
+000b2008 V vtable for boost::exception_detail::error_info_injector<std::out_of_range>
+000b2098 V vtable for boost::exception_detail::error_info_injector<std::runtime_error>
+000b26b8 V vtable for boost::thread_exception
+000b0e58 V vtable for boost::bad_function_call
+000b11d8 V vtable for boost::thread_specific_ptr<boost::log::v2_mt_posix::sinks::basic_formatting_sink_frontend<char>::formatting_context>::delete_data
+000b11a0 V vtable for boost::thread_specific_ptr<boost::log::v2_mt_posix::sinks::basic_formatting_sink_frontend<wchar_t>::formatting_context>::delete_data
+000b26d0 V vtable for boost::thread_resource_error
+000b2d08 V vtable for boost::log::v2_mt_posix::attribute_value::impl
+000b2d40 V vtable for boost::log::v2_mt_posix::intrusive_ref_counter
+000b2900 V vtable for boost::log::v2_mt_posix::aux::basic_ostringstreambuf<char, std::char_traits<char>, std::allocator<char> >
+000b28c0 V vtable for boost::log::v2_mt_posix::aux::basic_ostringstreambuf<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t> >
+000b19a0 V vtable for boost::log::v2_mt_posix::aux::locking_ptr_counter_base
+000b1908 V vtable for boost::log::v2_mt_posix::sinks::synchronous_sink<boost::log::v2_mt_posix::sinks::text_file_backend>
+000b1a48 V vtable for boost::log::v2_mt_posix::sinks::synchronous_sink<boost::log::v2_mt_posix::sinks::basic_text_ostream_backend<char> >
+000b18c0 V vtable for boost::log::v2_mt_posix::sinks::synchronous_sink<boost::log::v2_mt_posix::sinks::basic_text_ostream_backend<wchar_t> >
+000b1950 V vtable for boost::log::v2_mt_posix::sinks::basic_sink_frontend
+000b19e0 V vtable for boost::log::v2_mt_posix::sinks::basic_formatting_sink_frontend<char>
+000b1880 V vtable for boost::log::v2_mt_posix::sinks::basic_formatting_sink_frontend<wchar_t>
+000b0eb8 V vtable for boost::log::v2_mt_posix::sinks::file::collector
+000b18a0 V vtable for boost::log::v2_mt_posix::sinks::sink
+000b2d28 V vtable for boost::log::v2_mt_posix::attribute::impl
+000b2698 V vtable for boost::detail::sp_counted_base
+000b2560 V vtable for boost::detail::sp_counted_impl_pd<boost::thread_specific_ptr<boost::log::v2_mt_posix::sinks::basic_formatting_sink_frontend<char>::formatting_context>::delete_data*, boost::detail::do_heap_delete<boost::thread_specific_ptr<boost::log::v2_mt_posix::sinks::basic_formatting_sink_frontend<char>::formatting_context>::delete_data> >
+000b2480 V vtable for boost::detail::sp_counted_impl_pd<boost::thread_specific_ptr<boost::log::v2_mt_posix::sinks::basic_formatting_sink_frontend<wchar_t>::formatting_context>::delete_data*, boost::detail::do_heap_delete<boost::thread_specific_ptr<boost::log::v2_mt_posix::sinks::basic_formatting_sink_frontend<wchar_t>::formatting_context>::delete_data> >
+000b25a0 V vtable for boost::detail::sp_counted_impl_pd<boost::log::v2_mt_posix::sinks::synchronous_sink<boost::log::v2_mt_posix::sinks::text_file_backend>*, boost::detail::sp_ms_deleter<boost::log::v2_mt_posix::sinks::synchronous_sink<boost::log::v2_mt_posix::sinks::text_file_backend> > >
+000b24c0 V vtable for boost::detail::sp_counted_impl_pd<boost::log::v2_mt_posix::sinks::synchronous_sink<boost::log::v2_mt_posix::sinks::basic_text_ostream_backend<char> >*, boost::detail::sp_ms_deleter<boost::log::v2_mt_posix::sinks::synchronous_sink<boost::log::v2_mt_posix::sinks::basic_text_ostream_backend<char> > > >
+000b2540 V vtable for boost::detail::sp_counted_impl_pd<boost::log::v2_mt_posix::sinks::synchronous_sink<boost::log::v2_mt_posix::sinks::basic_text_ostream_backend<wchar_t> >*, boost::detail::sp_ms_deleter<boost::log::v2_mt_posix::sinks::synchronous_sink<boost::log::v2_mt_posix::sinks::basic_text_ostream_backend<wchar_t> > > >
+000b2580 V vtable for boost::detail::sp_counted_impl_pd<boost::log::v2_mt_posix::sinks::text_file_backend*, boost::detail::sp_ms_deleter<boost::log::v2_mt_posix::sinks::text_file_backend> >
+000b24e0 V vtable for boost::detail::sp_counted_impl_pd<boost::log::v2_mt_posix::sinks::basic_text_ostream_backend<char>*, boost::detail::sp_ms_deleter<boost::log::v2_mt_posix::sinks::basic_text_ostream_backend<char> > >
+000b24a0 V vtable for boost::detail::sp_counted_impl_pd<boost::log::v2_mt_posix::sinks::basic_text_ostream_backend<wchar_t>*, boost::detail::sp_ms_deleter<boost::log::v2_mt_posix::sinks::basic_text_ostream_backend<wchar_t> > >
+000b2520 V vtable for boost::detail::sp_counted_impl_pd<std::ostream*, boost::log::v2_mt_posix::empty_deleter>
+000b2500 V vtable for boost::detail::sp_counted_impl_pd<std::basic_ostream<wchar_t, std::char_traits<wchar_t> >*, boost::log::v2_mt_posix::empty_deleter>
+000b11f0 V vtable for boost::detail::tss_cleanup_function
+000b2418 V vtable for boost::system::system_error
+000b0e90 V vtable for boost::system::error_category
+000b23c0 V vtable for boost::exception
+000b1bf8 V vtable for boost::gregorian::bad_weekday
+000b1da8 V vtable for boost::gregorian::bad_day_of_year
+000b1cd0 V vtable for boost::gregorian::bad_day_of_month
+000b1b08 V vtable for boost::gregorian::bad_year
+000b1b80 V vtable for boost::gregorian::bad_month
+000443f4 W non-virtual thunk to boost::exception_detail::clone_impl<boost::exception_detail::error_info_injector<boost::lock_error> >::~clone_impl()
+00044f50 W non-virtual thunk to boost::exception_detail::clone_impl<boost::exception_detail::error_info_injector<boost::lock_error> >::~clone_impl()
+000448f8 W non-virtual thunk to boost::exception_detail::clone_impl<boost::exception_detail::error_info_injector<boost::condition_error> >::~clone_impl()
+00045080 W non-virtual thunk to boost::exception_detail::clone_impl<boost::exception_detail::error_info_injector<boost::condition_error> >::~clone_impl()
+000446c8 W non-virtual thunk to boost::exception_detail::clone_impl<boost::exception_detail::error_info_injector<boost::thread_resource_error> >::~clone_impl()
+00044e20 W non-virtual thunk to boost::exception_detail::clone_impl<boost::exception_detail::error_info_injector<boost::thread_resource_error> >::~clone_impl()
+00044c00 W non-virtual thunk to boost::exception_detail::error_info_injector<boost::lock_error>::~error_info_injector()
+000444fc W non-virtual thunk to boost::exception_detail::error_info_injector<boost::lock_error>::~error_info_injector()
+00044d00 W non-virtual thunk to boost::exception_detail::error_info_injector<boost::condition_error>::~error_info_injector()
+00044a00 W non-virtual thunk to boost::exception_detail::error_info_injector<boost::condition_error>::~error_info_injector()
+00044b00 W non-virtual thunk to boost::exception_detail::error_info_injector<boost::thread_resource_error>::~error_info_injector()
+000447d0 W non-virtual thunk to boost::exception_detail::error_info_injector<boost::thread_resource_error>::~error_info_injector()
+0003e53c W non-virtual thunk to boost::exception_detail::clone_impl<boost::exception_detail::error_info_injector<boost::bad_weak_ptr> >::~clone_impl()
+0003e25c W non-virtual thunk to boost::exception_detail::clone_impl<boost::exception_detail::error_info_injector<boost::bad_weak_ptr> >::~clone_impl()
+0003e66c W non-virtual thunk to boost::exception_detail::error_info_injector<boost::bad_weak_ptr>::~error_info_injector()
+0003e5d8 W non-virtual thunk to boost::exception_detail::error_info_injector<boost::bad_weak_ptr>::~error_info_injector()
+0004bfe0 T non-virtual thunk to BronxToolheadManager::SetFanDuty(float, unsigned char)
+0004c5e0 T non-virtual thunk to BronxToolheadManager::SetLEDBlink(unsigned char, float)
+0004bd48 T non-virtual thunk to BronxToolheadManager::SetPosition(int)
+0004c98c T non-virtual thunk to BronxToolheadManager::MoveTrapezoid(short const (&) [3], int const (&) [3], int const (&) [3], unsigned int const (&) [3], int const (&) [3], bool const (&) [3])
+0004beac T non-virtual thunk to BronxToolheadManager::ToggleSyncing(bool)
+00051d7c T non-virtual thunk to BronxToolheadManager::ProgramYonkers(char const*)
+0004cde4 T non-virtual thunk to BronxToolheadManager::ResetToolUsage()
+0004bf4c T non-virtual thunk to BronxToolheadManager::SetFilamentFan(bool)
+0004bd78 T non-virtual thunk to BronxToolheadManager::RetrievePosition()
+0004be68 T non-virtual thunk to BronxToolheadManager::SetLEDBrightness(unsigned char)
+0003940c T non-virtual thunk to BronxToolheadManager::FilamentIsPresent()
+000395f8 T non-virtual thunk to BronxToolheadManager::LoadAccelSettings(unsigned char, unsigned char, int, unsigned char, unsigned char)
+0004bf18 T non-virtual thunk to BronxToolheadManager::ToggleJamDetection(bool)
+0004c0c0 T non-virtual thunk to BronxToolheadManager::UploadAccelSettings()
+0004cce4 T non-virtual thunk to BronxToolheadManager::UpdateToolUsageStats()
+0004be34 T non-virtual thunk to BronxToolheadManager::ConfigureJamDetection(float)
+0004c05c T non-virtual thunk to BronxToolheadManager::UpdateToolRefurbCount(bool)
+0004cb9c T non-virtual thunk to BronxToolheadManager::CheckToolEEPROMVersion()
+00039440 T non-virtual thunk to BronxToolheadManager::ResetExtrusionDistance()
+0004caa4 T non-virtual thunk to BronxToolheadManager::RetrieveToolUsageStats()
+0006c430 T non-virtual thunk to BronxToolheadManager::IncrementExtrusionDistance(unsigned short)
+00039420 T non-virtual thunk to BronxToolheadManager::ToggleExtrusionPercentUpdate(bool)
+0004c2c0 T non-virtual thunk to BronxToolheadManager::Idle()
+0004c1a4 T non-virtual thunk to BronxToolheadManager::Move(short, int, int, unsigned int, int)
+0004fb30 T non-virtual thunk to BronxToolheadManager::~BronxToolheadManager()
+0004fb04 T non-virtual thunk to BronxToolheadManager::~BronxToolheadManager()
+00039618 T non-virtual thunk to BronxToolheadManager::GetPosition() const
+0003908c T non-virtual thunk to BronxToolheadManager::BufferIsFull() const
+00039484 T non-virtual thunk to BronxToolheadManager::GetToolUsageStats() const
+00039628 T non-virtual thunk to BronxToolheadManager::IsPositionRetrieved() const
+00039450 T non-virtual thunk to BronxToolheadManager::GetExtrusionDistance() const
+0006c01c T non-virtual thunk to BronxToolheadManager::VerifyToolUsageStatsRetrieved(unsigned char) const
+00039494 T non-virtual thunk to BronxToolheadManager::GetToolID() const
+0004c478 T non-virtual thunk to BronxToolheadManager::ReadHESLog()
+0004bddc T non-virtual thunk to BronxToolheadManager::BeginHESLog(unsigned short, bool)
+0004c028 T non-virtual thunk to BronxToolheadManager::ConfigureHES(unsigned char, unsigned short)
+00048f90 T non-virtual thunk to BronxToolheadManager::GetRawHESVal(bool*, short*)
+00039608 T non-virtual thunk to BronxToolheadManager::HESConfigured()
+0004bee4 T non-virtual thunk to BronxToolheadManager::QueryRawHESVal()
+0004c7e4 T non-virtual thunk to BronxToolheadManager::ChangeHESSampleRate(float, float*)
+0004c110 T non-virtual thunk to BronxToolheadManager::EndHESLog()
+0003a7d4 T non-virtual thunk to BronxToolheadManager::GetHESLog(unsigned short, int*)
+0004fb28 T non-virtual thunk to BronxToolheadManager::~BronxToolheadManager()
+0004fafc T non-virtual thunk to BronxToolheadManager::~BronxToolheadManager()
+0006cdd0 T non-virtual thunk to BronxToolheadManager::IsHESLogged() const
+00055e4c W non-virtual thunk to boost::log::v2_mt_posix::sinks::synchronous_sink<boost::log::v2_mt_posix::sinks::text_file_backend>::lock()
+00055c6c W non-virtual thunk to boost::log::v2_mt_posix::sinks::synchronous_sink<boost::log::v2_mt_posix::sinks::text_file_backend>::unlock()
+0003f870 W non-virtual thunk to boost::log::v2_mt_posix::sinks::synchronous_sink<boost::log::v2_mt_posix::sinks::text_file_backend>::try_lock()
+00067f9c W non-virtual thunk to boost::log::v2_mt_posix::sinks::synchronous_sink<boost::log::v2_mt_posix::sinks::text_file_backend>::~synchronous_sink()
+00068108 W non-virtual thunk to boost::log::v2_mt_posix::sinks::synchronous_sink<boost::log::v2_mt_posix::sinks::text_file_backend>::~synchronous_sink()
+00055eec W non-virtual thunk to boost::log::v2_mt_posix::sinks::synchronous_sink<boost::log::v2_mt_posix::sinks::basic_text_ostream_backend<char> >::lock()
+00055bcc W non-virtual thunk to boost::log::v2_mt_posix::sinks::synchronous_sink<boost::log::v2_mt_posix::sinks::basic_text_ostream_backend<char> >::unlock()
+0003f8ac W non-virtual thunk to boost::log::v2_mt_posix::sinks::synchronous_sink<boost::log::v2_mt_posix::sinks::basic_text_ostream_backend<char> >::try_lock()
+0006827c W non-virtual thunk to boost::log::v2_mt_posix::sinks::synchronous_sink<boost::log::v2_mt_posix::sinks::basic_text_ostream_backend<char> >::~synchronous_sink()
+000683e8 W non-virtual thunk to boost::log::v2_mt_posix::sinks::synchronous_sink<boost::log::v2_mt_posix::sinks::basic_text_ostream_backend<char> >::~synchronous_sink()
+00055dac W non-virtual thunk to boost::log::v2_mt_posix::sinks::synchronous_sink<boost::log::v2_mt_posix::sinks::basic_text_ostream_backend<wchar_t> >::lock()
+00055d0c W non-virtual thunk to boost::log::v2_mt_posix::sinks::synchronous_sink<boost::log::v2_mt_posix::sinks::basic_text_ostream_backend<wchar_t> >::unlock()
+0003f8e8 W non-virtual thunk to boost::log::v2_mt_posix::sinks::synchronous_sink<boost::log::v2_mt_posix::sinks::basic_text_ostream_backend<wchar_t> >::try_lock()
+00068764 W non-virtual thunk to boost::log::v2_mt_posix::sinks::synchronous_sink<boost::log::v2_mt_posix::sinks::basic_text_ostream_backend<wchar_t> >::~synchronous_sink()
+000688d0 W non-virtual thunk to boost::log::v2_mt_posix::sinks::synchronous_sink<boost::log::v2_mt_posix::sinks::basic_text_ostream_backend<wchar_t> >::~synchronous_sink()
+000621b0 W non-virtual thunk to boost::exception_detail::clone_impl<boost::exception_detail::error_info_injector<boost::gregorian::bad_weekday> >::~clone_impl()
+0003e078 W non-virtual thunk to boost::exception_detail::clone_impl<boost::exception_detail::error_info_injector<boost::gregorian::bad_weekday> >::~clone_impl()
+00062058 W non-virtual thunk to boost::exception_detail::clone_impl<boost::exception_detail::error_info_injector<boost::gregorian::bad_day_of_year> >::~clone_impl()
+0003dd68 W non-virtual thunk to boost::exception_detail::clone_impl<boost::exception_detail::error_info_injector<boost::gregorian::bad_day_of_year> >::~clone_impl()
+00061c78 W non-virtual thunk to boost::exception_detail::clone_impl<boost::exception_detail::error_info_injector<boost::gregorian::bad_day_of_month> >::~clone_impl()
+0003def0 W non-virtual thunk to boost::exception_detail::clone_impl<boost::exception_detail::error_info_injector<boost::gregorian::bad_day_of_month> >::~clone_impl()
+00061f00 W non-virtual thunk to boost::exception_detail::clone_impl<boost::exception_detail::error_info_injector<boost::gregorian::bad_year> >::~clone_impl()
+0003de2c W non-virtual thunk to boost::exception_detail::clone_impl<boost::exception_detail::error_info_injector<boost::gregorian::bad_year> >::~clone_impl()
+00062308 W non-virtual thunk to boost::exception_detail::clone_impl<boost::exception_detail::error_info_injector<boost::gregorian::bad_month> >::~clone_impl()
+0003dfb4 W non-virtual thunk to boost::exception_detail::clone_impl<boost::exception_detail::error_info_injector<boost::gregorian::bad_month> >::~clone_impl()
+00061b34 W non-virtual thunk to boost::exception_detail::clone_impl<boost::exception_detail::error_info_injector<std::out_of_range> >::~clone_impl()
+0003e470 W non-virtual thunk to boost::exception_detail::clone_impl<boost::exception_detail::error_info_injector<std::out_of_range> >::~clone_impl()
+00061dbc W non-virtual thunk to boost::exception_detail::clone_impl<boost::exception_detail::error_info_injector<std::runtime_error> >::~clone_impl()
+0003e128 W non-virtual thunk to boost::exception_detail::clone_impl<boost::exception_detail::error_info_injector<std::runtime_error> >::~clone_impl()
+00062438 W non-virtual thunk to boost::exception_detail::error_info_injector<boost::gregorian::bad_weekday>::~error_info_injector()
+0006224c W non-virtual thunk to boost::exception_detail::error_info_injector<boost::gregorian::bad_weekday>::~error_info_injector()
+000625e0 W non-virtual thunk to boost::exception_detail::error_info_injector<boost::gregorian::bad_day_of_year>::~error_info_injector()
+000620f4 W non-virtual thunk to boost::exception_detail::error_info_injector<boost::gregorian::bad_day_of_year>::~error_info_injector()
+000624cc W non-virtual thunk to boost::exception_detail::error_info_injector<boost::gregorian::bad_day_of_month>::~error_info_injector()
+00061d14 W non-virtual thunk to boost::exception_detail::error_info_injector<boost::gregorian::bad_day_of_month>::~error_info_injector()
+000626f4 W non-virtual thunk to boost::exception_detail::error_info_injector<boost::gregorian::bad_year>::~error_info_injector()
+00061f9c W non-virtual thunk to boost::exception_detail::error_info_injector<boost::gregorian::bad_year>::~error_info_injector()
+00062788 W non-virtual thunk to boost::exception_detail::error_info_injector<boost::gregorian::bad_month>::~error_info_injector()
+000623a4 W non-virtual thunk to boost::exception_detail::error_info_injector<boost::gregorian::bad_month>::~error_info_injector()
+0006254c W non-virtual thunk to boost::exception_detail::error_info_injector<std::out_of_range>::~error_info_injector()
+00061bbc W non-virtual thunk to boost::exception_detail::error_info_injector<std::out_of_range>::~error_info_injector()
+00062660 W non-virtual thunk to boost::exception_detail::error_info_injector<std::runtime_error>::~error_info_injector()
+00061e44 W non-virtual thunk to boost::exception_detail::error_info_injector<std::runtime_error>::~error_info_injector()
+0006d494 W virtual thunk to boost::exception_detail::clone_impl<boost::exception_detail::error_info_injector<boost::lock_error> >::clone() const
+00044170 W virtual thunk to boost::exception_detail::clone_impl<boost::exception_detail::error_info_injector<boost::bad_weak_ptr> >::clone() const
+0006d2f4 W virtual thunk to boost::exception_detail::clone_impl<boost::exception_detail::error_info_injector<boost::condition_error> >::clone() const
+0006d634 W virtual thunk to boost::exception_detail::clone_impl<boost::exception_detail::error_info_injector<boost::thread_resource_error> >::clone() const
+0006db20 W virtual thunk to boost::exception_detail::clone_impl<boost::exception_detail::error_info_injector<boost::gregorian::bad_weekday> >::clone() const
+0006deec W virtual thunk to boost::exception_detail::clone_impl<boost::exception_detail::error_info_injector<boost::gregorian::bad_day_of_year> >::clone() const
+0006d8b4 W virtual thunk to boost::exception_detail::clone_impl<boost::exception_detail::error_info_injector<boost::gregorian::bad_day_of_month> >::clone() const
+0006dc64 W virtual thunk to boost::exception_detail::clone_impl<boost::exception_detail::error_info_injector<boost::gregorian::bad_year> >::clone() const
+0006dda8 W virtual thunk to boost::exception_detail::clone_impl<boost::exception_detail::error_info_injector<boost::gregorian::bad_month> >::clone() const
+0006d770 W virtual thunk to boost::exception_detail::clone_impl<boost::exception_detail::error_info_injector<std::out_of_range> >::clone() const
+0006d9dc W virtual thunk to boost::exception_detail::clone_impl<boost::exception_detail::error_info_injector<std::runtime_error> >::clone() const
+00061608 W virtual thunk to boost::exception_detail::clone_impl<boost::exception_detail::error_info_injector<boost::lock_error> >::rethrow() const
+00040768 W virtual thunk to boost::exception_detail::clone_impl<boost::exception_detail::error_info_injector<boost::bad_weak_ptr> >::rethrow() const
+0006155c W virtual thunk to boost::exception_detail::clone_impl<boost::exception_detail::error_info_injector<boost::condition_error> >::rethrow() const
+000616b4 W virtual thunk to boost::exception_detail::clone_impl<boost::exception_detail::error_info_injector<boost::thread_resource_error> >::rethrow() const
+0003f224 W virtual thunk to boost::exception_detail::clone_impl<boost::exception_detail::error_info_injector<boost::gregorian::bad_weekday> >::rethrow() const
+0003ef94 W virtual thunk to boost::exception_detail::clone_impl<boost::exception_detail::error_info_injector<boost::gregorian::bad_day_of_year> >::rethrow() const
+0003f2d0 W virtual thunk to boost::exception_detail::clone_impl<boost::exception_detail::error_info_injector<boost::gregorian::bad_day_of_month> >::rethrow() const
+0003f0ec W virtual thunk to boost::exception_detail::clone_impl<boost::exception_detail::error_info_injector<boost::gregorian::bad_year> >::rethrow() const
+0003f040 W virtual thunk to boost::exception_detail::clone_impl<boost::exception_detail::error_info_injector<boost::gregorian::bad_month> >::rethrow() const
+0005595c W virtual thunk to boost::exception_detail::clone_impl<boost::exception_detail::error_info_injector<std::out_of_range> >::rethrow() const
+0003f37c W virtual thunk to boost::exception_detail::clone_impl<boost::exception_detail::error_info_injector<std::runtime_error> >::rethrow() const
+000443fc W virtual thunk to boost::exception_detail::clone_impl<boost::exception_detail::error_info_injector<boost::lock_error> >::~clone_impl()
+00044f58 W virtual thunk to boost::exception_detail::clone_impl<boost::exception_detail::error_info_injector<boost::lock_error> >::~clone_impl()
+0003e544 W virtual thunk to boost::exception_detail::clone_impl<boost::exception_detail::error_info_injector<boost::bad_weak_ptr> >::~clone_impl()
+0003e264 W virtual thunk to boost::exception_detail::clone_impl<boost::exception_detail::error_info_injector<boost::bad_weak_ptr> >::~clone_impl()
+00044900 W virtual thunk to boost::exception_detail::clone_impl<boost::exception_detail::error_info_injector<boost::condition_error> >::~clone_impl()
+00045088 W virtual thunk to boost::exception_detail::clone_impl<boost::exception_detail::error_info_injector<boost::condition_error> >::~clone_impl()
+000446d0 W virtual thunk to boost::exception_detail::clone_impl<boost::exception_detail::error_info_injector<boost::thread_resource_error> >::~clone_impl()
+00044e28 W virtual thunk to boost::exception_detail::clone_impl<boost::exception_detail::error_info_injector<boost::thread_resource_error> >::~clone_impl()
+000621b8 W virtual thunk to boost::exception_detail::clone_impl<boost::exception_detail::error_info_injector<boost::gregorian::bad_weekday> >::~clone_impl()
+0003e080 W virtual thunk to boost::exception_detail::clone_impl<boost::exception_detail::error_info_injector<boost::gregorian::bad_weekday> >::~clone_impl()
+00062060 W virtual thunk to boost::exception_detail::clone_impl<boost::exception_detail::error_info_injector<boost::gregorian::bad_day_of_year> >::~clone_impl()
+0003dd70 W virtual thunk to boost::exception_detail::clone_impl<boost::exception_detail::error_info_injector<boost::gregorian::bad_day_of_year> >::~clone_impl()
+00061c80 W virtual thunk to boost::exception_detail::clone_impl<boost::exception_detail::error_info_injector<boost::gregorian::bad_day_of_month> >::~clone_impl()
+0003def8 W virtual thunk to boost::exception_detail::clone_impl<boost::exception_detail::error_info_injector<boost::gregorian::bad_day_of_month> >::~clone_impl()
+00061f08 W virtual thunk to boost::exception_detail::clone_impl<boost::exception_detail::error_info_injector<boost::gregorian::bad_year> >::~clone_impl()
+0003de34 W virtual thunk to boost::exception_detail::clone_impl<boost::exception_detail::error_info_injector<boost::gregorian::bad_year> >::~clone_impl()
+00062310 W virtual thunk to boost::exception_detail::clone_impl<boost::exception_detail::error_info_injector<boost::gregorian::bad_month> >::~clone_impl()
+0003dfbc W virtual thunk to boost::exception_detail::clone_impl<boost::exception_detail::error_info_injector<boost::gregorian::bad_month> >::~clone_impl()
+00061b3c W virtual thunk to boost::exception_detail::clone_impl<boost::exception_detail::error_info_injector<std::out_of_range> >::~clone_impl()
+0003e478 W virtual thunk to boost::exception_detail::clone_impl<boost::exception_detail::error_info_injector<std::out_of_range> >::~clone_impl()
+00061dc4 W virtual thunk to boost::exception_detail::clone_impl<boost::exception_detail::error_info_injector<std::runtime_error> >::~clone_impl()
+0003e130 W virtual thunk to boost::exception_detail::clone_impl<boost::exception_detail::error_info_injector<std::runtime_error> >::~clone_impl()
+000b3f40 V boost::log::v2_mt_posix::aux::lazy_singleton<boost::log::v2_mt_posix::sources::aux::logger_singleton<log_obj>, boost::shared_ptr<boost::log::v2_mt_posix::sources::aux::logger_holder<boost::log::v2_mt_posix::sources::severity_channel_logger<boost::log::v2_mt_posix::trivial::severity_level, std::string> > > >::get_instance()::instance
+000b3f4c V boost::log::v2_mt_posix::aux::lazy_singleton<boost::log::v2_mt_posix::sources::aux::logger_singleton<log_obj>, boost::shared_ptr<boost::log::v2_mt_posix::sources::aux::logger_holder<boost::log::v2_mt_posix::sources::severity_channel_logger<boost::log::v2_mt_posix::trivial::severity_level, std::string> > > >::get()::_boost_log_once_block_flag_43
+000b4e7c V boost::log::v2_mt_posix::aux::lazy_singleton<boost::log::v2_mt_posix::sources::aux::logger_singleton<telem_obj>, boost::shared_ptr<boost::log::v2_mt_posix::sources::aux::logger_holder<boost::log::v2_mt_posix::sources::severity_channel_logger<boost::log::v2_mt_posix::trivial::severity_level, std::string> > > >::get_instance()::instance
+000b4e88 V boost::log::v2_mt_posix::aux::lazy_singleton<boost::log::v2_mt_posix::sources::aux::logger_singleton<telem_obj>, boost::shared_ptr<boost::log::v2_mt_posix::sources::aux::logger_holder<boost::log::v2_mt_posix::sources::severity_channel_logger<boost::log::v2_mt_posix::trivial::severity_level, std::string> > > >::get()::_boost_log_once_block_flag_43
+000b4e64 V boost::array<std::pair<boost::log::v2_mt_posix::type_info_wrapper, void*>, 2u> const& boost::log::v2_mt_posix::aux::type_sequence_dispatcher<boost::mpl::vector2<std::string, std::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t> > > >::get_dispatching_map<boost::log::v2_mt_posix::binder1st<boost::log::v2_mt_posix::output_fun, boost::log::v2_mt_posix::basic_formatting_ostream<char, std::char_traits<char>, std::allocator<char> >&> >()::_boost_log_once_block_flag_160
+000b4e50 V boost::array<std::pair<boost::log::v2_mt_posix::type_info_wrapper, void*>, 2u> const& boost::log::v2_mt_posix::aux::type_sequence_dispatcher<boost::mpl::vector2<std::string, std::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t> > > >::get_dispatching_map<boost::log::v2_mt_posix::binder1st<boost::log::v2_mt_posix::output_fun, boost::log::v2_mt_posix::basic_formatting_ostream<char, std::char_traits<char>, std::allocator<char> >&> >()::instance
+000b4e4c V boost::array<std::pair<boost::log::v2_mt_posix::type_info_wrapper, void*>, 2u> const& boost::log::v2_mt_posix::aux::type_sequence_dispatcher<boost::mpl::vector2<std::string, std::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t> > > >::get_dispatching_map<boost::log::v2_mt_posix::binder1st<boost::log::v2_mt_posix::output_fun, boost::log::v2_mt_posix::basic_formatting_ostream<char, std::char_traits<char>, std::allocator<char> >&> >()::pinstance
+0004f114 T operator/=(q14&, q14 const&)
+0004f154 T operator/(q14 const&, q14 const&)
+0004f000 T operator>=(q14, q14)
+0004ef54 T operator>(q14, q14)
+0004efac T operator<=(q14, q14)
+0004ef20 T operator<<(std::ostream&, q14 const&)
+0004ef64 T operator<(q14, q14)
+0004f228 T operator-=(q14&, q14 const&)
+0004f178 T operator*=(q14&, q14 const&)
+0004f254 T operator-(q14 const&, q14 const&)
+0004f19c T operator*(q14 const&, q14 const&)
+0004f1c0 T operator-(q14 const&)
+0004f054 T operator!(q14 const&)
+0004f214 T operator+=(q14&, q14 const&)
+0004f278 T operator+(q14 const&, q14 const&)
+0004f1e4 T operator+(q14 const&)
+000b4f2c B __bss_end__
+000b3efc B __bss_start
+000b3efc B __bss_start__
+000b4f2c B __end__
+00093d84 T __prussdrv_memmap_init
+000933d0 T __prussintc_set_cmr
+000933f8 T __prussintc_set_hmr
+000b4f2c B _bss_end__
+000b3efc D _edata
+000b4f2c B _end
+0009431c T _fini
+00033f84 T _init
+000b4d54 B all_axes_
+000b4d70 B axisConfigurations
+00042940 T crc32
+000b4ce5 B initialized_
+000b4d18 B l3Map
+000b4ce8 B pruMap
+0009415c T prussdrv_exec_program
+00093af4 T prussdrv_exit
+0009361c T prussdrv_get_phys_addr
+000936fc T prussdrv_get_virt_addr
+00093d5c T prussdrv_init
+000935c8 T prussdrv_map_extmem
+000935b0 T prussdrv_map_l3mem
+000935e0 T prussdrv_map_prumem
+00094094 T prussdrv_open
+0009358c T prussdrv_pru_clear_event
+00093498 T prussdrv_pru_disable
+0009345c T prussdrv_pru_enable
+00093420 T prussdrv_pru_reset
+00093568 T prussdrv_pru_send_event
+000940e0 T prussdrv_pru_send_wait_clear_event
+00093d20 T prussdrv_pru_wait_event
+000934d4 T prussdrv_pru_write_memory
+0009385c T prussdrv_pruintc_init
+000937d8 T prussdrv_start_irqthread
+000b4d14 B shuttingDown
+000b4e78 B status_count

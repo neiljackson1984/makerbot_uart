@@ -1,0 +1,162 @@
+#!/bin/sh
+
+pipeIntoRepl="/tmp/neiltemp1";
+pipeOutOfRepl="/tmp/neiltemp2";
+rm $pipeIntoRepl  $pipeOutOfRepl 1> /dev/null 2>&1; 
+if [ ! -f $pipeIntoRepl  ]; then mkfifo $pipeIntoRepl;  fi;
+if [ ! -f $pipeOutOfRepl ]; then mkfifo $pipeOutOfRepl; fi;
+replCommand="exec 8<> $pipeIntoRepl; exec 9<> $pipeOutOfRepl; python -i >$pipeOutOfRepl <$pipeIntoRepl"
+replCommand="exec 8<> $pipeIntoRepl; exec 9<> $pipeOutOfRepl; sh -i >$pipeOutOfRepl <$pipeIntoRepl"
+# echo echo foo > $pipeIntoRepl
+replCommand="exec 8< $pipeIntoRepl; exec 9> $pipeOutOfRepl; trap '' INT PIPE HUP QUIT TERM; nohup sh -i >$pipeOutOfRepl <$pipeIntoRepl &:; sleep 100"
+replCommand="exec 8< $pipeIntoRepl; exec 9> $pipeOutOfRepl; trap '' INT PIPE HUP QUIT TERM; nohup sh -i >$pipeOutOfRepl <$pipeIntoRepl &:; sleep 100"
+
+
+
+
+replPidFile="/tmp/neiltemp3";
+# the replProcess, here, refers to a running instance of sh in which the python repl
+# script is running and redirecting stdin and stdout to $pipeIntoRepl and
+# $pipeOutOfRepl respectively.
+replCommand=$(cat <<EOF
+    echo \$$ > $replPidFile
+    if [ ! -p $pipeIntoRepl  ]; then mkfifo $pipeIntoRepl;  fi;
+    if [ ! -p $pipeOutOfRepl ]; then mkfifo $pipeOutOfRepl; fi;
+    exec 8<> $pipeIntoRepl; 
+    exec 9<> $pipeOutOfRepl; 
+    sh >$pipeOutOfRepl <$pipeIntoRepl
+EOF
+)
+
+sh -c "$replCommand"  1>/dev/null  2>/dev/null & :;
+ 
+sh -c "$replCommand"
+
+# start-stop-daemon --background --pidfile $replPidFile --make-pidfile --startas nohup --start -- sh -c $replCommand
+
+
+if [ -d /proc/$(cat $replPidFile) ]; then echo repl process is running; else echo repl process is not running; fi
+sleep 2
+if [ -d /proc/$(cat $replPidFile) ]; then echo repl process is running; else echo repl process is not running; fi
+ 
+$replCommand & :;
+
+sh -c $replCommand 
+
+
+sh -i >$pipeOutOfRepl <$pipeIntoRepl
+
+trap 'echo Oops. I wrote to a pipe with no one on the other end to read it.' PIPE
+
+if [ -f $loggerPidFile ] && [ -d /proc/$(cat $loggerPidFile) ]; then 
+    echo logger process is already running.
+else 
+    echo logger process is not running
+fi
+
+
+tempModuleDirectory=/tmp/neiltemp
+pipeIntoRepl=/tmp/neiltemp1
+pipeOutOfRepl=/tmp/neiltemp2
+replPidFile=/tmp/neiltemp3
+loggerPidFile=/tmp/neiltemp4
+stimulatorPidFile=/tmp/neiltemp5
+stimulusFile=/tmp/neiltemp6
+
+kill $(cat $loggerPidFile) $(cat $stimulatorPidFile) 
+
+# filter all processes descended from the current shell from output of ps
+pstree -p $$ | grep -Eo '[0-9\.]+' | tr '\n' ' '
+pstree -p $$ | grep -Eo '[0-9\.]+' | sed 's/^\s*([0-9\.]+)\s*$/aaa/'
+pstree -p $$ | grep -Eo '[0-9\.]+' | awk '/^[0123456789]+$/ {print "("$1")"; }'
+pstree -p $$ | grep -Eo '[0-9\.]+' | awk '{print "("$1")"}' | sed -n -e 'H;${x;s/\n/|/g;s/^|//;p;}'
+
+
+commandToWatch=$(cat <<'EOF'
+ps -l | grep -vE -e "^\\s*\\w+\\s+\\w+\\s+($(pstree -p $$ | grep -Eo '[0-9\.]+' | awk '{print "("$1")"}' | sed -n -e 'H;${x;s/\n/|/g;s/^|//;p;}'))\\s+.*\$" | grep -vE -e "^\\s*\\w+\\s+\\w+\\s+\\w+\\s+$$\\s+.*\$"
+EOF
+)
+
+commandToWatch=$(cat <<EOF
+ps -l | grep -vE -e "^\\s*\\w+\\s+\\w+\\s+($(pstree -p $$ | grep -Eo '[0-9\.]+' | awk '{print "("$1")"}' | sed -n -e 'H;${x;s/\n/|/g;s/^|//;p;}'))\\s+.*\$" | grep -vE -e "^\\s*\\w+\\s+\\w+\\s+\\w+\\s+$$\\s+.*\$"
+EOF
+)
+
+ps -l | grep -vE -e "^\\s*\\w+\\s+\\w+\\s+($(pstree -p $$ | grep -Eo '[0-9]+' | awk '{print "("$1")"}' | sed -n -e 'H;${x;s/\n/|/g;s/^|//;p;}'))\\s+.*\$" | grep -vE -e "^\\s*\\w+\\s+\\w+\\s+\\w+\\s+$$\\s+.*\$"
+
+getFilteredPs()
+{
+ps -l | grep -vE -e "^\\s*\\w+\\s+\\w+\\s+($(pstree -p $$ | grep -Eo '[0-9]+' | awk '{print "("$1")"}' | sed -n -e 'H;${x;s/\n/|/g;s/^|//;p;}'))\\s+.*\$" | grep -vE -e "^\\s*\\w+\\s+\\w+\\s+\\w+\\s+$$\\s+.*\$"
+}
+
+
+commandToWatch=$(cat <<EOF
+replPidFile=/tmp/neiltemp3;loggerPidFile=/tmp/neiltemp4;stimulatorPidFile=/tmp/neiltemp5
+
+ps -l \
+| grep -vE -e "^\\\\s*\\\\w+\\\\s+\\\\w+\\\\s+\
+(\$(pstree -p \$$ | grep -Eo '[0-9]+' | awk '{print "("\$1")"}' | sed -n -e 'H;\${x;s/\n/|/g;s/^|//;p;}'))\
+\\\\s+.*\\$" \
+| grep -vE -e "^\\\\s*\\\\w+\\\\s+\\\\w+\\\\s+\\\\w+\\\\s+\$$\\\\s+.*\\$" \
+| grep -vE -e "^\\\\s*\\\\w+\\\\s+\\\\w+\\\\s+\\\\w+\\\\s+$$\\\\s+.*\\$" \
+| tail -n 16
+
+echo ; 
+
+echo -n -e 'repl:   '
+if [ -f \$replPidFile ] && [ -d /proc/\$(cat \$replPidFile) ]
+then echo repl is running with pid \$(cat \$replPidFile)
+else echo repl is not running
+fi
+
+echo -n -e 'logger:   '
+if [ -f \$loggerPidFile ] && [ -d /proc/\$(cat \$loggerPidFile) ]
+then echo logger is running with pid \$(cat \$loggerPidFile)
+else echo logger is not running
+fi
+
+echo -n -e 'stimulator:   '
+if [ -f \$stimulatorPidFile ] && [ -d /proc/\$(cat \$stimulatorPidFile) ]
+then echo stimulator is running with pid \$(cat \$stimulatorPidFile)
+else echo stimulator is not running
+fi
+
+EOF
+)
+watch "$commandToWatch"
+
+pipeIntoRepl=/tmp/neiltemp1
+pipeOutOfRepl=/tmp/neiltemp2
+echo '" ".join(("{: > 011.4f}" for _ in range(2))).format(*[1,2])' > $pipeIntoRepl
+echo '" ".join(("{: > 011.4f}" for _ in range(2))).format(*[1,2])' > $pipeIntoRepl
+echo '" ".join(("{: > 011.4f}" for _ in range(2))).format(*[1,2])' | python -i
+
+python -i -c '" ".join(("{: > 011.4f}" for _ in range(2))).format(*[1,2])'
+
+echo '"{: > 011.4f}".format(4)' > $pipeIntoRepl
+echo "'{: > 099.4f}'.format(4)" > $pipeIntoRepl
+echo '"{: > 011.4f}"' > $pipeIntoRepl
+9.format(" > 011.4f")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

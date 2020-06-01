@@ -513,3 +513,9 @@ tail -f /tmp/neil_log_1;
 cat /home/usb_storage/temperature_monitor.sh | sh
 sh /home/usb_storage/temperature_monitor.sh
 sh /home/usb_storage/temperature_monitor.sh
+
+sh -i -c "$(cat /home/usb_storage/temperature_monitor.sh)"
+
+
+
+watch "ps -l | grep -E -e \"re()pl.py\"; cat /tmp/neiltemp3"

@@ -1,0 +1,13 @@
+REM call :sshToMakerbotAndRunCommand "python /usr/scripts/repl.py"
+REM call :sshToMakerbotAndRunCommand "tail -f /var/home/logs/printer/machine_0.log"
+REM call :sshToMakerbotAndRunCommand "watch -n 4 'ps -l | tail -n 15; echo ; echo \""repl:\""; if [ -f /tmp/neiltemp3 ] && [ -d /proc/$(cat /tmp/neiltemp3) ]; then echo repl is running with pid $(cat /tmp/neiltemp3); else echo repl is not running; fi; echo ; echo \""logger:\""; if [ -f /tmp/neiltemp4 ] && [ -d /proc/$(cat /tmp/neiltemp4) ]; then echo logger is running with pid $(cat /tmp/neiltemp4); else echo logger is not running; fi; echo ; echo \""stimulator:\""; if [ -f /tmp/neiltemp5 ] && [ -d /proc/$(cat /tmp/neiltemp5) ]; then echo stimulator is running with pid $(cat /tmp/neiltemp5); else echo stimulator is not running; fi; "
+REM call :sshToMakerbotAndRunCommand "watch -n 4 'ps -l | tail -n 11; echo ; echo -n \""repl:        \""; if [ -f /tmp/neiltemp3 ] && [ -d /proc/$(cat /tmp/neiltemp3) ]; then echo repl is running with pid $(cat /tmp/neiltemp3); else echo repl is not running; fi; echo -n \""logger:      \""; if [ -f /tmp/neiltemp4 ] && [ -d /proc/$(cat /tmp/neiltemp4) ]; then echo logger is running with pid $(cat /tmp/neiltemp4); else echo logger is not running; fi; echo -n \""stimulator:  \""; if [ -f /tmp/neiltemp5 ] && [ -d /proc/$(cat /tmp/neiltemp5) ]; then echo stimulator is running with pid $(cat /tmp/neiltemp5); else echo stimulator is not running; fi; '"
+call :sshToMakerbotAndRunCommand "watch -n 4 'ps -l | tail -n 16; echo ; echo -n -e repl:\\\\x20\\\\x20\\\\x20\\\\x20\\\\x20\\\\x20\\\\x20\\\\x20; if [ -f /tmp/neiltemp3 ] && [ -d /proc/$(cat /tmp/neiltemp3) ]; then echo repl is running with pid $(cat /tmp/neiltemp3); else echo repl is not running; fi; echo -n -e logger:\\\\x20\\\\x20\\\\x20\\\\x20\\\\x20\\\\x20; if [ -f /tmp/neiltemp4 ] && [ -d /proc/$(cat /tmp/neiltemp4) ]; then echo logger is running with pid $(cat /tmp/neiltemp4); else echo logger is not running; fi; echo -n -e stimulator:\\\\x20\\\\x20; if [ -f /tmp/neiltemp5 ] && [ -d /proc/$(cat /tmp/neiltemp5) ]; then echo stimulator is running with pid $(cat /tmp/neiltemp5); else echo stimulator is not running; fi; '"
+call :sshToMakerbotAndRunCommand "tail -f /home/usb_storage/neil_repl_log"
+call :sshToMakerbotAndRunCommand 
+
+EXIT /B 0
+
+:sshToMakerbotAndRunCommand
+start "" kitty -kload "..\makerbot_ssh.ktx" -cmd "%~1" -title "%~1"
+EXIT /B 0

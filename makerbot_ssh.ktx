@@ -2,7 +2,7 @@ Present\1\
 HostName\makerbot.ad.autoscaninc.com\
 LogFileName\U%3A%5C2020-05-02_makerbot_uart_connection%5Cconsole_log%5Cssh-&Y&M&D&T-&H-&P.log\
 LogType\1\
-LogFileClash\-1\
+LogFileClash\0\
 LogFlush\1\
 LogHeader\1\
 SSHLogOmitPasswords\1\
@@ -10,7 +10,7 @@ SSHLogOmitData\0\
 Protocol\ssh\
 PortNumber\22\
 CloseOnExit\1\
-WarnOnClose\1\
+WarnOnClose\0\
 PingInterval\0\
 PingIntervalSecs\5\
 TCPNoDelay\1\
@@ -110,7 +110,7 @@ CRImpliesLF\0\
 DisableArabicShaping\0\
 DisableBidi\0\
 WinNameAlways\1\
-WinTitle\autoscan makerbot ssh\
+WinTitle\makerbot.ad.autoscaninc.com%20-%20KiTTY\
 TermWidth\80\
 TermHeight\24\
 Font\Consolas\
@@ -285,7 +285,7 @@ TermYPos\-1\
 WindowState\0\
 SaveWindowPos\0\
 ForegroundOnBell\0\
-Password\510b2\
+Password\b13bp\
 CtrlTabSwitch\0\
 Comment\\
 SCPAutoPwd\0\
