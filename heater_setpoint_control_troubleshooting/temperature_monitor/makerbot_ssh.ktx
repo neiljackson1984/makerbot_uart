@@ -10,7 +10,7 @@ SSHLogOmitData\0\
 Protocol\ssh\
 PortNumber\22\
 CloseOnExit\1\
-WarnOnClose\1\
+WarnOnClose\0\
 PingInterval\0\
 PingIntervalSecs\5\
 TCPNoDelay\1\

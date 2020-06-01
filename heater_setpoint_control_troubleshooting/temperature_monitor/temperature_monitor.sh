@@ -28,18 +28,20 @@ moduleContent=$(cat <<'EOF'
 import ctypes;
 import mbcoreutils.machine_definitions;
 import libmachine.pymachine;
+import time;
 
 # intended as an additional method on the Machine class.
 def neil_get_axes_position(pymach, timeout=3):
     c_axes_position = (ctypes.c_float*mbcoreutils.machine_definitions.constants['axis_count'])()
     # c_axes_position = (ctypes.c_float*6)()
     i=0
-    maxI=2
+    maxI=1
     #regardless of whether maxI is 2 or 10, it seems that we hit maxI on about every other call to neil_get_axes_position()
     for x in pymach._loop(pymach._libmachine.GetAxesPosition, c_axes_position, pymach._machine_driver, timeout): 
         if i>maxI:
             break
         i+=1
+        # time.sleep(1)
         pass
     # return Machine.unwrap_returns((list(c_axes_position),))
     if i>maxI:
@@ -56,6 +58,8 @@ def roundIfList(x):
 
 def realVectorToString(x):
     return " ".join(("{: > 011.4f}" for _ in range(len(x)))).format(*x)
+    # the repl seems to be condensing runs of multiple spaces in the output into a single space, so the above field width of 11
+    # does not have the desired effect in the log file -- oh well.
 
 def getReport(server):
     axes_position = neil_get_axes_position(server._machine_manager._pymach)
@@ -63,8 +67,6 @@ def getReport(server):
         currentPrintFilename = server._machine_manager.get_current_process().filename
     except:
         currentPrintFilename=""
-    
-    
     return [
         currentPrintFilename.split("/")[-1],
         server._machine_manager._pymach.get_current_command_index(), 
@@ -73,7 +75,8 @@ def getReport(server):
         ("move_buffer_empty" if server._machine_manager._pymach.move_buffer_empty() else "                 "), 
         ("accel_buffer_empty" if server._machine_manager._pymach.acceleration_buffer_empty() else "                  "), 
         realVectorToString(server._machine_manager._pymach.get_move_buffer_position()), 
-        ( realVectorToString(axes_position) if type(axes_position)==list else axes_position )
+        ( realVectorToString(axes_position) if type(axes_position)==list else axes_position ),
+        server._machine_manager.get_info_dict()
     ]
 EOF
 )
@@ -210,22 +213,33 @@ else
     echo started repl process with pid $(cat $replPidFile)
 fi
 
+echo "ensuring that the stimulator is stopped (temporarily)..."
+if [ -f $stimulatorPidFile ] && [ -d /proc/$(cat $stimulatorPidFile) ]; then 
+    echo temporarily stopping the stimulator process
+    kill $(cat $stimulatorPidFile)
+else 
+    echo the stimulator process is stopped
+fi
+
+
+echo "configuring makerbot repl..."
+echo debug > $pipeIntoRepl;
+echo "$initialCommand" > $pipeIntoRepl;
+
 
 echo "ensuring that the stimulator is running..."
 # start-stop-daemon --background --pidfile $replPidFile --make-pidfile --startas sh --start -- -c $replCommand
 if [ -f $stimulatorPidFile ] && [ -d /proc/$(cat $stimulatorPidFile) ]; then 
     echo stimulator process is already running with pid $(cat $stimulatorPidFile); 
 else 
-    echo repl stimulator is not already running, so we will now start it
+    echo stimulator is not already running, so we will now start it
     # sh -c "$stimulatorCommand"  1>/dev/null  2>/dev/null & :;
     watch -n 2 "cat $stimulusFile > $pipeIntoRepl" > /dev/null & :;
     echo $! > $stimulatorPidFile
     echo started stimulator process with pid $(cat $stimulatorPidFile)
 fi
 
-echo "configuring makerbot repl..."
-echo debug > $pipeIntoRepl;
-echo "$initialCommand" > $pipeIntoRepl;
+
 
 
 
