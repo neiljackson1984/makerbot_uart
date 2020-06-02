@@ -36,6 +36,15 @@ def neil_get_axes_position(pymach, timeout=3):
     # c_axes_position = (ctypes.c_float*6)()
     i=0
     maxI=1
+    
+    
+    # for x in pymach.toggle_toolhead_syncing(True, timeout): 
+        # if i>maxI:
+            # break
+        # i+=1
+        # pass
+    
+    
     #regardless of whether maxI is 2 or 10, it seems that we hit maxI on about every other call to neil_get_axes_position()
     for x in pymach._loop(pymach._libmachine.GetAxesPosition, c_axes_position, pymach._machine_driver, timeout): 
         if i>maxI:
@@ -50,6 +59,19 @@ def neil_get_axes_position(pymach, timeout=3):
         return libmachine.pymachine.Machine.unwrap_returns((list(c_axes_position),))
     # return [c_axes_position, i]
 
+
+def set_temperature_target(pymach, temperature):
+    i=0
+    maxI=1
+    
+    timeout = 3
+    index = 0
+    for x in pymach.set_temperature_target(index, temperature, timeout): 
+        if i>maxI:
+            break
+        i+=1
+
+
 def roundIfList(x):
     if type(x)==list:
         return map(lambda x: round(x,4), x)
@@ -57,26 +79,38 @@ def roundIfList(x):
         return x
 
 def realVectorToString(x):
-    return " ".join(("{: > 011.4f}" for _ in range(len(x)))).format(*x)
+    # return " ".join(("{: > 011.4f}" for _ in range(len(x)))).format(*x)
     # the repl seems to be condensing runs of multiple spaces in the output into a single space, so the above field width of 11
     # does not have the desired effect in the log file -- oh well.
+    return " ".join(("{:_> 011.4f}" for _ in range(len(x)))).format(*x)
 
 def getReport(server):
+
+    
     axes_position = neil_get_axes_position(server._machine_manager._pymach)
+    temperatureSetpoint = server._machine_manager._pymach.get_temperature_settings()[0]
+    currentCommandIndex = server._machine_manager._pymach.get_current_command_index()
+    attemptedToChangeTemperatureSetpoint = False
+    if currentCommandIndex > 0 and type(axes_position)==list and axes_position[2] >= 0.8 and temperatureSetpoint != 209:
+        set_temperature_target(server._machine_manager._pymach, 209)
+        attemptedToChangeTemperatureSetpoint = True
+    
     try:    
         currentPrintFilename = server._machine_manager.get_current_process().filename
     except:
         currentPrintFilename=""
     return [
         currentPrintFilename.split("/")[-1],
-        server._machine_manager._pymach.get_current_command_index(), 
+        currentCommandIndex, 
         server._machine_manager._pymach.get_temperature(0), 
-        server._machine_manager._pymach.get_temperature_settings()[0], 
-        ("move_buffer_empty" if server._machine_manager._pymach.move_buffer_empty() else "                 "), 
-        ("accel_buffer_empty" if server._machine_manager._pymach.acceleration_buffer_empty() else "                  "), 
+        temperatureSetpoint, 
+        ("move_buffer_empty" if server._machine_manager._pymach.move_buffer_empty() else "_________________"),  
+        ("accel_buffer_empty" if server._machine_manager._pymach.acceleration_buffer_empty() else "__________________"), 
+        server._machine_manager._pymach.get_sync_state(0),
+        attemptedToChangeTemperatureSetpoint,
         realVectorToString(server._machine_manager._pymach.get_move_buffer_position()), 
         ( realVectorToString(axes_position) if type(axes_position)==list else axes_position ),
-        server._machine_manager.get_info_dict()
+        # server._machine_manager.get_info_dict()
     ]
 EOF
 )
@@ -92,6 +126,7 @@ if "$tempModuleDirectory" not in sys.path:
     
 import $moduleName
 importlib.reload($moduleName)
+
 EOF
 )
 
@@ -143,7 +178,7 @@ cleanupCommand=$(cat <<EOF
     echo cleaning up...; 
     echo "logging the fact that we are ceasing logging ..."; echo "ceasing logging at \$(date +$timestampFormat)" > $pipeOutOfRepl; 
     echo "waiting 1 second to allow the logging apparatus to log the cessation of logging before we kill the logging apparatus ..."; sleep 1; 
-    echo killing processes \$(jobs -p) ...; kill \$(jobs -p); 
+    # echo killing processes \$(jobs -p) ...; kill \$(jobs -p); 
     echo killing logger and stimulator with pids \$(cat $loggerPidFile) and \$(cat $stimulatorPidFile) ...; kill \$(cat $loggerPidFile) \$(cat $stimulatorPidFile); 
     echo "invoking \"jobs\" one last time so that subsequent calls to jobs will not return anything...";  jobs ;
 EOF
