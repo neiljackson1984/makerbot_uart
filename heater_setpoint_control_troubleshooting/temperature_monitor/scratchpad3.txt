@@ -1,0 +1,34 @@
+#!/bin/sh
+
+{
+ contract.id:contract.generator.contract_duration() for contract in self._generator_manager._contracts._queue}
+ 
+"\n\n".join([
+  type(contract.generator).__name__ + ": " + str(contract.generator.contract_duration()) for contract in self._generator_manager._contracts._queue
+])
+
+#show the types of various contract generators, along with their contract_duration()s (periods) in the server's contract-generator-manager's contracts queue
+{type(contract.generator).__name__:str(contract.generator.contract_duration()) for contract in self._generator_manager._contracts._queue}
+
+type(self._generator_manager._contracts._queue[0].id)
+type(self._generator_manager._contracts._queue[0].id)
+
+.__class__
+self._generator_manager._contracts._queue[0].id.__class__
+
+contract=self._generator_manager._contracts._queue[0]
+str(contract.id)
+str(contract.generator)
+dir(type(contract.generator).__name__)
+
+self._config["kaiten"]["components"]["profiling"]
+
+str(self._machine_manager._current_process)
+
+self._machine_manager._pymach.iterate()
+
+>> 
+{'preheat_percent': 0, 'machine_error': 256, 'move_buffer_available_space': 100, 'toolhead_status': [{'tool_id': 8, 'filament_fan_running': False, 'filament_presence': True, 'filament_jam': False, 'move_status_bitfield': 0, 'current_temperature': 21, 'extrusion_percent': 0, 'ticks_remaining': 0, 'error': 0, 'target_temperature': 0, 'memory_space': 866, 'preheating': 0}]}
+
+
+{type(contract.generator).__name__:contract.generator.contract_duration() for contract in self._generator_manager._contracts._queue}

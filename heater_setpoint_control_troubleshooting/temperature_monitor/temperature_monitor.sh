@@ -91,15 +91,16 @@ def getReport(server):
     temperatureSetpoint = server._machine_manager._pymach.get_temperature_settings()[0]
     currentCommandIndex = server._machine_manager._pymach.get_current_command_index()
     attemptedToChangeTemperatureSetpoint = False
-    if currentCommandIndex > 0 and type(axes_position)==list and axes_position[2] >= 0.8 and temperatureSetpoint != 209:
-        set_temperature_target(server._machine_manager._pymach, 209)
-        attemptedToChangeTemperatureSetpoint = True
+    # if currentCommandIndex > 0 and type(axes_position)==list and axes_position[2] >= 0.8 and temperatureSetpoint != 209:
+        # set_temperature_target(server._machine_manager._pymach, 209)
+        # attemptedToChangeTemperatureSetpoint = True
     
     try:    
         currentPrintFilename = server._machine_manager.get_current_process().filename
     except:
         currentPrintFilename=""
     return [
+        (server._machine_manager.get_info_dict()['current_process']['name'] + " " + server._machine_manager.get_info_dict()['current_process']['step'] + " " + str(server._machine_manager.get_info_dict()['current_process']['progress']) if server._machine_manager.get_info_dict() and server._machine_manager.get_info_dict()['current_process'] else 'no current process'),
         currentPrintFilename.split("/")[-1],
         currentCommandIndex, 
         server._machine_manager._pymach.get_temperature(0), 
